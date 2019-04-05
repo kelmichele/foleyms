@@ -1,0 +1,27 @@
+@import '../../assets/global.scss';
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+
+.Footer {@include sec-default(); padding: 30px 0; background-color: rgba($msGreen, .1);}
+.toTop {width:35px; height: 35px; font-size:25px;
+  span {font-size: 25px; color:$black;}
+}
+
+.scrollUp {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  text-indent: -9999px;
+  @include sec-bgimage('../../assets/images/up.png');
+  background-size: 65%; background-position: center center;
+  z-index: 100;
+  border: 1px solid $black;
+  background-color: $black; 
+
+
+  // @include bp(tb) { left: 30px;visibility:visible; }
+  // @include bp(sm) { left: 15px; }
+}

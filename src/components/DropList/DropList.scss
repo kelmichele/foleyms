@@ -1,0 +1,17 @@
+@import '../../assets/global.scss';
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+
+.dropList {@include sec-default(); @include sec-bgimage2(); background-size:60%; background-position: left center;
+  margin:40px 0; height:350px;
+  .ListDD {width:40%; padding: 30px; 
+    background-color: $msGreen; color: $white; 
+    margin-left: 40%; margin-top: 15%;
+  }
+
+  h4,p,span,a{color:$white; margin-top: 0;}
+  h4{margin-bottom: 5px;}
+  button {float:right; margin-top:-70px;}
+  .dropItems {margin-bottom: 7px;}
+
+}

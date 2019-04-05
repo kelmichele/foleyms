@@ -1,0 +1,44 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "foleyresource",
+            "privacy": {
+                "protected": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ],
+                "unauth": [
+                    "/GET"
+                ]
+            }
+        }
+    ],
+    "resourceName": "downtown",
+    "apiName": "downtown",
+    "functionArns": [
+        {
+            "lambdaFunction": "foleyresource"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "foleyms-20190405104601-authRole",
+        "unAuthRoleName": "foleyms-20190405104601-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "foleyresource",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

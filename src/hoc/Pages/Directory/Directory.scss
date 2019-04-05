@@ -1,0 +1,6 @@
+@import '../../../assets/global.scss';
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixins.scss';
+
+
+.directoryPage{@include sec-default();}

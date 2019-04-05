@@ -1,0 +1,130 @@
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Playfair+Display:400,700');
+
+@import './variables.scss';
+@import './mixins.scss';
+@import './mixins.scss';
+
+.inside, .insideAlt, .medDef, .med2Def, .insideXl{width: 85%; @include center-block(); 
+  max-width:1600px;
+}
+.insideXl {width: 90%;}
+.insideAlt {width: 80%;}
+.medDef {width:1080px;}
+
+@media (max-width:1100px) {
+  .medDef {width:90%;}
+}
+
+@include bp(xl) {
+  .med2Def{width: 940px;}
+}
+
+@include bp(br) {
+  .med2Def {width:85%;}
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 576px) {max-width: 556px;}
+  @media (min-width: 768px) {max-width: 748px;}
+  @media (min-width: 992px) {max-width: 972px;}
+  @include bp(dt) {max-width: 1180px;}
+  @include bp(ph) {max-width: 90%;}
+}
+
+.fullRow{@include sec-default();}
+.borderRow{@include sec-default(); padding: 60px 0; margin:50px 0;
+  border-top:4px double $msGreen;
+  border-bottom:4px double $msGreen;
+
+  @include bp(tb) {margin:25px 0; padding:40px 0 30px;}
+}
+
+body {font-family: $monte; 
+  h1, h2, h3, h4, h5, p, li, a {color: $black; line-height: 1.5em; 
+    font-family: $monte; font-weight: 300; letter-spacing: .5px;
+    &.bmargin0 {margin-bottom: 0;}
+    &.play{font-family: $play;}
+    &.gochi{font-family:$gochi;}
+  }
+  p,li{font-weight: 400;}
+  p{font-size: 16px;}
+  h1{ font-family:$gochi; font-size: 4rem;
+    &.lightHd,&.darkHd  {color: $white; @include tshadowl(rgba($black,.79)); text-align: center; font-weight:bold; }
+    &.darkHd {@include tshadowl(rgba($black,.75)); color:$black; }
+    &.sm {font-size: 1.8rem;}
+  }
+  h2{font-size: 1.65rem;}
+
+  @include bp(tn) {
+    h1{font-size:3rem;}
+    p{font-size:15px;}
+  }
+
+  @include bp(md) {
+    h1{font-size:2rem;}
+  }
+}
+.centerBlock{ @include center-block();}
+.bmargin0 {margin-bottom: 0;}
+.tmargin0 {margin-top: 0;}
+.textCenter {text-align: center;}
+.tpadding4{padding-top:40px;}
+.tpadding6{padding-top:60px;}
+
+.spacer1 {@include sec-default();height:10px;}
+.spacer2 {@include sec-default();height:20px;}
+.spacer3 {@include sec-default();height:30px;}
+.spacer4 {@include sec-default();height:40px;}
+.spacer5 {@include sec-default();height:50px;}
+.spacer6 {@include sec-default();height:60px;}
+
+hr{
+	&.hlf {width: 50%;}
+	&.less {width: 25%;}
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.clearfix.btn {@include sec-default(); margin-top:20px;}
+
+.msLink {@include link(30%, $white); background-color: $msGreen; @include tshadowl(rgba($black, .3));}
+.textLink{font-weight: bold;
+  &.und {text-decoration: underline; }
+}
+
+.visuallyHidden {
+  @include visuallyHidden();
+}
+
+.imgResponsive {max-width: 100%; height: auto; display:block;}
+ul {margin:0; list-style-type: none; padding-left: 0;}
+ul.disc li{list-style-type: disc;}
+
+a {text-decoration: none;
+  &:hover {opacity: .7;}
+}
+
+button{background: none; border:none; border-radius:0; font-family: $monte; font-size:inherit; color:inherit; font-weight:inherit; letter-spacing: inherit;}
+
+
+.intro {@include sec-default();padding:30px 0; text-align: center; 
+  p{ font-size: 17px;}
+
+  @include bp(tn) {padding:10px 0;
+    p{font-size:16px;}
+  }
+
+  @include bp(mb) {
+    p{font-size:15px;}
+  }
+}
+
+.msLogo {width:220px; padding:15px;}

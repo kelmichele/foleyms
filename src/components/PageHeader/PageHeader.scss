@@ -1,0 +1,19 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/global.scss';
+
+.PageHeader{height:300px; padding:50px 0 0; margin-bottom: 20px;text-align: center;
+  @include sec-bgimage2(); 
+  // background-position: center center;
+  z-index: 0; position:relative;
+  .Overlay{@include sec-default(); @include before(); background-color: $black;}
+
+  &.Gray {@include grayscale();}
+  &.Teal .Overlay{background-color: $msGreen;}
+
+  // h1{color: $black;}
+  h1{
+    &.Light {color: $white; @include tshadowl(rgba($black,.5));}
+    &.Dark {color: $black;}
+  }
+}

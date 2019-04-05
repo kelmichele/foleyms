@@ -1,0 +1,32 @@
+@import '../../../assets/global.scss';
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixins.scss';
+
+.aboutPage, .boardPage{@include sec-default();}
+
+.abBody{@include sec-default();}
+
+.boardPage {
+  h1{margin-top: -85px; color:$white; text-align:center; @include tshadowl(rgba($black,.4));}
+  
+  .boardBody{@include sec-default(); text-align: center; margin-top:20px; position:relative; }
+  h3{padding-bottom:5px; border-bottom:$border; margin-bottom: 20px; font-weight:bold;
+    color: $msGreen; font-size:30px; letter-spacing: 1px; font-family: $gochi;
+  }
+
+  // .officers li, .members li {display: inline-block; width:33%; float:none; vertical-align: top;}
+  // .officers li{width:40%;}
+
+  .officers, .members{display: inline-block; width:76%; float:none; vertical-align: top;}
+  .officers{width:18%; float:left;}
+  .members {float:right;
+    li{display: inline-block; width:33%; float:none; vertical-align: top;}
+  }
+
+  li, a{margin-bottom: 40px; font-size: 18px; font-weight:$semi; line-height: 1.2em;
+    span {font-size:14px; color: $msRed; font-weight:normal; font-style: italic;}
+    b{font-size:16px;}
+  }
+
+  .officers li{margin-bottom: 20px;}
+}

@@ -1,0 +1,9 @@
+@import '../../assets/global.scss';
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+
+.Accordion {@include center-block(); width:50%;
+  li {@include sec-default(); margin-top: 15px; text-align:left;}
+  button {background-image:none; background:transparent; border:none;}
+}
+.custContent{padding-left: 20px;}

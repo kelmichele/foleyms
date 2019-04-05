@@ -1,0 +1,16 @@
+@import '../../assets/global.scss';
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+
+.custDrop {min-width:200px; width:250px; margin-top: -40px; border-top: 1px solid rgba($black,.1);}
+
+.dropMenu {text-align: left;
+  li{width:100%; margin-bottom:12px !important;}
+  a {font-size:15px;}
+}
+
+// @media (max-width: 1024px) {
+//   .NavigationItems {@include sec-default();margin-bottom:10px;
+//     a {color: $white;}
+//   }
+// }

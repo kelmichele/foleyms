@@ -1,0 +1,9 @@
+@import '../../assets/global.scss';
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+
+Main {@include sec-default();
+  padding:0px 0 50px;
+  background-color: $cream;
+  // justify-content: center;
+}

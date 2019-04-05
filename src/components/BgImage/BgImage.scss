@@ -1,0 +1,11 @@
+@import '../../assets/global.scss';
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+
+.BgImage{@include sec-default(); 
+  padding:40px 0; min-height:400px;
+  background-size: cover; background-repeat: no-repeat;
+}
+.bgTitle {
+  font-size:20px;
+}

@@ -1,0 +1,45 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/global.scss';
+
+.ImageText{@include sec-default(); padding:45px 0;
+  .ImageHlf, .TextHlf {display: inline-block;
+    &.xtra{margin-top: 50px;}
+    &.xsm{margin-top: 20px;}
+  }
+  .ImageHlf {float: right;}
+  &.equal {
+    .ImageHlf, .TextHlf {width:48%;}
+  }
+
+  &.textRight {
+    .ImageHlf {float: left;}
+    .TextHlf {float:right;}
+  }
+
+  &.textBig{
+    .TextHlf{width:55%;}
+    .ImageHlf{width:42%;}
+  }
+
+  &.imageBig{
+    .TextHlf{width:55%;}
+    .ImageHlf{width:42%;}
+  }
+
+  @include bp(tb) {padding:30px 0 15px;
+    .TextHlf.xtra{margin-top: 0px;}
+    
+    &.equal, &.textBig, &.imageBig{
+      .ImageHlf, .TextHlf {width:85%; @include center-block();}
+      .ImageHlf{width:75%; margin-bottom: 30px;}
+    }
+  }
+
+  @include bp(tn) {padding:30px 0 15px;
+    &.equal, &.textBig, &.imageBig{
+      .TextHlf {@include sec-default();}
+      .ImageHlf{width:85%; }
+    }
+  }
+}

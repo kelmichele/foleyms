@@ -1,0 +1,11 @@
+@import '../../assets/global.scss';
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+
+.Social{@include sec-default();
+  li {display: inline-block; margin:5px;}
+
+  &.light {
+    a, span {color: $white;}
+  }
+}

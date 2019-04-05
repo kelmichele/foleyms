@@ -1,0 +1,7 @@
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixins.scss';
+@import '../../../assets/global.scss';
+
+.Home {
+  h1.lightHd {@include tshadowl(rgba($black,.9));}
+}
