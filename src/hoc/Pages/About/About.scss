@@ -2,14 +2,16 @@
 @import '../../../assets/variables.scss';
 @import '../../../assets/mixins.scss';
 
-.aboutPage, .boardPage{@include sec-default();}
+.aboutPage, .boardPage{@include sec-default(); }
 
 .abBody{@include sec-default();}
+
+.aboutPage .intro p {width:80%; @include center-block();}
 
 .boardPage {
   h1{margin-top: -85px; color:$white; text-align:center; @include tshadowl(rgba($black,.4));}
   
-  .boardBody{@include sec-default(); text-align: center; margin-top:20px; position:relative; }
+  .boardBody{@include sec-default(); text-align: center; margin-top:20px; position:relative; background-color: $msLt;}
   h3{padding-bottom:5px; border-bottom:$border; margin-bottom: 20px; font-weight:bold;
     color: $msGreen; font-size:30px; letter-spacing: 1px; font-family: $gochi;
   }
@@ -29,4 +31,13 @@
   }
 
   .officers li{margin-bottom: 20px;}
+}
+
+
+.relTitle {@include sec-default(); padding:70px 0;
+  position: relative; z-index: 0; 
+  &::before{@include before(); background-color: $msGreen; height:50%;}
+
+  .imgCenter{width:85%; @include center-block();}
+  h1{margin-top:0;}
 }

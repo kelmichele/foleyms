@@ -7,6 +7,10 @@ const calendar = () => {
       data-tockify-component="calendar"
       data-tockify-calendar="foley.downtown"
     />
+
+    // [tockify component = "calendar" calendar = "foley.downtown"]
+
   );
 }
 export default calendar;
+  

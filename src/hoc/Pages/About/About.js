@@ -53,35 +53,25 @@ const about = () => {
 
       <div className={classes.medDef}>
         <div className={classes.intro}>
-          {/* <div className={classes.med2Def}> */}
-            <p className={classes.tpadding4}>Just eleven miles north of Alabama’s white sand beaches, Foley’s historic downtown epitomizes old Alabama charm.  
-              Historic sites, boutique retailers and unique restaurants line the walkways of this quaint Main Street, making visitors feel like they’ve stepped back in time.
-            </p>
-          {/* </div> */}
+          <p className={classes.tpadding4}>Just eleven miles north of Alabama’s white sand beaches, Foley’s historic downtown epitomizes old Alabama charm.  
+            Historic sites, boutique retailers and unique restaurants line the walkways of this quaint Main Street, making visitors feel like they’ve stepped back in time.
+          </p>
         </div>
         
         <div className={classes.abBody}>
-          {/* <div className={classes.inside}> */}
-            <ImageText textContent={textContent0} image={bodyImg2} addPadd="xsm" gridType="textBig" />
-          {/* </div> */}
-              
-            {/* <div className={classes.inside}> */}
-              <div className={classes.borderRow}>
-                <div className={classes.insideXl}>
-                  <p>Brimming with history, downtown Foley is home to two city museums housed in their original, historic buildings, and an “old time” soda fountain drugstore 
-                    that has donned the same corner since 1929. The Holmes Medical Museum is housed in Baldwin County’s first hospital, and showcases extensive displays of
-                    medical equipment and patient rooms as they would have been in the 1930s and ’40s. The Foley Railroad Museum includes a model train exhibit, antique train 
-                    cars, and train rides around the park. It is housed in the Depot, which was built in 1909, and has been the hub of activity in the City for over 60 years. 
-                  </p>
-                </div>
-              </div>
-            {/* </div> */}
-
+          <ImageText textContent={textContent0} image={bodyImg2} addPadd="xsm" gridType="textBig" />
             
-          {/* <div className={classes.inside}> */}
-            <ImageText textContent={textContent1} image={bodyImg3} addPadd="xsm" textFloat="textRight" />
-          {/* </div> */}
+          <div className={classes.borderRow}>
+            <div className={classes.insideXl}>
+              <p>Brimming with history, downtown Foley is home to two city museums housed in their original, historic buildings, and an “old time” soda fountain drugstore 
+                that has donned the same corner since 1929. The Holmes Medical Museum is housed in Baldwin County’s first hospital, and showcases extensive displays of
+                medical equipment and patient rooms as they would have been in the 1930s and ’40s. The Foley Railroad Museum includes a model train exhibit, antique train 
+                cars, and train rides around the park. It is housed in the Depot, which was built in 1909, and has been the hub of activity in the City for over 60 years. 
+              </p>
+            </div>
+          </div>
 
+          <ImageText textContent={textContent1} image={bodyImg3} addPadd="xsm" textFloat="textRight" />
         </div>
       </div>
     </div>

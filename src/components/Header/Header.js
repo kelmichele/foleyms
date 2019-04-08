@@ -11,9 +11,9 @@ class Header extends Component {
   render() {
     // if (window.location.pathname === '/') return null;
     return (
-      <div className={classes.Header}>
+      <div className={classes.Header} data-uk-sticky="sel-target: .HeaderDiv; cls-active: uk-navbar-sticky;">
        {/* data-uk-sticky="sel-target: .Header; cls-active: uk-navbar-sticky;"> */}
-        <div className={classes.inside}>
+        <div className={classes.insideXl}>
 
           <header className={classes.HeaderDiv}>
             <div className={classes.LogoHd}>

@@ -2,7 +2,10 @@
 @import '../../assets/variables.scss';
 @import '../../assets/mixins.scss';
 
-.Footer {@include sec-default(); padding: 30px 0; background-color: rgba($msGreen, .1);}
+.Footer {@include sec-default(); padding: 30px 0; 
+  background-color: rgba($msGreen, .1);
+  background-color:$white;
+}
 .toTop {width:35px; height: 35px; font-size:25px;
   span {font-size: 25px; color:$black;}
 }

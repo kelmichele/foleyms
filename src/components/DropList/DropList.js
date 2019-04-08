@@ -31,7 +31,7 @@ class DropList extends Component {
       );
 
     return (
-      <div className={classes.dropList} style={{ backgroundImage: "url(" + this.props.BgImage + ")" }}>
+      <div id={this.props.category} className={classes.dropList} style={{ backgroundImage: "url(" + this.props.BgImage + ")" }}>
         <div className={classes.ListDD}>
           <h4>{this.props.category}</h4>
           <p>{this.props.subcat}</p>

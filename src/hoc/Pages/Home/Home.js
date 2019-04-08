@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import classes from "./Home.scss";
+// import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
+
 import Parallax from "../../../components/Parallax/Parallax";
-import bg1 from "../../../assets/images/TEMPdowntown-foley.jpg";
+// import bg1 from "../../../assets/images/TEMPdowntown-foley.jpg";
+import bg1 from "../../../assets/images/dogPark2.jpg";
 
 const plaxHd1 = (
 <h1 className={[classes.lightHd, classes.textCenter].join(' ')}>Downtown Foley</h1>
@@ -25,16 +29,58 @@ class Home extends Component {
         />
        
         {/* Sections: categories, overview/intro, upcoming events, main street */}
+        <div className={classes.clearfix} />
+        <div className={classes.detsHome}>
+          <div className={classes.insideNrw}>
+            <p>
+              Just eleven miles north of Alabama’s white sand beaches, Foley’s historic downtown epitomizes old Alabama charm.
+              Downtown Foley is home to historic sites, unique restaurants, a variety of retailers and so much more.
+              The area captivates visitors and residents alike with its picturesque beauty.
+            </p>
+          </div>
+        </div>
+
+        <div className={classes.serviceRow}>
+          <div className={[classes.ServiceBox, classes.Box1].join(' ')}>
+            {/* <a href={} className={classes.SboxTitle}>Dining</a> */}
+            <Link to="/directory#Dining" className={classes.SboxTitle}>Dining</Link>
+          </div>
+
+          <div className={[classes.ServiceBox, classes.Box2].join(' ')}>
+            {/* <div className={classes.SboxTitle}>Shopping</div> */}
+            <Link to="/directory#Shopping" className={classes.SboxTitle}>Shopping</Link>
+          </div>
+
+          <div className={[classes.ServiceBox, classes.Box3].join(' ')}>
+            {/* <div className={classes.SboxTitle}>Services</div> */}
+            <Link to="/directory#Services" className={classes.SboxTitle}>Services</Link>
+          </div>
+
+          <div className={[classes.ServiceBox, classes.Box4].join(' ')}>
+            {/* <div className={classes.SboxTitle}>Misc.</div> */}
+            <Link to="/directory#Misc" className={classes.SboxTitle}>Misc</Link>
+          </div>
+        </div>
+
+        <div className={classes.detsHome}>
+          <div className={classes.insideNrw}>
+            <p>
+              Located at the heart of Baldwin County’s busiest intersection, Foley has significant commercial appeal.
+              With professional offices sprinkled throughout the Main Street district and newly remodeled vacant buildings,
+              this revitalized downtown area is attracting new, diverse buisnesses and potential downtown housing.
+            </p>
+            <Link to="/listings">Check out our available properties</Link>
+          </div>
+        </div>
 
 
-        <div className={[classes.inside, classes.tpadding4].join(' ')}>
-          <div className={classes.clearfix} />
 
-          <h2>HELLO</h2>
-          <hr />
-          <p>
-            Just eleven miles north of Alabama’s white sand beaches, Foley’s historic downtown epitomizes old Alabama charm.  
-            Historic sites, boutique retailers and unique restaurants line the walkways of this quaint Main Street
+
+
+
+
+          {/* 
+
 
             Among its traditional architecture and old-world style, 
             downtown Foley features restaurants, gift shops, barbershops, antique markets and even a hidden spa for unwinding after a long day of shopping
@@ -56,9 +102,7 @@ class Home extends Component {
               You can walk the landscaped trail while enjoying the beauty and fragrance of hundreds of roses displayed in a variety of sizes and color. 
 
             Located at the heart of Baldwin County’s busiest intersection, with an average of forty-thousand cars per day, Foley has significant commercial appeal, 
-              especially with its newly built pedestrian bridge connecting the shops of downtown with the park and city buildings allowing accessibility and walkability 
-          </p>
-        </div>
+              especially with its newly built pedestrian bridge connecting the shops of downtown with the park and city buildings allowing accessibility and walkability  */}
       </div>
     );
   }

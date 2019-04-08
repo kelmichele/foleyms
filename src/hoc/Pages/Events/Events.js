@@ -2,10 +2,10 @@ import React from "react";
 import classes from "./Events.scss";
 import Parallax from "../../../components/Parallax/Parallax";
 import phImage from "../../../assets/images/ph.jpg";
-import Calendar from "../../../components/Calendar/Calendar";
+// import Calendar from "../../../components/Calendar/Calendar";
 
 const pH1 = (
-  <h1 className={classes.lightHd}>Foley Main Street</h1>
+  <h1 className={classes.lightHd}>Upcoming Events</h1>
 );
 
 const events = () => {
@@ -14,7 +14,13 @@ const events = () => {
       <Parallax plaxStyle="styleHd" plaxHeadline={pH1} plaxImage={phImage} />
       
       <div className={classes.inside}>
-        <Calendar />
+        {/* <Calendar /> */}
+        {/* [tockify component="calendar" calendar="foley.downtown"] */}
+        <div
+          data-tockify-component="calendar"
+          data-tockify-calendar="foley.downtown"
+        />
+        
       </div>
     </div>
   );

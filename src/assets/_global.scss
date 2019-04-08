@@ -4,7 +4,7 @@
 @import './mixins.scss';
 @import './mixins.scss';
 
-.inside, .insideAlt, .medDef, .med2Def, .insideXl{width: 85%; @include center-block(); 
+.inside, .insideAlt, .medDef, .med2Def, .insideXl, .insideNrw{width: 85%; @include center-block(); 
   max-width:1600px;
 }
 .insideXl {width: 90%;}
@@ -22,6 +22,16 @@
 @include bp(br) {
   .med2Def {width:85%;}
 }
+
+@media screen and (min-width:823px){
+  .insideNrw{width:785px;}
+}
+
+@include bp(tn) {
+  .insideNrw{width:90%}
+}
+
+.boxedBody {width: 90%; @include center-block();}
 
 .container {
   width: 100%;

@@ -26,6 +26,11 @@ const board = () => {
         plaxHeight="300px"
       />
 
+      {/* <div className={classes.relTitle}>
+        {plaxHd1}
+        <img src={hero} class={classes.imgCenter} alt="board of directors"/>
+      </div> */}
+
       <div className={classes.boardBody}>
         <div className={classes.med2Def}>
           <div className={classes.intro}>
