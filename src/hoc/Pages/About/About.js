@@ -7,6 +7,7 @@ import phImage from "../../../assets/images/foley6BW.jpg";
 import bodyImg2 from "../../../assets/images/mm-appetizer2.jpg";
 import ImageText from "../../../components/ImageText/ImageText";
 import bodyImg3 from "../../../assets/images/foley6.jpg";
+import Aux from "../../../hoc/Aux/Aux";
 // import Pdf from "../../../foley-walking-map.pdf";
 
 
@@ -43,11 +44,15 @@ const textContent1 = (
 
 const about = () => {
   return (
+    <Aux>
+    <Helmet>
+      <title>About the Foley Main Street District</title>
+      <meta name="description" content="" />
+      <body className={classes.aboutPage} />
+    </Helmet>
+
+
     <div className={classes.aboutPage}>
-      <Helmet>
-        <title>About Us | Foley Main Street</title>
-        <meta name="description" content="" />
-      </Helmet>
       
       <Parallax plaxStyle="styleHd" plaxHeadline={pH1} plaxImage={phImage} />
 
@@ -75,6 +80,7 @@ const about = () => {
         </div>
       </div>
     </div>
+    </Aux>
   );
 };
 

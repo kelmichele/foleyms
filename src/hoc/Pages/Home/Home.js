@@ -4,8 +4,16 @@ import classes from "./Home.scss";
 import { HashLink as Link } from 'react-router-hash-link';
 
 import Parallax from "../../../components/Parallax/Parallax";
-// import bg1 from "../../../assets/images/TEMPdowntown-foley.jpg";
 import bg1 from "../../../assets/images/dogPark2.jpg";
+import PhotoCat from "../../../components/PhotoCat/PhotoCat";
+// import Collage from "../../../components/Collage/Collage";
+import msLogo from "../../../assets/images/msaRedRGB.jpg";
+
+import ImageText from "../../../components/ImageText/ImageText";
+import ItPhoto1 from "../../../assets/images/wLaurel.png";
+import Pdf1 from "../../../Mkt-Snapshot2019.pdf";
+import Pdf2 from "../../../FoleyFwdPlan_190320.pdf";
+
 
 const plaxHd1 = (
 <h1 className={[classes.lightHd, classes.textCenter].join(' ')}>Downtown Foley</h1>
@@ -14,6 +22,28 @@ const plaxHd1 = (
 //   <img src={vf} class={classes.centerBlock} />
 // );
 
+const textContent = (
+  <div>  
+    <p class={classes.CustomP}>
+      Located at the heart of Baldwin County’s busiest intersection, Foley has significant commercial appeal.
+      With professional offices sprinkled throughout the Main Street district and newly remodeled vacant buildings,
+      this revitalized downtown area is attracting new, diverse buisnesses and potential downtown housing.
+    </p>
+    <Link to="/listings" class={classes.msLink}>View Available Properties</Link>
+  </div>
+);
+
+const textContent2 = (
+  <div>
+    <h3 className={classes.gochi}>Preserving Our History</h3>
+    <p>With the help of their first ever Main Street Director, Foley is working to implement
+    Main Street Alabama’s four-step approach for downtown promotion, economic vitality, and community connectivity.</p>
+    <a href={Pdf1} target="_blank" rel="noopener noreferrer" className={[classes.msLink, classes.inline, classes.invColor].join(' ')}>
+    Market Snapshot</a>
+    <a href={Pdf2} target="_blank" rel="noopener noreferrer" className={[classes.msLink, classes.inline].join(' ')}>
+    Foley Forward Comprehensive Plan</a>
+  </div>
+);
 
 class Home extends Component {
   render() {
@@ -30,6 +60,10 @@ class Home extends Component {
        
         {/* Sections: categories, overview/intro, upcoming events, main street */}
         <div className={classes.clearfix} />
+        <div className={classes.insideXl}><PhotoCat TopDist="negative" /></div>
+        <div className={classes.clearfix} />
+
+
         <div className={classes.detsHome}>
           <div className={classes.insideNrw}>
             <p>
@@ -37,72 +71,37 @@ class Home extends Component {
               Downtown Foley is home to historic sites, unique restaurants, a variety of retailers and so much more.
               The area captivates visitors and residents alike with its picturesque beauty.
             </p>
+            <Link to="/about" class={classes.msLink}>Learn More About Foley</Link>
           </div>
         </div>
+        {/* <Collage /> */}
 
-        <div className={classes.serviceRow}>
-          <div className={[classes.ServiceBox, classes.Box1].join(' ')}>
-            {/* <a href={} className={classes.SboxTitle}>Dining</a> */}
-            <Link to="/directory#Dining" className={classes.SboxTitle}>Dining</Link>
-          </div>
-
-          <div className={[classes.ServiceBox, classes.Box2].join(' ')}>
-            {/* <div className={classes.SboxTitle}>Shopping</div> */}
-            <Link to="/directory#Shopping" className={classes.SboxTitle}>Shopping</Link>
-          </div>
-
-          <div className={[classes.ServiceBox, classes.Box3].join(' ')}>
-            {/* <div className={classes.SboxTitle}>Services</div> */}
-            <Link to="/directory#Services" className={classes.SboxTitle}>Services</Link>
-          </div>
-
-          <div className={[classes.ServiceBox, classes.Box4].join(' ')}>
-            {/* <div className={classes.SboxTitle}>Misc.</div> */}
-            <Link to="/directory#Misc" className={classes.SboxTitle}>Misc</Link>
-          </div>
+        <div class={classes.insideAlt}>
+          <ImageText textContent={textContent} image={ItPhoto1} alt="" addPadd="xtra" textFloat="RelativeBg" />
         </div>
 
-        <div className={classes.detsHome}>
+        <div className={classes.clearfix} />
+        <div className={classes.spacer5} />
+        <div class={classes.medDef}>
+          <ImageText textContent={textContent2} image={msLogo} alt="" gridType="CustomGridHome" textFloat="textRight" />
+        </div>
+
+
+        {/* <div className={classes.detsHome}>
           <div className={classes.insideNrw}>
             <p>
               Located at the heart of Baldwin County’s busiest intersection, Foley has significant commercial appeal.
               With professional offices sprinkled throughout the Main Street district and newly remodeled vacant buildings,
               this revitalized downtown area is attracting new, diverse buisnesses and potential downtown housing.
             </p>
-            <Link to="/listings">Check out our available properties</Link>
+            <Link to="/listings" class={classes.msLink}>View Available Properties</Link>
           </div>
-        </div>
+        </div> */}
 
 
 
-
-
-
-
-          {/* 
-
-
-            Among its traditional architecture and old-world style, 
-            downtown Foley features restaurants, gift shops, barbershops, antique markets and even a hidden spa for unwinding after a long day of shopping
-            Foley captivates visitors and residents alike with its picturesque beauty. 
-            The newly remodeled vacant buildings and downtown revitalization add to this area’s appeal, 
-            attracting new, diverse businesses and potential downtown housing. 
-            Professional offices are sprinkled among the Main Street district,
-            popular lunch destination due to its eclectic cuisine options, including Mediterranean, Italian, vegan, and Southern-style restaurants
-            Quaint coffee shops and local art shops can also be found in this charming area.
-
-            Brimming with history, downtown Foley is home to two city museums housed in their original, historic buildings, 
-            an “old time” soda fountain drugstore that has donned the same corner since 1929. 
-            The Holmes Medical Museum is housed in Baldwin County’s first hospital, and showcases extensive displays of medical equipment and patient rooms as 
-              they would have been in the 1930s and ’40s. 
-            The Foley Railroad Museum includes a model train exhibit, antique train cars, and train rides around the park. 
-              It is housed in the Depot, which was built in 1909, and has been the hub of activity in the City for over 60 years. 
-
-            Downtown Foley is also home to the Wilbourne Antique Rose Trail, which follows the route of the Louisville and Nashville Railroad into downtown Foley. 
-              You can walk the landscaped trail while enjoying the beauty and fragrance of hundreds of roses displayed in a variety of sizes and color. 
-
-            Located at the heart of Baldwin County’s busiest intersection, with an average of forty-thousand cars per day, Foley has significant commercial appeal, 
-              especially with its newly built pedestrian bridge connecting the shops of downtown with the park and city buildings allowing accessibility and walkability  */}
+        {/* <p>With the help of their first ever Main Street Director, Foley is working to implement 
+          Main Street Alabama’s four-step approach for downtown promotion, economic vitality, and community connectivity.</p> */}
       </div>
     );
   }

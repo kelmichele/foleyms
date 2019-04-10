@@ -16,8 +16,10 @@ import List from "./List";
 import Details from "./Details";
 
 import Amplify, { API } from 'aws-amplify';
-import awsmobile from './aws-exports';
-Amplify.configure(awsmobile);
+// import awsmobile from './aws-exports';
+// Amplify.configure(awsmobile);
+import aws_exports from './aws-exports';
+Amplify.configure(aws_exports);
 // let apiName = 'downtown';
 // let path = '/items';
 
@@ -99,6 +101,11 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className={classes.boxedBody}>
+          <div className={classes.inside}>
+            <button onClick={this.post}>POST</button>
+            <button onClick={this.get}>GET</button>
+            <button onClick={this.list}>LIST</button>
+          </div>
           <Content>{routes}</Content>
         </div>
 
@@ -166,11 +173,7 @@ class App extends Component {
                 <List list={this.state.list} loadDetailsPage={this.loadDetailsPage} />
               )}
           </div>
-        {/* <div className={classes.inside}>
-          <button onClick={this.post}>POST</button>
-          <button onClick={this.get}>GET</button>
-          <button onClick={this.list}>LIST</button>
-        </div> */}
+       
         <Footer />
       </div>
     );

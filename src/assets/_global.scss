@@ -105,7 +105,13 @@ hr{
 }
 .clearfix.btn {@include sec-default(); margin-top:20px;}
 
-.msLink {@include link(30%, $white); background-color: $msGreen; @include tshadowl(rgba($black, .3));}
+.msLink {@include link(30%, $white); background-color: $msGreen; @include tshadowl(rgba($black, .3));font-weight:$semi;
+  &.altColor{background-color: $black;}
+  &.invColor{background-color: $white; color:$msGreen; border:2px solid $msGreen}
+  &.inline{display: inline-block; width:auto;
+    &:last-child {margin-left: 15px;}
+  }
+}
 .textLink{font-weight: bold;
   &.und {text-decoration: underline; }
 }
@@ -119,7 +125,7 @@ ul {margin:0; list-style-type: none; padding-left: 0;}
 ul.disc li{list-style-type: disc;}
 
 a {text-decoration: none;
-  &:hover {opacity: .7;}
+  &:hover {opacity: .7; text-decoration: none;}
 }
 
 button{background: none; border:none; border-radius:0; font-family: $monte; font-size:inherit; color:inherit; font-weight:inherit; letter-spacing: inherit;}
@@ -138,3 +144,6 @@ button{background: none; border:none; border-radius:0; font-family: $monte; font
 }
 
 .msLogo {width:220px; padding:15px;}
+
+
+.Calendar{width:100%;}

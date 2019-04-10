@@ -5,7 +5,39 @@ import Social from '../../hoc/Social/Social';
 const footer = () => { 
   return (
     <div className={classes.Footer}>
-      <div className={classes.inside}>
+      <div className={classes.insideAlt}>
+        <div className={classes.FooterCol}>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Upcoming Events</li>
+          </ul>
+        </div>
+
+        <div className={classes.FooterCol}>
+          <ul>
+            <li>Business Directory</li>
+            <li>Available Property</li>
+            <li>Maps</li>
+          </ul>
+        </div>
+
+        <div className={classes.FooterCol}>
+          <ul>
+            <li>City of Foley</li>
+            <li>Demographics</li>
+            <li>Market Snapshot</li>
+            <li>Comprehensive Plan</li>
+          </ul>
+        </div>
+
+        <div className={classes.FooterCol}>
+          <ul>
+            <li>Board of Directors</li>
+            <li>Revitalization and Beautification Advisory Board</li>
+            <li>Foley Historical Commission</li>
+          </ul>
+        </div>
         <Social />  
       </div>
 

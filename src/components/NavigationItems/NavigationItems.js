@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./NavigationItems.scss";
 import Aux from "../../hoc/Aux/Aux";
+import Pdf1 from "../../Mkt-Snapshot2019.pdf";
+import Pdf2 from "../../FoleyFwdPlan_190320.pdf";
 
 class NavigationItems extends Component {
   render() {
@@ -31,6 +33,41 @@ class NavigationItems extends Component {
             </ul>
           </div>
         </li>
+
+        <li><NavLink to="#">Community Links</NavLink>
+          <div className={["uk-navbar-dropdown", classes.custDrop, classes.LgDrop].join(' ')}>
+            <ul className={classes.dropMenu}>
+              <li>
+                <a href="https://cityoffoley.org" target="_blank" className={classes.NavigationItems} rel="noopener noreferrer">
+                City of Foley</a>
+              </li>
+
+              <li>
+                <a href="https://cityoffoley.org/city-boards/#07ec64ca388885c49" target="_blank" className={classes.NavigationItems} rel="noopener noreferrer">
+                Revitalization and Beautification Advisory Board</a>
+              </li>
+
+              <li>
+                <a href="https://cityoffoley.org/city-boards/#bc56c55276cae12ca" target="_blank" className={classes.NavigationItems} rel="noopener noreferrer">
+                Foley Historical Commission</a>
+              </li>
+
+              <li>
+                <a href="https://cityoffoley.org/demographics/" target="_blank" className={classes.NavigationItems} rel="noopener noreferrer">
+                Demographics</a>
+              </li>
+
+              <li><a href={Pdf1} target="_blank" rel="noopener noreferrer" className={classes.NavigationItems}>
+                Market Snapshot
+              </a></li>
+              <li><a href={Pdf2} target="_blank" rel="noopener noreferrer" className={classes.NavigationItems}>
+                Foley Forward Comprehensive Plan
+              </a></li>
+
+            </ul>
+          </div>
+        </li>
+
 
       </Aux>
     );

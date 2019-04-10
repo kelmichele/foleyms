@@ -3,15 +3,17 @@ import classes from "./Directory.scss";
 import { Helmet } from "react-helmet";
 import Parallax from "../../../components/Parallax/Parallax";
 import phImage from "../../../assets/images/ph.jpg";
-// import Filter from "../../../components/Filter/Filter";
 import DropList from "../../../components/DropList/DropList";
 import bg1 from "../../../assets/images/mm-alfredo.jpg";
 import bg2 from "../../../assets/images/artCenter1.jpg";
+import Filter from "../../../components/Filter/Filter";
 
 // double check: 
   // let's get grillin, bobby's thrift, Hollis Ole Crush Antique Mall, All About Massage Therapy
   // Christine's alterations, colorz salon, gill's automotive, MANE (main?) attraction salon
   // mort swaim law, path to wellness
+
+  // IF THEY WANT TO MIRROR OAMS, USE DROPLIST 
 
 const hdLine = (
   <h1 className={classes.lightHd}>Business Directory</h1>
@@ -131,6 +133,11 @@ const directory = () => {
 
       <div className={classes.medDef}>
         <div className={classes.spacer6} />
+
+        <Filter />
+
+        <hr /><div className={classes.spacer6} />
+
         <DropList category="Dining" subcat="Get Your Dine On" BgImage={bg1} dropItems={diningList} />
         <DropList category="Shopping" subcat="Get Your Shop On" BgImage={bg2} dropItems={retailList} />
         <DropList category="Services" subcat="Get Your Serve On" BgImage={bg1} dropItems={serviceList} />

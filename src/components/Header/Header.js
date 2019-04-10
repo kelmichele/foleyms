@@ -7,11 +7,17 @@ import NavigationItems from "../../components/NavigationItems/NavigationItems";
 import { Link } from "react-router-dom";
 
 class Header extends Component {
+  
 
   render() {
+    // data-uk-sticky={actClass}
+    // const actClass = (
+    //   'cls-active: uk-navbar-sticky;'
+    // );
+    
     // if (window.location.pathname === '/') return null;
     return (
-      <div className={classes.Header} data-uk-sticky="sel-target: .HeaderDiv; cls-active: uk-navbar-sticky;">
+      <div className={classes.Header} data-uk-sticky="sel-target: .Header; cls-active: uk-navbar-sticky;">
        {/* data-uk-sticky="sel-target: .Header; cls-active: uk-navbar-sticky;"> */}
         <div className={classes.insideXl}>
 
