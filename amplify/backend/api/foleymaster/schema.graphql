@@ -1,0 +1,6 @@
+type Buslisting @model {
+  id: ID!
+  name: String!
+  category: String
+  website: String
+}

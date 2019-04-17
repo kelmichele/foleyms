@@ -1,3 +1,8 @@
 @import './assets/global.scss';
 @import './assets/variables.scss';
 @import './assets/mixins.scss';
+
+
+.BuslistingsListLoader, .BuslistingDetails {
+  @include sec-default();
+}
