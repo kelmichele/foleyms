@@ -101,11 +101,11 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className={classes.boxedBody}>
-          <div className={classes.inside}>
+          {/* <div className={classes.inside}>
             <button onClick={this.post}>POST</button>
             <button onClick={this.get}>GET</button>
             <button onClick={this.list}>LIST</button>
-          </div>
+          </div> */}
           <Content>{routes}</Content>
         </div>
 

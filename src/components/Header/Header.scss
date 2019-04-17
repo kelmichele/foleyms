@@ -8,13 +8,15 @@
 
   .HeaderDiv{background-color: $white; border-bottom: $border; }
   // box-shadow: 0px 2px 2px rgba($black,.1); box-shadow: 0 1px 33px rgba(26,37,46,0.1), inset 0 1px 0 rgba(255,255,255,0.35);
-  .LogoHd, nav { display: inline-block; float:none; vertical-align: top;} 
-  nav{min-width:50%;}
-  .LogoHd {width: 150px; padding:10px;}
+  .LogoHd, nav { display: inline-block; float:none;}
+  nav{min-width:70%; float:right;}
+  .LogoHd {width:20%; padding:10px 0 15px; margin-left: 7%;
+    // img{width: 200px;}
+  }
   
   .ocNavBtn {display: none;}
   .custNav {@include sec-default();
-    li {display:inline-block; float: none; margin: 20px 1% 0;}
+    li {display:inline-block; float: none; margin: 40px 1% 0;}
     li a {color: $black; font-size:16px; text-transform: none;font-family:$monte;}
   }
 

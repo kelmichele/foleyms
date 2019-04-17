@@ -68,7 +68,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "foleyms-20190405104601-deployment",
-					"S3Key": "amplify-builds/foleyresource-1554480711-latest-build.zip"
+					"S3Key": "amplify-builds/foleyresource-1554931233-latest-build.zip"
 				}
 			}
 		},
