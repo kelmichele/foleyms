@@ -3,7 +3,7 @@
 @import '../../assets/mixins.scss';
 
 .Content {@include sec-default();
-  padding:0px 0 50px;
+  // padding:0px 0 50px;
   // justify-content: center;
   background-color: $msLt; 
   // box-shadow:0px 5px 8px rgba($black,.1);
