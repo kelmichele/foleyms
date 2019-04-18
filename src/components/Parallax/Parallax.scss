@@ -12,9 +12,12 @@
   &.styleHd {height: 200px;
     h1{margin-top: 55px;}
   }
+  &.styleHdLg {height: 300px;
+    h1{margin-top: 55px;}
+  }
 
   @include bp(tn) {
-    &.styleHd {height: auto;}
+    &.styleHd,&.styleHdLg {height: auto;}
   }
 
   @include bp(md) {
