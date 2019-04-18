@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import classes from "./Header.scss";
 // import logo from "../../assets/images/msaRedRGB.jpg";
-import logo from "../../assets/images/FMS-concept.png";
+import logo from "../../assets/images/FMS-teal.png";
 import NavigationItems from "../../components/NavigationItems/NavigationItems";
 import { Link } from "react-router-dom";
 

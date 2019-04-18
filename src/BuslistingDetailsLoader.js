@@ -13,6 +13,7 @@ const GetBuslisting = `query GetBuslisting($id: ID!) {
 }
 `;
 
+// React.Component 
 class BuslistingDetailsLoader extends Component {
   render() {
     return (

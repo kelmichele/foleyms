@@ -14,53 +14,13 @@ import Directory from "./hoc/Pages/Directory/Directory";
 // import BuslistingsListLoader from "./BuslistingsListLoader";
 // import BuslistingDetailsLoader from "./BuslistingDetailsLoader";
 
-// import Amplify, {} from 'aws-amplify';
-import Amplify, { API, graphqlOperation } from 'aws-amplify';
+// import Amplify, {API} from 'aws-amplify';
+import Amplify, { graphqlOperation } from 'aws-amplify';
 import aws_exports from './aws-exports';
 import { Connect } from 'aws-amplify-react';
 Amplify.configure(aws_exports);
 
 
-
-
-
-const ListBuslistings = `query ListBuslistings {
-    listBuslistings(limit: 9999) {
-        items {
-          id
-          name
-          category
-          website
-        }
-    }
-}`;
-
-class BuslistingsListLoader extends Component {
-  onNewBuslisting = (prevQuery, newData) => {
-    // When we get data about a new buslisting, we need to put in into an object 
-    // with the same shape as the original query results, but with the new data added as well
-    let updatedQuery = Object.assign({}, prevQuery);
-    updatedQuery.listBuslistings.items = prevQuery.listBuslistings.items.concat([newData.onCreateBuslisting]);
-    return updatedQuery;
-  }
-
-  render() {
-    return (
-      <Connect
-        query={graphqlOperation(ListBuslistings)}
-      // subscription={graphqlOperation(SubscribeToNewBuslistings)}
-      // onSubscriptionMsg={this.onNewBuslisting}
-      >
-        {({ data, loading }) => {
-          if (loading) { return <div>Loading...</div>; }
-          if (!data.listBuslistings) return;
-
-          return <BuslistingsList buslistings={data.listBuslistings.items} />;
-        }}
-      </Connect>
-    );
-  }
-}
 function makeComparator(key, order = 'asc') {
   return (a, b) => {
     if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) return 0;
@@ -76,7 +36,27 @@ function makeComparator(key, order = 'asc') {
   };
 }
 
-class BuslistingsList extends Component {
+const ListBuslistings = `query ListBuslistings {
+    listBuslistings(limit: 9999) {
+        items {
+          id
+          name
+          category
+          website
+        }
+    }
+}`;
+
+const GetBuslisting = `query GetBuslisting($id: ID!) {
+  getBuslisting(id: $id) {
+    id
+    name
+    category
+    website
+  }
+}
+`;
+class BuslistingsList extends React.Component {
   buslistingItems() {
     return this.props.buslistings.sort(makeComparator('name')).map(buslisting =>
       <li key={buslisting.id}>
@@ -87,8 +67,8 @@ class BuslistingsList extends Component {
 
   render() {
     return (
-      <div className={classes.BuslistingsListLoader}>
-        <h3 style={{ marginBottom: '10px' }}>My Buslistings</h3>
+      <div className={classes.BuslistingsList}>
+        <h3>My Buslistings</h3>
         <ul>
           {this.buslistingItems()}
         </ul>
@@ -96,17 +76,9 @@ class BuslistingsList extends Component {
     );
   }
 }
-const GetBuslisting = `query GetBuslisting($id: ID!) {
-  getBuslisting(id: $id) {
-    id
-    name
-    category
-    website
-  }
-}
-`;
 
-class BuslistingDetailsLoader extends Component {
+
+class BuslistingDetailsLoader extends React.Component {
   render() {
     return (
       <Connect query={graphqlOperation(GetBuslisting, { id: this.props.id })}>
@@ -121,19 +93,46 @@ class BuslistingDetailsLoader extends Component {
   }
 }
 
+
 class BuslistingDetails extends Component {
   render() {
     return (
       <div className={classes.BuslistingDetails}>
-        <h3>{this.props.buslisting.name}</h3>
-        <p>TODO: Allow photo uploads</p>
-        <p>TODO: Show photos for this buslisting</p>
+      xxxxxxxxxxxxx
+        <h3>HI {this.props.buslisting.name}</h3>
+        <p>{this.props.buslisting.category}</p>
+        <p>{this.props.buslisting.website}</p>
+        
       </div>
     )
   }
 }
 
 
+class BuslistingsListLoader extends React.Component {
+  onNewBuslisting = (prevQuery, newData) => {
+    // When we get data about a new buslisting, we need to put in into an object 
+    // with the same shape as the original query results, but with the new data added as well
+    let updatedQuery = Object.assign({}, prevQuery);
+    updatedQuery.listBuslistings.items = prevQuery.listBuslistings.items.concat([newData.onCreateBuslisting]);
+    return updatedQuery;
+  }
+
+  render() {
+    return (
+      <Connect
+        query={graphqlOperation(ListBuslistings)}
+      >
+        {({ data, loading }) => {
+          if (loading) { return <div>Loading...</div>; }
+          if (!data.listBuslistings) return;
+
+          return <BuslistingsList buslistings={data.listBuslistings.items} />;
+        }}
+      </Connect>
+    );
+  }
+}
 
 
 
@@ -149,7 +148,8 @@ class App extends Component {
         <Route path="/events" component={Events} />
         <Route path="/listings" component={Listings} />
         <Route path="/directory" component={Directory} />
-        <Route path="/" exact={true} component={BuslistingsListLoader} />
+        <Route path="/table" exact component={BuslistingsListLoader} />
+
         <Route
           path="/buslistings/:buslistingId"
           render={() => <div><NavLink to='/'>Back to Buslistings list</NavLink></div>}
@@ -165,19 +165,8 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className={classes.boxedBody}>
-          {/* <div className={classes.inside}>
-            <button onClick={this.post}>POST</button>
-            <button onClick={this.get}>GET</button>
-            <button onClick={this.list}>LIST</button>
-          </div> */}
-
           <Content>{routes}</Content>
-
-          <div className={classes.inside}>
-            <BuslistingsListLoader />
-          </div>
         </div>
-
         <Footer />
       </div>
     );
@@ -185,3 +174,4 @@ class App extends Component {
 }
 
 export default App;
+

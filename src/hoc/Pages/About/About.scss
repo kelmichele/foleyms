@@ -11,33 +11,39 @@
 .boardPage {
   h1{margin-top: -85px; color:$white; text-align:center; @include tshadowl(rgba($black,.4));}
   
-  .boardBody{@include sec-default(); text-align: center; margin-top:20px; position:relative; background-color: $msLt;}
+  .boardBody{@include sec-default(); text-align: center; margin-top:50px; position:relative; background-color: $msLt;}
+  
   h3{padding-bottom:5px; border-bottom:$border; margin-bottom: 20px; font-weight:bold;
     color: $msGreen; font-size:30px; letter-spacing: 1px; font-family: $gochi;
   }
 
-  // .officers li, .members li {display: inline-block; width:33%; float:none; vertical-align: top;}
-  // .officers li{width:40%;}
-
-  .officers, .members{display: inline-block; width:76%; float:none; vertical-align: top;}
-  .officers{width:18%; float:left;}
-  .members {float:right;
+  .members{@include sec-default();
     li{display: inline-block; width:33%; float:none; vertical-align: top;}
   }
 
   li, a{margin-bottom: 40px; font-size: 18px; font-weight:$semi; line-height: 1.2em;
-    span {font-size:14px; color: $msRed; font-weight:normal; font-style: italic;}
+    span {font-size:14px; color: $msRed; color:rgb(105, 105, 105); font-weight:normal; font-style: italic;}
     b{font-size:16px;}
   }
 
-  .officers li{margin-bottom: 20px;}
+  .OfficerBox {@include sec-default(); padding:20px 0; background-color: $msGreen; text-align:center;
+    margin: 40px 0;
+    h3{border-color: rgba($msCream,.25); color:$white; @include tshadowl(rgba($black,.35));}
+    .officers {@include sec-default(); }
+    li{display: inline-block; float:none; vertical-align: top; width:24%; line-height:1.3em;}
+    li, a{ font-size: 18px; color:$white;@include tshadowl(rgba($black,.25));
+      span {color:$white;}
+    }
+  }
+
 }
 
 
-.relTitle {@include sec-default(); padding:70px 0;
+.relTitle {@include sec-default(); padding:70px 0 0px;
   position: relative; z-index: 0; 
-  &::before{@include before(); background-color: $msGreen; height:50%;}
+  &::before{@include before(); background-color: $msGreen; height:75%;}
 
-  .imgCenter{width:85%; @include center-block();}
-  h1{margin-top:0;}
+  .imgCenter{width:80%; @include center-block();}
+  h2{font-size:2rem; margin: 0; font-family: $gochi; color: $white; font-weight: bold; text-align: center; @include tshadowl(rgba($black,.5)); line-height:1em;}
+  h1{margin-top:0; color: $white; font-size:2.5rem; margin-bottom: 10px; font-family: $monte; letter-spacing:1px; font-weight:bold; text-transform: uppercase}
 }

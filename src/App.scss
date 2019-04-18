@@ -3,6 +3,8 @@
 @import './assets/mixins.scss';
 
 
-.BuslistingsListLoader, .BuslistingDetails {
+.BuslistingsListLoader, .BuslistingDetails, .BuslistingDetailsLoader, .BuslistingsList {
   @include sec-default();
+  color:$black;
+  min-height:500px;  padding:80px;
 }

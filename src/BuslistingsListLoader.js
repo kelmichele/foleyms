@@ -4,16 +4,17 @@ import { Connect } from 'aws-amplify-react';
 import BuslistingsList from "./BuslistingsList";
 
 const ListBuslistings = `query ListBuslistings {
-    listBuslistings(limit: 9999) {
-        items {
-          id
-          name
-          category
-          website
-        }
+  listBuslistings(limit: 9999) {
+    items {
+      id
+      name
+      category
+      website
     }
+  }
 }`;
 
+// class BuslistingsListLoader extends React.Component {
 class BuslistingsListLoader extends Component {
   onNewBuslisting = (prevQuery, newData) => {
     // When we get data about a new buslisting, we need to put in into an object 

@@ -1,13 +1,13 @@
 import React from "react";
 import classes from "./About.scss";
 import { Helmet } from "react-helmet";
-// import PageHeader from "../../../components/PageHeader/PageHeader";
-import Parallax from "../../../components/Parallax/Parallax";
-import hero from "../../../assets/images/board.jpg";
+// import Parallax from "../../../components/Parallax/Parallax";
+// import hero from "../../../assets/images/board.jpg";
+import heroRel from "../../../assets/images/boardNrw.jpg";
 
-const plaxHd1 = (
-<h1 className={classes.lightHd}>Board of Directors</h1>
-);
+// const plaxHd1 = (
+// <h1 className={classes.lightHd}>Board of Directors</h1>
+// );
 
 const board = () => {
   return(
@@ -17,22 +17,23 @@ const board = () => {
         <meta name="description" content="" />
       </Helmet>
 
-      <Parallax
+      {/* <Parallax
         plaxImage={hero}
         // plaxShadow="true"
         plaxHeadline={plaxHd1}
         // plaxContent={plaxContent1}
         // bgSize="100%"
         plaxHeight="300px"
-      />
+      /> */}
 
-      {/* <div className={classes.relTitle}>
-        {plaxHd1}
-        <img src={hero} class={classes.imgCenter} alt="board of directors"/>
-      </div> */}
+      <div className={classes.relTitle}>
+        {/* <h2>Meet Our</h2> */}
+        <h1>Board of Directors</h1>
+        <img src={heroRel} class={classes.imgCenter} alt="board of directors"/>
+      </div>
 
       <div className={classes.boardBody}>
-        <div className={classes.med2Def}>
+        <div className={classes.insideNrw}>
           <div className={classes.intro}>
             <p>Main Street is a stand alone 501(c)6 governed by the Main Street Board of Directors. The board members serve staggered terms for up to three years, and represent a cross section of our business community.</p>
             <p>To get involved with Foley Main Street Board of Directors, you may email <a href="mailto: cwatkins@was-design.com">Chad Watkins </a>
@@ -40,15 +41,19 @@ const board = () => {
           </div>
         </div>
 
-        <div className={classes.medDef}>
-          <ul className={classes.officers}>
-            <h3 className={classes.ofc}>Officers</h3>
-            <li><a href="mailto: cwatkins@was-design.com"><b>President</b><br />Chad Watkins<br /><span>WAS Design</span></a></li>
-            <li><a href="mailto: jshanks1975@gmail.com"><b>Vice President</b><br />Justin Shanks<br /><span>Foley Bike Shop</span></a></li>
-            <li><a href="mailto: flake@mediacombb.net"><b>Secretary</b><br />Barbara Ingram<br /><span>Economic Development</span></a></li>
-            <li><b>Treasurer</b><br />Ryan Wood<br /><span>Alabama Credit Union</span></li>
-          </ul>
+        <div className={classes.OfficerBox}>
+          <div className={classes.medDef}>
+            <ul className={classes.officers}>
+              <h3 className={classes.ofc}>Officers</h3>
+              <li><a href="mailto: cwatkins@was-design.com"><b>President</b><br />Chad Watkins<br /><span>WAS Design</span></a></li>
+              <li><a href="mailto: jshanks1975@gmail.com"><b>Vice President</b><br />Justin Shanks<br /><span>Foley Bike Shop</span></a></li>
+              <li><a href="mailto: flake@mediacombb.net"><b>Secretary</b><br />Barbara Ingram<br /><span>Economic Development</span></a></li>
+              <li><b>Treasurer</b><br />Ryan Wood<br /><span>Alabama Credit Union</span></li>
+            </ul>
+          </div>
+        </div>
 
+        <div className={classes.medDef}>
           <ul className={classes.members}>
             <h3>Members</h3>
             <li>Courtney Brett<br /><span>Casburn Architecture</span></li>

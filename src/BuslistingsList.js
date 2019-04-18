@@ -17,20 +17,20 @@ function makeComparator(key, order = 'asc') {
   };
 }
 
+// React.
 class BuslistingsList extends Component {
   buslistingItems() {
     return this.props.buslistings.sort(makeComparator('name')).map(buslisting =>
       <li key={buslisting.id}>
-        {/* <NavLink to={`/buslistings/${buslisting.id}`}>{buslisting.id} - {buslisting.name}</NavLink> */}
-        <NavLink to="/buslistings/:buslistingName">{buslisting.name}</NavLink>
+        <NavLink to={`/buslistings/${buslisting.id}`}>{buslisting.name}</NavLink>
       </li>
     );
   }
 
   render() {
     return (
-      <div className={classes.BuslistingsListLoader}>
-        <h3 style={{ marginBottom: '10px' }}>My Buslistings</h3>
+      <div className={classes.BuslistingsList}>
+        <h3>My Buslistings</h3>
         <ul>
           {this.buslistingItems()}
         </ul>
@@ -38,6 +38,5 @@ class BuslistingsList extends Component {
     );
   }
 }
-
 
 export default BuslistingsList;
