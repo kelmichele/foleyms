@@ -12,7 +12,7 @@
   &.Teal .Overlay{background-color: $msGreen;}
 
   // h1{color: $black;}
-  h1{
+  h1{ font-weight:bold; 
     &.Light {color: $white; @include tshadowl(rgba($black,.5));}
     &.Dark {color: $black;}
   }

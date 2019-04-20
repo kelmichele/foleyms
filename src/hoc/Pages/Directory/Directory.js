@@ -8,7 +8,7 @@ import bg1 from "../../../assets/images/mm-alfredo.jpg";
 import bg2 from "../../../assets/images/artCenter1.jpg";
 import Filter from "../../../components/Filter/Filter";
 
-// double check: 
+// double check:  
   // let's get grillin, bobby's thrift, Hollis Ole Crush Antique Mall, All About Massage Therapy
   // Christine's alterations, colorz salon, gill's automotive, MANE (main?) attraction salon
   // mort swaim law, path to wellness

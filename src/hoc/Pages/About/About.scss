@@ -2,17 +2,14 @@
 @import '../../../assets/variables.scss';
 @import '../../../assets/mixins.scss';
 
-.aboutPage, .boardPage{@include sec-default(); }
-
-.abBody{@include sec-default();}
+.aboutPage, .boardPage,.abBody,.ContactBody{@include sec-default(); }
 
 .aboutPage {
-  .intro p {font-size:19px;
-    // display: inline-block; width:46%; vertical-align: top;
-    // font-size:16px; text-align: left;
-    // &.left{float:left;color: $msGreen; font-size:19px;}
-    // &.right{float:right; margin-top: 0;}
+  .intro p {font-size:17px;
+    // span{font-family: $sign; font-size: 30px;}
   }
+  .fullRow.Sec1, .fullRow.Sec2{padding:40px 0 0px; text-align:center;}
+  .fullRow.Sec2 p {width:90%; @include center-block();}
 }
 
 .boardPage {
@@ -21,7 +18,7 @@
   .boardBody{@include sec-default(); text-align: center; margin-top:50px; position:relative; background-color: $msLt;}
   
   h3{padding-bottom:5px; border-bottom:$border; margin-bottom: 20px; font-weight:bold;
-    color: $msGreen; font-size:30px; letter-spacing: 1px; font-family: $gochi;
+    color: $msGreen; font-size:35px; letter-spacing: 2px; font-family: $sign;
   }
 
   .members{@include sec-default();
@@ -46,10 +43,11 @@
 }
 
 .relTitle {@include sec-default(); padding:70px 0 0px;
+  margin-top:50px;
   text-align: center;
   position: relative; z-index: 0;  
   &::before{@include before(); background-color: $msGreen; height:75%;}
-  &.BgAlt::before{background-color:#383839; height:45%;}
+  &.BgAlt::before{background-color:$dark; height:45%;}
 
   .imgCenter{width:80%; @include center-block();}
   .TextBox {@include sec-default(); padding:60px 0 30px;}
@@ -61,4 +59,31 @@
   img{display: inline-block; width:49.7%;}
   .ImgL{float:left;}
   .ImgR{float:right;}
+}
+
+.ContactBody{padding: 60px 0;
+  .LeftSide, .RightSide {display: inline-block; width:59%;}
+  .RightSide {float:right; width:38%;}
+  .LeftSide {
+    margin-top: 5%;
+    p{font-size:18px;}
+    p.ConInfo{margin-left:30px; padding-left:15px; border-left:2px solid $msGreen;
+    }
+  }
+
+  .PhotoBoxLink {@include sec-default(); margin-bottom:15px;
+    @include sec-bgimage2();
+    padding: 35px 0 0; text-align:center;
+    height:70px;
+    position: relative; z-index:0;
+    color:$white; font-weight: bold; @include tshadowl(rgba($black,.5)); font-size:25px;letter-spacing: .4px;
+    font-family: $sign;font-size: 30px; letter-spacing: 1px;
+
+    &::before{@include before();background-color: rgba($black, .5);}
+    &::after{@include after(); border:2px solid $white; width:90%; height: 80%; margin-left:5%; bottom: 10%;}
+    
+    &.tour{background-image: url(../../../assets/images/mapSS.png);}
+    &.board{background-image: url(../../../assets/images/board.jpg);}
+    &.property{background-image: url(../../../assets/images/sAlston.png);}
+  }
 }

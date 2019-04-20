@@ -18,7 +18,7 @@ const photoCat = (props) => {
       </div>
 
       <div className={[classes.ServiceBox, classes.Box4].join(' ')}>
-        <Link to="/directory#Misc" className={classes.SboxTitle}>More</Link>
+        <Link to="/directory#Misc" className={classes.SboxTitle}>Misc.</Link>
       </div>
     </div>
   )

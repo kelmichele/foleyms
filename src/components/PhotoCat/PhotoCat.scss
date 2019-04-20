@@ -24,8 +24,14 @@
 }
 
 .photoCat.negative{margin-top:-50px;
-  .ServiceBox{
-     margin:0 .5%;
-    a{font-size:30px;}
+  .ServiceBox{margin:0 .5%;
+    &::before{background-color: rgba($black, .3);}
+
+    a{font-size:30px;
+      font-family: $sign; font-size: 40px; letter-spacing: 2px;
+    }
+    &.Box1{background-image: url(../../assets/images/mm-alfredo.jpg);}
+    &.Box2{background-image: url(../../assets/images/artCenter1.jpg);}
+    &.Box4{background-image: url(../../assets/images/downtown1.jpg);}
   }
 }

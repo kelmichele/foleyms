@@ -17,7 +17,7 @@ class NavigationItems extends Component {
             <ul className={classes.dropMenu}>
               <li><NavLink to="/directory" className={classes.NavigationItems}>Business Directory</NavLink></li>
               <li><NavLink to="/listings" className={classes.NavigationItems}>Available Property</NavLink></li>
-              <li><NavLink to="/listings" className={classes.NavigationItems}>Maps</NavLink></li>
+              {/* <li><NavLink to="/listings" className={classes.NavigationItems}>Maps</NavLink></li> */}
             </ul>
           </div>
         </li>
