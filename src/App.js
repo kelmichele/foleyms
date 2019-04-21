@@ -11,15 +11,15 @@ import Contact from "./hoc/Pages/About/Contact";
 import Events from "./hoc/Pages/Events/Events";
 import Listings from "./hoc/Pages/Listings/Listings";
 import Directory from "./hoc/Pages/Directory/Directory";
+import Business from "./hoc/Pages/Business/Business";
 // import BuslistingsListLoader from "./BuslistingsListLoader";
 // import BuslistingDetailsLoader from "./BuslistingDetailsLoader";
 
-// import Amplify, {API} from 'aws-amplify';
-import Amplify, { graphqlOperation } from 'aws-amplify';
+import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import aws_exports from './aws-exports';
+// withAuthenticator
 import { Connect } from 'aws-amplify-react';
 Amplify.configure(aws_exports);
-
 
 function makeComparator(key, order = 'asc') {
   return (a, b) => {
@@ -47,6 +47,17 @@ const ListBuslistings = `query ListBuslistings {
     }
 }`;
 
+const SubscribeToNewBuslistings = `
+  subscription OnCreateBuslisting {
+    onCreateBuslisting {
+      id
+      name
+      category
+      website
+    }
+  }
+`;
+
 const GetBuslisting = `query GetBuslisting($id: ID!) {
   getBuslisting(id: $id) {
     id
@@ -56,6 +67,58 @@ const GetBuslisting = `query GetBuslisting($id: ID!) {
   }
 }
 `;
+
+class NewBuslisting extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      buslistingName: ''
+    };
+  }
+
+  handleChange = (event) => {
+    let change = {};
+    change[event.target.name] = event.target.value;
+    this.setState(change);
+  }
+
+  handleSubmit = async (event) => {
+    event.preventDefault();
+    const NewBuslisting = `mutation NewBuslisting($name: String!) {
+      createBuslisting(input: {name: $name}) {
+        id
+        name
+        category
+        website
+      }
+    }`;
+
+    const result = await API.graphql(graphqlOperation(NewBuslisting, { name: this.state.buslistingName }));
+    console.info(`Created buslisting with id ${result.data.createBuslisting.id}`);
+    this.setState({ buslistingName: '' })
+  }
+
+  render() {
+    return (
+      <div>
+        <h3>Add a new buslisting</h3>
+        <input
+          type='text'
+          placeholder='New Buslisting Name'
+          icon='plus'
+          iconPosition='left'
+          action={{ content: 'Create', onClick: this.handleSubmit }}
+          name='buslistingName'
+          value={this.state.buslistingName}
+          onChange={this.handleChange}
+        />
+      </div>
+    )
+  }
+}
+
+
+
 class BuslistingsList extends React.Component {
   buslistingItems() {
     return this.props.buslistings.sort(makeComparator('name')).map(buslisting =>
@@ -98,11 +161,11 @@ class BuslistingDetails extends Component {
   render() {
     return (
       <div className={classes.BuslistingDetails}>
-      xxxxxxxxxxxxx
+        xxxxxxxxxxxxx
         <h3>HI {this.props.buslisting.name}</h3>
         <p>{this.props.buslisting.category}</p>
         <p>{this.props.buslisting.website}</p>
-        
+
       </div>
     )
   }
@@ -122,6 +185,8 @@ class BuslistingsListLoader extends React.Component {
     return (
       <Connect
         query={graphqlOperation(ListBuslistings)}
+        subscription={graphqlOperation(SubscribeToNewBuslistings)}
+        onSubscriptionMsg={this.onNewBuslisting}
       >
         {({ data, loading }) => {
           if (loading) { return <div>Loading...</div>; }
@@ -136,7 +201,6 @@ class BuslistingsListLoader extends React.Component {
 
 
 
-
 class App extends Component {
   render() {
     let routes = (
@@ -148,11 +212,14 @@ class App extends Component {
         <Route path="/events" component={Events} />
         <Route path="/listings" component={Listings} />
         <Route path="/directory" component={Directory} />
+        <Route path="/business" component={Business} />
+
+        <Route path="/new" exact component={NewBuslisting} />
         <Route path="/table" exact component={BuslistingsListLoader} />
 
         <Route
           path="/buslistings/:buslistingId"
-          render={() => <div><NavLink to='/'>Back to Buslistings list</NavLink></div>}
+          render={() => <div><NavLink to='/table' className={classes.BackTo}>Back to Buslistings list</NavLink></div>}
         />
         <Route
           path="/buslistings/:buslistingId"
@@ -174,4 +241,6 @@ class App extends Component {
 }
 
 export default App;
+// export default withAuthenticator(App, { includeGreetings: true });
+// export default withAuthenticator(App);
 

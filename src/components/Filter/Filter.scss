@@ -6,7 +6,8 @@
 .filterList {@include sec-default(); text-align: center; margin:40px 0;
   li {display:inline-block; width: 16%; margin: 10px 1%; padding: 60px 5px 0; 
     height:200px; @include sec-bgimage('../../assets/images/foley4.jpg'); background-size: cover; position: relative; z-index: 0;
-    color:$white; font-weight: $semi; @include tshadowl(rgba($black,.5)); font-size:25px;letter-spacing: .4px;
+    color:$white; font-weight: $semi; @include tshadowl(rgba($black,.5)); font-size:22px;letter-spacing: .4px;
+    font-family: $sign;
 
     &::before{@include before(); background-color: rgba($black, .5);}
     &:first-child{margin-left: 0;}
@@ -19,6 +20,12 @@
     &.serve{background-image: url(../../assets/images/foley4.jpg); background-position: bottom right;}
   }
 }
-.filterContent {@include sec-default(); padding:0 4%;
-  li{margin-bottom:10px;}
+.filterContent {@include sec-default(); 
+// padding:0 4%;
+  text-align:center;
+  li{margin-bottom:10px;
+    display:inline-block; width:28%; margin: 10px 1.5%; vertical-align: top;
+    padding: 20px 10px; background-color: $white; box-shadow: 0px 5px 10px rgba($black,.1);
+    text-align:center;
+  }
 }

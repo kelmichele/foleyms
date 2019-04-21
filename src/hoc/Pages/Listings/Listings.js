@@ -30,7 +30,7 @@ const listings = () => {
         <div className={classes.inside}>
           <div className={classes.realItem}>
             <a href={Listing1} target="_blank" rel="noopener noreferrer">
-              <img src={rl1} alt="real estate item" class={classes.imgResponsive} />
+              <img src={rl1} alt="real estate item" className={classes.imgResponsive} />
               <div className={classes.realTitle}>
                 222 S Alston St<br /> Foley, AL 36535<br />
                 <span>Commercial Building</span>
@@ -40,7 +40,7 @@ const listings = () => {
 
           <div className={classes.realItem}>
             <a href={Listing2} target="_blank" rel="noopener noreferrer">
-              <img src={rl2} alt="real estate item" class={classes.imgResponsive} />
+              <img src={rl2} alt="real estate item" className={classes.imgResponsive} />
               <div className={classes.realTitle}>
                 309 W Laurel Ave<br /> Foley, AL 36535<br />
                 <span>Office Space For Lease</span>
@@ -50,7 +50,7 @@ const listings = () => {
 
           <div className={classes.realItem}>
             <a href={Listing3} target="_blank" rel="noopener noreferrer">
-              <img src={rl3} alt="real estate item" class={classes.imgResponsive} />
+              <img src={rl3} alt="real estate item" className={classes.imgResponsive} />
               <div className={classes.realTitle}>
                 200 W Laurel Ave<br /> Foley, AL 36535<br />
                 <span>Office Space For Rent</span>

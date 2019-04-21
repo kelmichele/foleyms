@@ -3,9 +3,9 @@ import classes from "./About.scss";
 import { Helmet } from "react-helmet";
 // import PageHeader from "../../../components/PageHeader/PageHeader";
 import Parallax from "../../../components/Parallax/Parallax";
-import phImage from "../../../assets/images/TEMProses.jpg";
+import phImage from "../../../assets/images/pbRose.jpg";
 // import bodyImg2 from "../../../assets/images/mm-appetizer2.jpg";
-import bodyImg2 from "../../../assets/images/TEMPfountain.jpg";
+// import bodyImg2 from "../../../assets/images/downtown3.jpg";
 import ImageText from "../../../components/ImageText/ImageText";
 import bodyImg3 from "../../../assets/images/foley6.jpg";
 import bodyImg4 from "../../../assets/images/TEMPplaza.jpg";
@@ -13,6 +13,7 @@ import ImgRow1 from "../../../assets/images/modelTrain1.jpg";
 import ImgRow2 from "../../../assets/images/railroad1.jpg";
 import Aux from "../../../hoc/Aux/Aux";
 // import Pdf from "../../../foley-walking-map.pdf";
+import { Link } from "react-router-dom";
 
 
 const pH1 = (
@@ -33,19 +34,20 @@ const textContent1 = (
       especially with its newly built pedestrian bridge connecting the shops of downtown with the park and city buildings allowing accessibility and walkability 
       for visitors and residents alike.
     </p>
+    <Link to="/listings" className={classes.msLink}>View Available Property <span uk-icon="arrow-right"></span></Link>
   </div>
 );
 
-const tc2 = (
-  <div>
-    <p>The newly remodeled vacant buildings and downtown revitalization add to this area’s appeal, thus attracting a plethora of new,
-    diverse businesses and potential downtown housing. 
-    Professional offices are sprinkled among the Main Street district, offering conveniences to the nearby residents. </p>
-    <p>It has also become a popular lunch destination due to its eclectic cuisine options,
-    including Mediterranean, Italian, vegan, and Southern-style restaurants all within a stone’s throw of one another.
-    Quaint coffee shops and local art shops can also be found in this charming area.</p>
-  </div>
-);
+// const tc2 = (
+//   <div>
+//     <p>The newly remodeled vacant buildings and downtown revitalization add to this area’s appeal, thus attracting a plethora of new,
+//     diverse businesses and potential downtown housing. 
+//     Professional offices are sprinkled among the Main Street district, offering conveniences to the nearby residents. </p>
+//     <p>It has also become a popular lunch destination due to its eclectic cuisine options,
+//     including Mediterranean, Italian, vegan, and Southern-style restaurants all within a stone’s throw of one another.
+//     Quaint coffee shops and local art shops can also be found in this charming area.</p>
+//   </div>
+// );
 
 const about = () => {
   return (
@@ -65,16 +67,25 @@ const about = () => {
           <div className={classes.intro}>
             {textContent0}
           </div>
+
+          <div className={classes.TextRow}>
+            <p className={classes.Uno}>The newly remodeled vacant buildings and downtown revitalization add to this area’s appeal, thus attracting a plethora of new,
+            diverse businesses and potential downtown housing. 
+            Professional offices are sprinkled among the Main Street district, offering conveniences to the nearby residents. </p>
+            <p className={classes.Dos}>It has also become a popular lunch destination due to its eclectic cuisine options,
+            including Mediterranean, Italian, vegan, and Southern-style restaurants all within a stone’s throw of one another.
+            Quaint coffee shops and local art shops can also be found in this charming area.</p>
+          </div>
         </div>
       </div>
 
 
       <div className={classes.abBody}>
-        <div className={classes.med2Def}>
+        {/* <div className={classes.med2Def}>
           <ImageText textContent={tc2} image={bodyImg2} addPadd="xtra" textFloat="textRight" gridType="imageBig" /> 
-        </div>
+        </div> */}
 
-        <div className={[classes.relTitle, classes.BgAlt].join(' ')}>
+        <div className={[classes.relTitle, classes.BgNone].join(' ')}>
           <img src={bodyImg4} className={[classes.imgResponsive, classes.imgCenter].join(' ')} alt="Foley" />
           <div className={classes.insideNrw}>
             <div className={classes.TextBox}>
@@ -88,25 +99,57 @@ const about = () => {
         </div>
 
 
-        <div className={classes.ImgRow}>
+        {/* <div className={classes.ImgRow}>
           <div className={classes.inside}>
             <img src={ImgRow1} className={[classes.imgResponsive, classes.ImgL].join(' ')} alt="Foley" />
             <img src={ImgRow2} className={[classes.imgResponsive, classes.ImgR].join(' ')} alt="Foley" />
           </div>
+        </div> */}
+
+        <div className={[classes.ImgRow, "uk-position-relative uk-visible-toggle uk-light"].join(' ')} tabindex="-1" uk-slider="center: true; autoplay: true;">
+          <div className={classes.insideAlt}>
+              <ul className={[classes.ImgSlides, "uk-slider-items uk-grid"].join(' ')}>
+              <li className={classes.SlideSize}>
+                <div className="uk-panel">
+                  <img src={ImgRow1} alt="" />
+                  {/* <div className="uk-position-center uk-panel"><h1>1</h1></div> */}
+                </div>
+              </li>
+
+              <li className={classes.SlideSize}>
+                <div className="uk-panel">
+                  <img src={ImgRow2} alt="" />
+                </div>
+              </li>
+
+              <li className={classes.SlideSize}>
+                <div className="uk-panel">
+                  <img src={ImgRow1} alt="" />
+                </div>
+              </li> 
+
+              <li className={classes.SlideSize}>
+                <div className="uk-panel">
+                  <img src={ImgRow2} alt="" />
+                </div>
+              </li>
+            </ul>
+            <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+          </div>
         </div>
 
-          <div className={[classes.fullRow, classes.Sec2].join(' ')}>
-            <div className={classes.insideNrw}>
-              <p>Downtown Foley is also home to the Wilbourne Antique Rose Trail, which follows the route of the Louisville and Nashville Railroad into downtown Foley.
-                You can walk the landscaped trail while enjoying the beauty and fragrance of hundreds of roses displayed in a variety of sizes and color.
-              </p>
-            </div>
+        <div className={[classes.fullRow, classes.Sec2].join(' ')}>
+          <div className={classes.insideNrw}>
+            <p>Downtown Foley is also home to the Wilbourne Antique Rose Trail, which follows the route of the Louisville and Nashville Railroad into downtown Foley.
+              You can walk the landscaped trail while enjoying the beauty and fragrance of hundreds of roses displayed in a variety of sizes and color.
+            </p>
           </div>
-
-
+        </div>
 
         <div className={classes.medDef}>            
           <ImageText textContent={textContent1} image={bodyImg3} addPadd="xtra" textFloat="textRight" />
+          <div className={classes.spacer3} />
         </div>
       </div>
     </div>

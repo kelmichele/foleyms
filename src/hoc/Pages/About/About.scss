@@ -43,7 +43,7 @@
 }
 
 .relTitle {@include sec-default(); padding:70px 0 0px;
-  margin-top:50px;
+  // margin-top:50px;
   text-align: center;
   position: relative; z-index: 0;  
   &::before{@include before(); background-color: $msGreen; height:75%;}
@@ -53,12 +53,30 @@
   .TextBox {@include sec-default(); padding:60px 0 30px;}
   h2{font-size:2rem; margin: 0; font-family: $gochi; color: $white; font-weight: bold; text-align: center; @include tshadowl(rgba($black,.5)); line-height:1em;}
   h1{margin-top:0; color: $white; font-size:2.5rem; margin-bottom: 10px; font-family: $monte; letter-spacing:1px; font-weight:bold; text-transform: uppercase}
+
+  &.BgNone{padding:0 0 30px;
+    &::before{display:none;}
+    .imgCenter{width:75%;}
+  }
 }
 
-.ImgRow {@include sec-default(); padding:15px 0; text-align: center;
-  img{display: inline-block; width:49.7%;}
-  .ImgL{float:left;}
-  .ImgR{float:right;}
+.ImgRow {@include sec-default(); padding:80px 0; background-color: #f5f5f5;
+// padding:15px 0; text-align: center;
+//   img{display: inline-block; width:49.7%;}
+//   .ImgL{float:left;}
+//   .ImgR{float:right;}
+  .SlideSize{width: 70%; display:inline-block;}
+}
+
+.TextRow {@include sec-default();
+  p{display: inline-block; position:relative;
+    width:44%; text-align: justify;
+    // width:49%; text-align: left;
+  }
+  p.Uno{float:left;
+    &::before {@include before(); width:1px; left:112%; height:105%; margin-top:-2.5%; background-color: $black;}
+  }
+  p.Dos{float:right;}
 }
 
 .ContactBody{padding: 60px 0;
@@ -72,18 +90,30 @@
   }
 
   .PhotoBoxLink {@include sec-default(); margin-bottom:15px;
-    @include sec-bgimage2();
+    @include sec-bgimage2();background-position: center center;
     padding: 35px 0 0; text-align:center;
     height:70px;
     position: relative; z-index:0;
     color:$white; font-weight: bold; @include tshadowl(rgba($black,.5)); font-size:25px;letter-spacing: .4px;
     font-family: $sign;font-size: 30px; letter-spacing: 1px;
 
-    &::before{@include before();background-color: rgba($black, .5);}
+    &::before{@include before();background-color: rgba($black, .45);}
     &::after{@include after(); border:2px solid $white; width:90%; height: 80%; margin-left:5%; bottom: 10%;}
     
     &.tour{background-image: url(../../../assets/images/mapSS.png);}
     &.board{background-image: url(../../../assets/images/board.jpg);}
     &.property{background-image: url(../../../assets/images/sAlston.png);}
   }
+
+  .LeftSide {@include center-block(); margin:0 auto 50px;}
+  .RightSide{ @include sec-default();}
+  .PhotoBoxLink {
+    display: inline-block; width:30%; margin:20px 1%;
+  }
+}
+
+.Exec {@include sec-default(); text-align:left; margin-top:30px;padding-top:30px;
+  position: relative; z-index: 0;  
+  &::before{@include before(); background-color: $msGreen; height:190px;}
+  h3{color:$white; border-bottom:0;margin-bottom:35px;}
 }

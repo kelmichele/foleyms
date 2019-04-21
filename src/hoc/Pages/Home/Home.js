@@ -27,19 +27,19 @@ const plaxHd1 = (
 <h1 className={[classes.lightHd, classes.textCenter].join(' ')}>Downtown Foley</h1>
 );
 // const plaxContent1 = (
-//   <img src={vf} class={classes.centerBlock} />
+//   <img src={vf} className={classes.centerBlock} />
 // );
 
 // KP * DELETE COLLAGE COMPONENT??
 
 const textContent = (
   <div>  
-    <p class={classes.CustomP}>
+    <p className={classes.CustomP}>
       Located at the heart of Baldwin County’s busiest intersection, Foley has significant commercial appeal.
       With professional offices sprinkled throughout the Main Street district and newly remodeled vacant buildings,
       this revitalized downtown area is attracting new, diverse buisnesses and potential downtown housing.
     </p>
-    <Link to="/listings" class={classes.msLink}>View Available Properties</Link>
+    <Link to="/listings" className={classes.msLink}>View Available Properties</Link>
   </div>
 );
 
@@ -89,7 +89,7 @@ class Home extends Component {
         </div>
 
         <div className={classes.photo4}>
-          {/* <div class={classes.insideAlt}> */}
+          {/* <div className={classes.insideAlt}> */}
             <div className={[classes.ServiceBox, classes.Box1].join(' ')}>
               <Link to="/directory#Dining" className={classes.SboxTitle}>Eat.</Link>
               <img src={ti1} className={classes.PhotoBox} alt="placeholder alt" />
@@ -115,12 +115,12 @@ class Home extends Component {
           </div>
         </div>
 
-        {/* <div class={classes.insideAlt}>
+        {/* <div className={classes.insideAlt}>
           <ImageText textContent={textContent} image={ItPhoto1} alt="" addPadd="xtra" textFloat="RelativeBg" />
         </div> */}
 
         <div className={classes.MsSec} >
-          <div class={classes.medDef}>
+          <div className={classes.medDef}>
             <ImageText textContent={textContent2} image={msLogo} alt="" gridType="CustomGridHome" textFloat="textRight" />
           </div>
         </div>
