@@ -14,10 +14,10 @@
     &:last-child{margin-right: 0;}
 
     &.all{background-image: url(../../assets/images/foley1.jpg);}
-    &.shop{background-image: url(../../assets/images/foley7.jpg);}
-    &.dine{background-image: url(../../assets/images/foley8.jpg);}
-    &.attr{background-image: url(../../assets/images/foley9.jpg);}
-    &.serve{background-image: url(../../assets/images/foley4.jpg); background-position: bottom right;}
+    &.shop{background-image: url(../../assets/images/downtown2.jpg);}
+    &.dine{background-image: url(../../assets/images/mm-serving2.jpg);}
+    &.attr{background-image: url(../../assets/images/downtown4.jpg);}
+    &.serve{background-image: url(../../assets/images/foley1.jpg); background-position: bottom right;}
   }
 }
 .filterContent {@include sec-default(); 

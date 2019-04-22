@@ -4,30 +4,27 @@ import classes from "./Home.scss";
 import { HashLink as Link } from 'react-router-hash-link';
 
 import Parallax from "../../../components/Parallax/Parallax";
-import bg1 from "../../../assets/images/dogPark2.jpg";
+import bg1 from "../../../assets/images/Plaza.jpg";
 // import PhotoCat from "../../../components/PhotoCat/PhotoCat";
 import msLogo from "../../../assets/images/msaRedRGB.jpg";
 
-import ImageText from "../../../components/ImageText/ImageText";
+import ImageTextLink from "../../../components/ImageText/ImageTextLink";
 // import ItPhoto1 from "../../../assets/images/wLaurel.png";
 import Pdf1 from "../../../Mkt-Snapshot2019.pdf";
 import Pdf2 from "../../../FoleyFwdPlan_190320.pdf";
 import Pdf3 from "../../../foley-map2.pdf";
 
 import ti1 from "../../../assets/images/mm-alfredo.jpg";
-import ti2 from "../../../assets/images/artCenter1.jpg";
-import ti3 from "../../../assets/images/foley3.jpg";
+import ti2 from "../../../assets/images/modelTrain1b.jpg";
+import ti3 from "../../../assets/images/artCenter1.jpg";
 
 import MapImg1 from "../../../assets/images/mapSS.png";
 import MapImg2 from "../../../assets/images/mapLegend.jpg";
 
 
 const plaxHd1 = (
-<h1 className={[classes.lightHd, classes.textCenter].join(' ')}>Downtown Foley</h1>
+<h1 className={[classes.lightHd, classes.textCenter].join(' ')}>Main Street Foley</h1>
 );
-// const plaxContent1 = (
-//   <img src={vf} className={classes.centerBlock} />
-// );
 
 // KP * DELETE COLLAGE COMPONENT??
 
@@ -62,7 +59,7 @@ class Home extends Component {
         <Parallax
           plaxImage={bg1}
           // plaxShadow="true"
-          plaxHeadline={plaxHd1}
+          // plaxHeadline={plaxHd1}
           // plaxContent={plaxContent1}
           // bgSize="100%"
           plaxHeight="300px"
@@ -75,37 +72,37 @@ class Home extends Component {
 
         <div className={classes.detsHome}>
           <div className={classes.insideNrw}>
+            <h1 className={classes.HomeH1}><span className={classes.TopH1}>Welcome to</span> <br />Historic Downtown <span className={classes.sign}>Foley</span></h1>
+            {/* <p className={classes.sign}>Historic Dow ntown Foley</p> */}
             <p className={classes.Xnrw}>
-              {/* Just eleven miles north of Alabama’s white sand beaches, Foley’s historic downtown epitomizes old Alabama charm.
-              Downtown Foley is home to historic sites, unique restaurants, a variety of retailers and so much more.
-              The area captivates visitors and residents alike with its picturesque beauty. */}
-             
               Just eleven miles north of Alabama’s white sand beaches, Foley’s historic downtown epitomizes old Alabama charm.  
               Historic sites, boutique retailers, and unique restaurants line the walkways of this quaint Main Street, 
               making visitors feel like they’ve stepped back in time.  
             </p>
+            <div className={classes.spacer1} />
             <Link to="/about" className={classes.msLink}>Learn More About Foley</Link>
           </div>
         </div>
 
         <div className={classes.photo4}>
-          {/* <div className={classes.insideAlt}> */}
+          <div className={classes.inside}>
             <div className={[classes.ServiceBox, classes.Box1].join(' ')}>
-              <Link to="/directory#Dining" className={classes.SboxTitle}>Eat.</Link>
+              <Link to="/directory" className={classes.SboxTitle}>Eat.</Link>
               <img src={ti1} className={classes.PhotoBox} alt="placeholder alt" />
             </div>
 
             <div className={[classes.ServiceBox, classes.Box2].join(' ')}>
               <img src={ti2} className={classes.PhotoBox} alt="placeholder alt" />
-              <Link to="/directory#Shopping" className={classes.SboxTitle}>Play.</Link>
+              <Link to="/directory" className={classes.SboxTitle}>Play.</Link>
             </div>
 
             <div className={[classes.ServiceBox, classes.Box3].join(' ')}>
-              <Link to="/directory#Services" className={classes.SboxTitle}>Explore.</Link>
+              <Link to="/directory" className={classes.SboxTitle}>Explore.</Link>
               <img src={ti3} className={classes.PhotoBox} alt="placeholder alt" />
-              <Link to="/directory" className={classes.Plink}>Visit Our Business Directory <span uk-icon="arrow-right"></span></Link>
+              <div className={classes.spacer1} />
+              {/* <Link to="/directory" className={classes.Plink}>Visit Our Business Directory <span uk-icon="arrow-right"></span></Link> */}
             </div>
-          {/* </div> */}
+          </div>
         </div>
 
         <div className={classes.JoinRow}>
@@ -115,14 +112,9 @@ class Home extends Component {
           </div>
         </div>
 
-        {/* <div className={classes.insideAlt}>
-          <ImageText textContent={textContent} image={ItPhoto1} alt="" addPadd="xtra" textFloat="RelativeBg" />
-        </div> */}
-
         <div className={classes.MsSec} >
           <div className={classes.medDef}>
-            <ImageText textContent={textContent2} image={msLogo} alt="" gridType="CustomGridHome" textFloat="textRight" />
-            {/* http://www.mainstreetalabama.org./ */}
+            <ImageTextLink textContent={textContent2} image={msLogo} alt="" gridType="CustomGridHome" textFloat="textRight" />
           </div>
         </div>
       

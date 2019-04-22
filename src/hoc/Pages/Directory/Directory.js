@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 // import Parallax from "../../../components/Parallax/Parallax";
 // import phImage from "../../../assets/images/ph.jpg";
 import PageHeader from "../../../components/PageHeader/PageHeader";
-import phBG from "../../../assets/images/modelTrain1.jpg";
+import phBG from "../../../assets/images/TEMPgads.jpg";
 // import DropList from "../../../components/DropList/DropList";
 // import bg1 from "../../../assets/images/mm-alfredo.jpg";
 // import bg2 from "../../../assets/images/artCenter1.jpg";
@@ -224,7 +224,7 @@ const directory = () => {
         <meta name="description" content="" />
       </Helmet>
       {/* <Parallax plaxImage={phImage} plaxStyle="styleHd" plaxHeadline={hdLine} /> */}
-      <PageHeader phImage={phBG} ovPacity=".2" hColor="white" pageTitle="Business Directory" />
+      <PageHeader phImage={phBG} ovPacity=".4" hColor="white" pageTitle="Business Directory" Pos="center" />
 
       <div className={classes.medDef}>
         <Filter FilterItems={allList} />

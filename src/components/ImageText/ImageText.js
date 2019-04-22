@@ -5,7 +5,7 @@ import Aux from "../../hoc/Aux/Aux";
 const imageText = (props) => {
   return (
     <Aux>
-      <div className={[classes.ImageText, classes[props.textFloat], classes[props.gridType]].join(' ')}>
+      <div className={[classes.ImageText, classes[props.textFloat], classes[props.gridType], classes[props.lessPadd]].join(' ')}>
         <div className={classes.ImageHlf}>
           <img src={props.image} className={classes.imgResponsive} alt={props.alt} />
         </div>

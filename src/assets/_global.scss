@@ -69,6 +69,12 @@ body {font-family: $monte;
     &.lightHd,&.darkHd  {color: $white; @include tshadowl(rgba($black,.79)); text-align: center; font-weight:bold; }
     &.darkHd {@include tshadowl(rgba($black,.75)); color:$black; }
     &.sm {font-size: 1.8rem;}
+    &.HomeH1{text-transform: none; font-size: 3rem; line-height:1em;
+      font-size:2.2rem; font-weight:bold;
+      span.TopH1 {font-size:25px; font-weight:normal;}
+      span.sign{font-family: $sign; font-size:3rem; font-weight:normal;}
+    }
+
   }
   h2{font-size: 1.65rem;}
 

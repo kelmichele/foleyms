@@ -2,7 +2,8 @@
 @import '../../assets/mixins.scss';
 @import '../../assets/global.scss';
 
-.ImageText{@include sec-default(); padding:45px 0;
+.ImageText,.ImageTextLink{@include sec-default(); padding:45px 0;
+  &.less{padding-top:20px;}
   .ImageHlf, .TextHlf {display: inline-block;
     &.xxtra{margin-top: 70px;}
     &.xtra{margin-top: 50px;}

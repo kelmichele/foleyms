@@ -3,13 +3,13 @@
 @import '../../../assets/mixins.scss';
 
 .aboutPage, .boardPage,.abBody,.ContactBody{@include sec-default(); }
-
 .aboutPage {
-  .intro p {font-size:17px;
-    // span{font-family: $sign; font-size: 30px;}
+  .intro p {font-size:17px;}
+  .fullRow.Sec1, .fullRow.Sec2{padding:20px 0 0px; text-align:center;}
+  .fullRow.Sec2 {padding-top:40px;
+    p {width:90%; @include center-block();}
   }
-  .fullRow.Sec1, .fullRow.Sec2{padding:40px 0 0px; text-align:center;}
-  .fullRow.Sec2 p {width:90%; @include center-block();}
+  .msLink{font-size:14px;}
 }
 
 .boardPage {
@@ -68,7 +68,7 @@
   .SlideSize{width: 70%; display:inline-block;}
 }
 
-.TextRow {@include sec-default();
+.TextRow {@include sec-default(); margin-bottom: 30px;
   p{display: inline-block; position:relative;
     width:44%; text-align: justify;
     // width:49%; text-align: left;
