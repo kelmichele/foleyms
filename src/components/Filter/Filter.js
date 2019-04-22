@@ -5,7 +5,7 @@ class Filter extends Component {
   render() {
     const FilterContent = this.props.FilterItems.map((FilterItem) =>
       <li key={FilterItem.id} data-tags={[ "all " + FilterItem.tags]}>
-        {FilterItem.name}
+        <a href={FilterItem.website} target="_blank" rel="noopener noreferrer">{FilterItem.name}</a>
       </li>
     );
 

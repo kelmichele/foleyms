@@ -22,9 +22,9 @@ import MapImg1 from "../../../assets/images/mapSS.png";
 import MapImg2 from "../../../assets/images/mapLegend.jpg";
 
 
-const plaxHd1 = (
-<h1 className={[classes.lightHd, classes.textCenter].join(' ')}>Main Street Foley</h1>
-);
+// const plaxHd1 = (
+// <h1 className={[classes.lightHd, classes.textCenter].join(' ')}>Main Street Foley</h1>
+// );
 
 // KP * DELETE COLLAGE COMPONENT??
 
