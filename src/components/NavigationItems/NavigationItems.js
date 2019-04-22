@@ -15,8 +15,8 @@ class NavigationItems extends Component {
           {/* <NavLink to="/explore" className={classes.NavigationItems}></NavLink></li> */}
           <div className={["uk-navbar-dropdown", classes.custDrop].join(' ')}>
             <ul className={classes.dropMenu}>
-              <li><NavLink to="/directory" className={classes.NavigationItems}>Business Directory</NavLink></li>
-              <li><NavLink to="/listings" className={classes.NavigationItems}>Available Property</NavLink></li>
+              <li><NavLink to="/directory" className={[classes.NavigationItems, classes.dropLink].join(' ')}>Business Directory</NavLink></li>
+              <li><NavLink to="/listings" className={[classes.NavigationItems, classes.dropLink].join(' ')}>Available Property</NavLink></li>
               {/* <li><NavLink to="/listings" className={classes.NavigationItems}>Maps</NavLink></li> */}
             </ul>
           </div>
@@ -27,9 +27,9 @@ class NavigationItems extends Component {
         <li><NavLink to="#">About</NavLink>
           <div className={["uk-navbar-dropdown", classes.custDrop].join(' ')}>
             <ul className={classes.dropMenu}>
-              <li><NavLink to="/about" className={classes.NavigationItems}>About Us</NavLink></li>
-              <li><NavLink to="/board" className={classes.NavigationItems}>Board of Directors</NavLink></li>
-              <li><NavLink to="/contact" className={classes.NavigationItems}>Contact</NavLink></li>
+              <li><NavLink to="/about" className={[classes.NavigationItems, classes.dropLink].join(' ')}>About Us</NavLink></li>
+              <li><NavLink to="/board" className={[classes.NavigationItems, classes.dropLink].join(' ')}>Board of Directors</NavLink></li>
+              <li><NavLink to="/contact" className={[classes.NavigationItems, classes.dropLink].join(' ')}>Contact</NavLink></li>
             </ul>
           </div>
         </li>
@@ -38,29 +38,29 @@ class NavigationItems extends Component {
           <div className={["uk-navbar-dropdown", classes.custDrop, classes.LgDrop].join(' ')}>
             <ul className={classes.dropMenu}>
               <li>
-                <a href="https://cityoffoley.org" target="_blank" className={classes.NavigationItems} rel="noopener noreferrer">
+                <a href="https://cityoffoley.org" target="_blank" className={[classes.NavigationItems, classes.dropLink].join(' ')} rel="noopener noreferrer">
                 City of Foley</a>
               </li>
 
               <li>
-                <a href="https://cityoffoley.org/city-boards/#07ec64ca388885c49" target="_blank" className={classes.NavigationItems} rel="noopener noreferrer">
+                <a href="https://cityoffoley.org/city-boards/#07ec64ca388885c49" target="_blank" className={[classes.NavigationItems, classes.dropLink].join(' ')} rel="noopener noreferrer">
                 Revitalization and Beautification Advisory Board</a>
               </li>
 
               <li>
-                <a href="https://cityoffoley.org/city-boards/#bc56c55276cae12ca" target="_blank" className={classes.NavigationItems} rel="noopener noreferrer">
+                <a href="https://cityoffoley.org/city-boards/#bc56c55276cae12ca" target="_blank" className={[classes.NavigationItems, classes.dropLink].join(' ')} rel="noopener noreferrer">
                 Foley Historical Commission</a>
               </li>
 
               <li>
-                <a href="https://cityoffoley.org/demographics/" target="_blank" className={classes.NavigationItems} rel="noopener noreferrer">
+                <a href="https://cityoffoley.org/demographics/" target="_blank" className={[classes.NavigationItems, classes.dropLink].join(' ')} rel="noopener noreferrer">
                 Demographics</a>
               </li>
 
-              <li><a href={Pdf1} target="_blank" rel="noopener noreferrer" className={classes.NavigationItems}>
+              <li><a href={Pdf1} target="_blank" rel="noopener noreferrer" className={[classes.NavigationItems, classes.dropLink].join(' ')}>
                 Market Snapshot
               </a></li>
-              <li><a href={Pdf2} target="_blank" rel="noopener noreferrer" className={classes.NavigationItems}>
+              <li><a href={Pdf2} target="_blank" rel="noopener noreferrer" className={[classes.NavigationItems, classes.dropLink].join(' ')}>
                 Foley Forward Comprehensive Plan
               </a></li>
 

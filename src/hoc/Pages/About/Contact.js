@@ -13,29 +13,41 @@ const contact = () => {
   return(
     <div className={classes.contactPage}>
       <Helmet>
-        <title>Contact Us | Foley Main Street</title>
+        <title>Contact Foley Main Street</title>
         <meta name="description" content="" />
       </Helmet>
       <Parallax plaxImage={phImage} plaxStyle="styleHd" plaxHeadline={hdLine} />
-
+ 
       <div className={classes.ContactBody}>
-        <div className={classes.insideNrw}>
+        <div className={classes.med2Def}>
           <div className={classes.LeftSide}>
             <p>The Main Street Foley office is located in the South Baldwin Chamber of Commerce offices.</p>
             <p className={classes.ConInfo}>112 West Laurel Street <br />
               Foley, Al 36535 </p>
             <p className={classes.ConInfo}>251.401.4801</p>
             <p className={classes.ConInfo}>foleymainstreet@gmail.com</p>
+            
+            <div className={classes.InLeft}>
+              <Link to="/directory" className={[classes.PhotoBoxLink, classes.tour].join(' ')}>Business Directory</Link>
+              <Link to="/listings" className={[classes.PhotoBoxLink, classes.property].join(' ')}>Available Properties</Link>
+            </div>
+          </div>
+
+          <div className={classes.CalSide}>
+            <div data-tockify-component="mini" data-tockify-calendar="foley.downtown"></div>
+            <div className={[classes.PhotoBoxLink, classes.event].join(' ')}> 
+              Select any underlined date for event details.<br /> <Link to="/events">Click here</Link> to see all upcoming events.
+            </div>
           </div>
         </div>
 
-        <div className={classes.med2Def}>
+        {/* <div className={classes.med2Def}>
           <div className={classes.RightSide}>
             <Link to="/directory" className={[classes.PhotoBoxLink, classes.tour].join(' ')}>Business Directory</Link>
             <Link to="/board" className={[classes.PhotoBoxLink, classes.board].join(' ')}>Meet the Board</Link>
             <Link to="/listings" className={[classes.PhotoBoxLink, classes.property].join(' ')}>Available Properties</Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

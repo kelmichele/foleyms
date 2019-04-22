@@ -5,7 +5,7 @@ const social = (props) => {
   return (
     <ul className={[classes.Social, classes[props.Colors]].join(' ')}>
       <li><a href="https://www.facebook.com/VisitFoley" target="_blank" rel="noopener noreferrer">
-        <span aria-label="City of Foley Facebook Link" uk-icon="icon: facebook"></span>
+        <span className={classes.SocialIcon} aria-label="City of Foley Facebook Link" uk-icon="icon: facebook"></span>
       </a></li>
 
       <li><a href="https://www.instagram.com/visitfoley/" target="_blank" rel="noopener noreferrer">

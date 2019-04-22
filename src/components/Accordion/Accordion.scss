@@ -7,3 +7,10 @@
   button {background-image:none; background:transparent; border:none;}
 }
 .custContent{padding-left: 20px;}
+
+.FooterAcc{@include sec-default();
+  .AccTitle{font-size:25px; font-weight: bold; font-family: $sign; letter-spacing: 1px; }
+  .custContent{padding-top: 0px; margin-top:0;}
+  p{margin-top:0;}
+  li{margin:0;}
+}

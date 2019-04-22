@@ -18,6 +18,7 @@
   .custNav {@include sec-default();
     li {display:inline-block; float: none; margin: 40px 1% 0;}
     li a {color: $black; font-size:16px; text-transform: none;font-family:$monte;}
+    li li a {font-size:15px;}
   }
 
   // .mobileMenu {background: msGreen;}

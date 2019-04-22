@@ -3,7 +3,10 @@
 @import '../../assets/mixins.scss';
 
 .Social{@include sec-default();
-  li {display: inline-block; margin:5px;}
+  li {display: inline-block; margin:5px 7px;
+    &:first-child{margin-left:0;}
+  }
+  svg {width:22px; height:22px;}
 
   &.light {
     a, span {color: $white;}

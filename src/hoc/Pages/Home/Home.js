@@ -22,7 +22,6 @@ import MapImg1 from "../../../assets/images/mapSS.png";
 import MapImg2 from "../../../assets/images/mapLegend.jpg";
 
 
-
 const plaxHd1 = (
 <h1 className={[classes.lightHd, classes.textCenter].join(' ')}>Downtown Foley</h1>
 );
@@ -45,7 +44,8 @@ const textContent = (
 
 const textContent2 = (
   <div>
-    <h3 className={classes.sign}>Preserving Our History</h3>
+    <h3 className={classes.sign}>Preservation. Promotion. Pride.</h3>
+    {/* <h3 className={classes.sign}>Preserving Our History</h3> */}
     <p>With the help of their first ever Main Street Director, Foley is working to implement
     Main Street Alabama’s four-step approach for downtown promotion, economic vitality, and community connectivity.</p>
     <a href={Pdf1} target="_blank" rel="noopener noreferrer" className={[classes.msLink, classes.inline, classes.invColor].join(' ')}>
@@ -122,6 +122,7 @@ class Home extends Component {
         <div className={classes.MsSec} >
           <div className={classes.medDef}>
             <ImageText textContent={textContent2} image={msLogo} alt="" gridType="CustomGridHome" textFloat="textRight" />
+            {/* http://www.mainstreetalabama.org./ */}
           </div>
         </div>
       

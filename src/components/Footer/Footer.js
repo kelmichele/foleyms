@@ -2,51 +2,48 @@ import React from 'react';
 import classes from './Footer.scss';
 import Social from '../../hoc/Social/Social';
 import { Link } from 'react-router-dom';
-import Pdf1 from "../../Mkt-Snapshot2019.pdf";
-import Pdf2 from "../../FoleyFwdPlan_190320.pdf";
+import MsLogo from "../../assets/images/msaRedRGB.jpg";
+import logo from "../../assets/images/FMS-teal.png";
 
 const footer = () => { 
+
+
   return (
     <div className={classes.Footer}>
-      <div className={classes.insideAlt}>
-        <div className={classes.FooterCol}>
-          <ul>
-            <li><Link to="/" className={classes.NavigationItems}>Home</Link></li>
-            <li><Link to="/directory" className={classes.NavigationItems}>Business Directory</Link></li>
-            <li><Link to="/listings" className={classes.NavigationItems}>Available Property</Link></li>
-          </ul>
+      <div className={classes.med2Def}>
+
+        <div className={[classes.FtGrid, classes.FgLast].join(' ')}>
+          {/* <p className={classes.FtTitle}>Follow Foley</p> */}
+          <a href="http://www.mainstreetalabama.org/" target="_blank" rel="noopener noreferrer">
+            <img src={MsLogo} alt="Mainstreet Foley Logo" className={classes.LogoImg} />
+          </a>
+          {/* <Social /> */}
+        </div>  
+
+        <div className={[classes.FtGrid, classes.FgAcc].join(' ')}>
+          <p className={classes.FtTitle}>Contact Us</p>
+          <p className={classes.FtInfo}>112 West Laurel Street <br />
+            Foley, Al 36535 </p>
+          <p className={classes.FtInfo}>251.401.4801</p>
+          <p className={classes.FtInfo}>foleymainstreet@gmail.com</p>
+          <Social />
         </div>
 
-        <div className={classes.FooterCol}>
-          <ul>
-            <li><Link to="/about" className={classes.NavigationItems}>About Us</Link></li>
-            <li><Link to="/events" className={classes.NavigationItems}>Upcoming Events</Link></li>
-            <li><Link to="/board" className={classes.NavigationItems}>Board of Directors</Link></li>
-            <li><Link to="/contact" className={classes.NavigationItems}>Contact</Link></li>
-          </ul>
+        <div className={[classes.FtGrid, classes.Fg3].join(' ')}>
+          <Link to="/"><img src={logo} alt="Mainstreet Foley Logo" className={classes.LogoImg} /></Link>
+          <p className={classes.FtMoto}>Preservation. Promotion. Pride.</p>
         </div>
-
-        <div className={classes.FooterCol}>
-          <ul>
-            <li><a href="https://cityoffoley.org/demographics/" target="_blank" className={classes.NavigationItems} rel="noopener noreferrer">Demographics</a></li>
-            <li><a href={Pdf1} target="_blank" rel="noopener noreferrer" className={classes.NavigationItems}>Market Snapshot</a></li>
-            <li><a href={Pdf2} target="_blank" rel="noopener noreferrer" className={classes.NavigationItems}>Foley Forward Comprehensive Plan</a></li>
-          </ul>
-        </div>
-
-        <div className={classes.FooterCol}>
-          <ul>
-            <li><a href="https://cityoffoley.org" target="_blank" className={classes.NavigationItems} rel="noopener noreferrer">City of Foley</a></li>
-            <li><a href="https://cityoffoley.org/city-boards/#07ec64ca388885c49" target="_blank" className={classes.NavigationItems} rel="noopener noreferrer">Revitalization and Beautification Advisory Board</a></li>
-            <li><a href="https://cityoffoley.org/city-boards/#bc56c55276cae12ca" target="_blank" className={classes.NavigationItems} rel="noopener noreferrer">Foley Historical Commission</a></li>
-          </ul>
-        </div>
-        <Social />  
       </div>
 
-      {/* <a href="#" className={classes.scrollUp}></a> */}
 
-      {/* <button type="button" className={classes.scrollUp}></button> */}
+      <div className={classes.insideAlt}>
+        <div className={classes.FooterBtm}>
+          <p className={classes.Hs}>Design by <a href="https://hsdesignhouse.com/" target="_blank" rel="noopener noreferrer">
+          High Seas Design House</a></p>
+
+          <p className={classes.Copy}>Copyright 2019. All rights reserved.</p>
+        </div>
+      </div>
 
       <button className={classes.toTop} data-uk-totop data-uk-scroll>
         <span uk-icon="icon: chevron-up" />
