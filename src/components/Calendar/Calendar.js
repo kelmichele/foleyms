@@ -14,18 +14,11 @@ import React, { Component } from "react";
   
 
 class Calendar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
 
-  componentDidMount() {
-    
-  }
-
-  componentWillUnmount() {
-
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {};
+  // }
 
   render() {
     return (

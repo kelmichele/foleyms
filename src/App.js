@@ -10,8 +10,7 @@ import Board from "./hoc/Pages/About/Board";
 import Contact from "./hoc/Pages/About/Contact";
 import Events from "./hoc/Pages/Events/Events";
 import Listings from "./hoc/Pages/Listings/Listings";
-import Directory from "./hoc/Pages/Directory/Directory";
-import Business from "./hoc/Pages/Business/Business";
+// import Directory from "./hoc/Pages/Directory/Directory";
 import BuslistingsListLoader from "./components/BusTable/BuslistingsListLoader";
 import BuslistingDetailsLoader from "./components/BusTable/BuslistingDetailsLoader";
 // API,graphqlOperation
@@ -31,10 +30,9 @@ class App extends Component {
         <Route path="/contact" component={Contact} />
         <Route path="/events" component={Events} />
         <Route path="/listings" component={Listings} />
-        <Route path="/directory" component={Directory} />
-        <Route path="/business" component={Business} />
+        {/* <Route path="/directory" component={Directory} /> */}
 
-        <Route path="/table" exact component={BuslistingsListLoader} />
+        <Route path="/directory" exact component={BuslistingsListLoader} />
 
         {/* <Route
           path="/buslistings/:buslistingId"

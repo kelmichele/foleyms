@@ -15,7 +15,6 @@ const events = () => {
       
       <div className={classes.inside}>
         {/* <Calendar /> */}
-        {/* [tockify component="calendar" calendar="foley.downtown"] */}
         <div
           data-tockify-component="calendar"
           data-tockify-calendar="foley.downtown"
