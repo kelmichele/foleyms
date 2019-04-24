@@ -10,28 +10,22 @@ import Board from "./hoc/Pages/About/Board";
 import Contact from "./hoc/Pages/About/Contact";
 import Events from "./hoc/Pages/Events/Events";
 import Listings from "./hoc/Pages/Listings/Listings";
-// import Directory from "./hoc/Pages/Directory/Directory";
 import BuslistingsListLoader from "./components/BusTable/BuslistingsListLoader";
 import BuslistingDetailsLoader from "./components/BusTable/BuslistingDetailsLoader";
-// API,graphqlOperation
-import Amplify, {} from 'aws-amplify';
+import Amplify, { } from 'aws-amplify';
 import aws_exports from './aws-exports';
-// withAuthenticator
-// import { Connect } from 'aws-amplify-react';
 Amplify.configure(aws_exports);
 
 class App extends Component {
   render() {
     let routes = (
       <Switch>
-        <Route exact={true} path="/" component={Home} />
+        <Route exact={true} path="/" component={Home} label="Homepage" />
         <Route path="/about" component={About} />
         <Route path="/board" component={Board} />
         <Route path="/contact" component={Contact} />
-        <Route path="/events" component={Events} />
+        <Route exact={true} path="/events" component={Events} label="EventPage" />
         <Route path="/listings" component={Listings} />
-        {/* <Route path="/directory" component={Directory} /> */}
-
         <Route path="/directory" exact component={BuslistingsListLoader} />
 
         {/* <Route
@@ -58,6 +52,3 @@ class App extends Component {
 }
 
 export default App;
-// export default withAuthenticator(App, { includeGreetings: true });
-// export default withAuthenticator(App);
-

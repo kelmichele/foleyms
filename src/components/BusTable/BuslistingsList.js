@@ -34,9 +34,6 @@ class BuslistingsList extends Component {
       <li key={buslisting.id} data-tags={["all " + buslisting.category]}>
         <NavLink to={`/buslistings/${buslisting.id}`}>{buslisting.name}</NavLink>
       </li>
-      // <li key={buslisting.id}>
-      //   <NavLink to={`/buslistings/${buslisting.id}`}>{buslisting.name}</NavLink>
-      // </li>
     );
   }
 
@@ -53,7 +50,7 @@ class BuslistingsList extends Component {
         <div className={classes.medDef}>
           <div data-uk-filter="target: .js-filter">
             <ul className={classes.filterList}>
-              <li className="uk-active" data-uk-filter-control="[data-tags*='all']"><button type="button">All</button></li>
+              <li className={[classes.all, "uk-active"].join(' ')} data-uk-filter-control="[data-tags*='all']"><button type="button">All</button></li>
               <li className={classes.shop} data-uk-filter-control="[data-tags*='retail']"><button type="button">Retail</button></li>
               <li className={classes.dine} data-uk-filter-control="[data-tags*='dining']"><button type="button">Dining</button></li>
               <li className={classes.attr} data-uk-filter-control="[data-tags*='misc']"><button type="button">Miscellaneous</button></li>

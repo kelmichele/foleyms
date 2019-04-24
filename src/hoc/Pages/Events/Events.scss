@@ -2,4 +2,14 @@
 @import '../../../assets/variables.scss';
 @import '../../../assets/mixins.scss';
 
-.eventsPage{@include sec-default();}
+.eventsPage{@include sec-default(); }
+
+.warning, .calBox{@include sec-default();
+  background-color:$msGreen;
+}
+
+.eventsBody{@include sec-default(); padding:60px 0;}
+.EventEmbed{display:block;}
+
+
+.CalFrame{@include center-block(); } 

@@ -6,27 +6,35 @@
 
 
 
-.filterList {@include sec-default(); text-align: center; margin:40px 0;
+.filterList {@include sec-default(); text-align: center; 
+  padding:60px 0 40px; 
+  padding:0 0 40px; margin-top:-60px;
   li {display:inline-block; width: 16%; margin: 10px 1%; padding: 60px 5px 0; 
-    height:200px; @include sec-bgimage('../../assets/images/foley4.jpg'); background-size: cover; position: relative; z-index: 0;
-    color:$white; font-weight: $semi; @include tshadowl(rgba($black,.5)); font-size:22px;letter-spacing: .4px;
-    font-family: $sign;
+    height:200px; @include sec-bgimage2(); background-size: cover; position: relative; z-index: 0;
+    padding:0 5px; background-position: center center;
+    button{font-family: $sign; font-weight: $semi; @include tshadowl(rgba($black,.5)); font-size:30px;letter-spacing: .4px;
+      // position:absolute; left:0; top:-31px;
+      // background-color:#fbf9f8; bottom:0px; padding: 0 10px;
+      color:$white; margin-top:80px;
+    }
 
-    &::before{@include before(); background-color: rgba($black, .5);}
+    &::before{@include before(); background-color: rgba($black, .4);}
     &:first-child{margin-left: 0;}
     &:last-child{margin-right: 0;}
 
-    &.all{background-image: url(../../assets/images/foley1.jpg);}
+    &.all{background-image: url(../../assets/images/foley4.jpg);}
     &.shop{background-image: url(../../assets/images/downtown2.jpg);}
     &.dine{background-image: url(../../assets/images/mm-serving2.jpg);}
     &.attr{background-image: url(../../assets/images/downtown4.jpg);}
     &.serve{background-image: url(../../assets/images/foley1.jpg); background-position: bottom right;}
   }
 }
-.filterContent {@include sec-default(); text-align:center;
+.filterContent {@include sec-default(); text-align:center; padding-bottom:60px;
   li{margin-bottom:10px;
     display:inline-block; width:28%; margin: 10px 1.5%; vertical-align: top;
     padding: 20px 10px; background-color: $white; box-shadow: 0px 5px 10px rgba($black,.1);
     text-align:center;
+
+    a{width:90%; @include center-block();}
   }
 }
