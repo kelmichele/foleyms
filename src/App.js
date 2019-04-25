@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from "react-router-dom";
+import { withRouter, Route, Switch } from "react-router-dom";
 import classes from './App.scss';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -12,6 +12,12 @@ import Events from "./hoc/Pages/Events/Events";
 import Listings from "./hoc/Pages/Listings/Listings";
 import BuslistingsListLoader from "./components/BusTable/BuslistingsListLoader";
 import BuslistingDetailsLoader from "./components/BusTable/BuslistingDetailsLoader";
+import Calendar from "./components/Calendar/Calendar";
+
+// import Parallax from "./components/Parallax/Parallax";
+// import phImage from "./assets/images/ph.jpg";
+// import PropTypes from "prop-types";
+
 import Amplify, { } from 'aws-amplify';
 import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
@@ -20,14 +26,15 @@ class App extends Component {
   render() {
     let routes = (
       <Switch>
-        <Route exact={true} path="/" component={Home} label="Homepage" />
+        <Route exact={true} path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/board" component={Board} />
         <Route path="/contact" component={Contact} />
-        <Route exact={true} path="/events" component={Events} label="EventPage" />
+        <Route path="/events" component={Events} />
+        <Route path="/calendar" component={Calendar} />
+
         <Route path="/listings" component={Listings} />
         <Route path="/directory" exact component={BuslistingsListLoader} />
-
         {/* <Route
           path="/buslistings/:buslistingId"
           render={() => <div><NavLink to='/table' className={classes.BackTo}>Back to Buslistings list</NavLink></div>}
@@ -39,11 +46,32 @@ class App extends Component {
       </Switch>
     );
 
+    const Cal = (props) => {
+      const { location } = props;
+      if (!location.pathname.match(/events/)) {
+        return (
+          <div className={classes.CalNot}>
+            <Calendar />
+          </div>
+        );
+      }
+      return (
+        <div className={classes.Cal}>
+          <Calendar />
+        </div>
+      )
+    }
+    const SneakyCal = withRouter(Cal);
+
     return (
       <div className="App">
         <Header />
         <div className={classes.boxedBody}>
-          <Content>{routes}</Content>
+          <Content>{routes}
+            <SneakyCal />
+            {/* <Calendar /> */}
+          </Content>
+          
         </div>
         <Footer />
       </div>

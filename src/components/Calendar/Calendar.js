@@ -1,31 +1,20 @@
 import React, { Component } from "react";
-// import React from "react";
+// import Parallax from "../../components/Parallax/Parallax";
+// import phImage from "../../assets/images/ph.jpg";
+import classes from "../../App.scss";
 
 
-// const calendar = () => {
-//   return(
-//     <div
-//       data-tockify-component="calendar"
-//       data-tockify-calendar="foley.downtown"
-//     />
-//   );
-// }
-// export default calendar;
-  
 
 class Calendar extends Component {
-
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {};
-  // }
-
   render() {
     return (
-      <div
-        data-tockify-component="calendar"
-        data-tockify-calendar="foley.downtown"
-      />
+      <div className={classes.med2Def}>
+        {/* <Parallax plaxStyle="styleHd" plaxHeadline="Calendar" plaxImage={phImage} /> */}
+        <div
+          data-tockify-component="calendar"
+          data-tockify-calendar="foley.downtown"
+        />
+      </div>
     );
   }
 }
