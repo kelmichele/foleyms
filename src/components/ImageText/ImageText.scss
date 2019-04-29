@@ -45,6 +45,11 @@
 
   @include bp(tb) {padding:30px 0 15px;
     .TextHlf.xtra{margin-top: 0px;}
+
+    &.CustomGridHome{
+      .TextHlf{width:90%;@include center-block(); margin-top:35px; text-align:center;}
+      .ImageHlf{width:200px;@include center-block();}
+    }
     
     &.equal, &.textBig, &.imageBig{
       .ImageHlf, .TextHlf {width:85%; @include center-block();}

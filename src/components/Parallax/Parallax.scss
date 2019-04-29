@@ -3,7 +3,10 @@
 @import '../../assets/global.scss';
 
 .Parallax{@include sec-default();
-  &.styleFull{height:400px; padding:10% 0;}
+  &.styleFull{height:660px;
+  background-position: center center;
+  .innerLax{padding:10% 0;}
+  }
   &.true{z-index: 0; position:relative;
     &::before {@include before(); background-color: rgba($black,.3);}
 
@@ -16,11 +19,31 @@
     h1{margin-top: 55px;}
   }
 
+  @include bp(tb) {
+    &.styleFull{height:480px;
+      .innerLax{padding:5% 0;}
+    }
+  }
+
   @include bp(tn) {
+    &.styleFull{height:400px;
+      .innerLax{padding:5% 0;}
+    }
+
     &.styleHd,&.styleHdLg {height: auto;}
   }
 
   @include bp(md) {
+    &.styleFull{height:330px;
+      .innerLax{padding:2.5% 0;}
+    }
+    
     &.styleHd h1 {margin-top: 35px;}
+  }
+
+  @include bp(md) {
+    &.styleFull{height:300px;
+      .innerLax{padding:1.5% 0;}
+    }
   }
 }

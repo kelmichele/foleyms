@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Listings.scss";
 import PageHeader from "../../../components/PageHeader/PageHeader";
-import phBG from "../../../assets/images/TEMPgads.jpg";
+import phBG from "../../../assets/images/Foley-3016.jpg";
 import rl1 from "../../../assets/images/sAlston.png";
 import rl2 from "../../../assets/images/wLaurel.png";
 import rl3 from "../../../assets/images/wLaurel200.png";
@@ -14,7 +14,7 @@ import Listing3 from "../../../wLaurel200.pdf";
 const listings = () => {
   return (
     <div className={classes.listingsPage}>
-      <PageHeader phImage={phBG} ovPacity=".4" hColor="white" pageTitle="Available Property" Pos="center" />
+      <PageHeader phImage={phBG} ovPacity=".25" hColor="white" pageTitle="Available Property" Pos="center" />
 
       <div className={classes.intro}>
         <div className={classes.insideNrw}>

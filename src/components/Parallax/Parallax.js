@@ -6,13 +6,15 @@ class Parallax extends Component {
     return (
       <div
         className={[classes.Parallax, classes[this.props.plaxShadow], classes[this.props.plaxStyle]].join(' ')}
-        uk-parallax={this.props.bgy}
+        data-uk-parallax={this.props.bgy}
         style={{ backgroundImage: "url(" + this.props.plaxImage + ")", backgroundSize: this.props.bgSize }}
         // , backgroundPosition: this.props.bgPos
       >
-        <div className={classes.inside}>
-          {this.props.plaxHeadline}
-          {this.props.plaxContent}
+        <div className={classes.innerLax}>
+          <div className={classes.inside}>
+            {this.props.plaxHeadline}
+            {this.props.plaxContent}
+          </div>
         </div>
       </div>
     );

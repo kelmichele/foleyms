@@ -62,14 +62,13 @@ class App extends Component {
       )
     }
     const SneakyCal = withRouter(Cal);
-
+    
     return (
       <div className="App">
         <Header />
         <div className={classes.boxedBody}>
           <Content>{routes}
             <SneakyCal />
-            {/* <Calendar /> */}
           </Content>
           
         </div>

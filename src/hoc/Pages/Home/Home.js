@@ -4,7 +4,7 @@ import classes from "./Home.scss";
 import { HashLink as Link } from 'react-router-hash-link';
 
 import Parallax from "../../../components/Parallax/Parallax";
-import bg1 from "../../../assets/images/Plaza.jpg";
+import bg1 from "../../../assets/images/Foley-3087.jpg";
 // import PhotoCat from "../../../components/PhotoCat/PhotoCat";
 import msLogo from "../../../assets/images/msaRedRGB.jpg";
 
@@ -23,7 +23,7 @@ import MapImg2 from "../../../assets/images/mapLegend.jpg";
 
 
 // const plaxHd1 = (
-// <h1 className={[classes.lightHd, classes.textCenter].join(' ')}>Main Street Foley</h1>
+//   <h1 className={[classes.HomeH1, classes.AltStyle].join(' ')}><span className={classes.TopH}>Welcome to</span> <br />Historic Downtown  <span className={classes.sign}>Foley</span></h1>
 // );
 
 // KP * DELETE COLLAGE COMPONENT??
@@ -61,19 +61,15 @@ class Home extends Component {
           // plaxShadow="true"
           // plaxHeadline={plaxHd1}
           // plaxContent={plaxContent1}
-          // bgSize="100%"
+          // bgy="bgy: -200"
+          bgSize="100%"
           plaxHeight="300px"
         />
        
-        {/* Sections: categories, overview/intro, upcoming events, main street */}
-        {/* <div className={classes.clearfix} />
-        <div className={classes.insideXl}><PhotoCat TopDist="negative" /></div>
-        <div className={classes.clearfix} /> */}
-
         <div className={classes.detsHome}>
           <div className={classes.insideNrw}>
             <h1 className={classes.HomeH1}><span className={classes.TopH1}>Welcome to</span> <br />Historic Downtown <span className={classes.sign}>Foley</span></h1>
-            {/* <p className={classes.sign}>Historic Dow ntown Foley</p> */}
+            {/* <p className={classes.sign}>Historic Downtown Foley</p> */}
             <p className={classes.Xnrw}>
               Just eleven miles north of Alabama’s white sand beaches, Foley’s historic downtown epitomizes old Alabama charm.  
               Historic sites, boutique retailers, and unique restaurants line the walkways of this quaint Main Street, 
@@ -106,6 +102,7 @@ class Home extends Component {
         </div>
 
         <div className={classes.JoinRow}>
+        {/* <div className={[classes.JoinRow, classes.dark].join(' ')}> */}
           <div className={classes.insideNrw}>
             <p className={classes.sign}>Join the Neighborhood</p>
             {textContent}

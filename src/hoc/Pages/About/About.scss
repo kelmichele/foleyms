@@ -6,7 +6,7 @@
 .aboutPage {
   .intro p {font-size:17px;}
   .fullRow.Sec1, .fullRow.Sec2{padding:20px 0 0px; text-align:center;}
-  .fullRow.Sec2 {padding-top:40px;
+  .fullRow.Sec2 {padding:30px 0 25px;
     p {width:90%; @include center-block();}
   }
   .msLink{font-size:14px;}
@@ -57,6 +57,7 @@
   &.BgNone{padding:0 0 30px;
     &::before{display:none;}
     .imgCenter{width:75%;}
+    .TextBox {padding:40px 0 0px;}
   }
 }
 
@@ -65,7 +66,13 @@
 //   img{display: inline-block; width:49.7%;}
 //   .ImgL{float:left;}
 //   .ImgR{float:right;}
-  .SlideSize{width: 70%; display:inline-block;}
+  .SlideSize{ display:inline-block;
+    // width: 70%;
+    img{height:460px;}
+  }
+
+  // &.SlideAlt .SlideSize img{height:460px;}
+  &.noBg{background-color: transparent; padding:0px 0 0px;}
 }
 
 .TextRow {@include sec-default(); margin-bottom: 30px;
@@ -79,7 +86,7 @@
   p.Dos{float:right;}
 }
 
-.ContactBody{padding: 40px 0 60px;
+.ContactBody{padding: 70px 0 60px;
   .LeftSide, .RightSide, .CalSide {display: inline-block;}
   .LeftSide {width:50%; margin-top:2%; 
     p{font-size:18px;}
@@ -87,7 +94,7 @@
     .InLeft{@include sec-default(); margin-top:0px;}
   }
 
-  .PhotoBoxLink {display: inline-block; min-height: 70px; 
+  .PhotoBoxLink1 {display: inline-block; min-height: 70px; 
     width:48%; margin:40px 0 0;
     @include sec-bgimage2();background-position: center center; background-size:cover;
     padding: 35px 0 0; text-align:center; position: relative; z-index:0;
@@ -118,6 +125,83 @@
     }
   }
 
+
+  .TopHlf, .BtmHlf {@include sec-default(); text-align:center;
+    .PhotoBoxLink, .ContInfo {display: inline-block; width:33%; margin:0 .5%; vertical-align: top;padding: 20px 5px; }
+    .PhotoBoxLink {min-height: 170px; width:25%;
+      // width:48%; margin:40px 0 0;
+      @include sec-bgimage2();background-position: center center; background-size:cover;
+      text-align:center; position: relative; z-index:0;
+      color:$white; font-weight: bold; @include tshadowl(rgba($black,.5)); font-family: $sign; font-size:25px; letter-spacing: 1.5px;
+      span{line-height: 110px;}
+
+      &::before{@include before();background-color: rgba($black, .55);}
+      &::after{@include after(); border:2px solid $white; width:90%; height: 80%; margin-left:4%; bottom: 10%;}
+      
+      &.tour{background-image: url(../../../assets/images/mapSS.png);}
+      &.property{background-image: url(../../../assets/images/sAlston.png);}
+      &.events {background-image: url(../../../assets/images/dogPark2.jpg);}
+    }
+    .ContInfo {padding:30px 5px 0;}
+  }
+
+  .TopHlf{
+    // .ContInfo {width:35%;}
+    // .PhotoBoxLink {width:25%;  }
+    p{width:85%; @include center-block();}
+  }
+  .BtmHlf{
+    .PhotoBoxLink{margin-top:-30px;}
+  }
+
+
+  position: relative; z-index: 0; padding:100px 0; background-color:rgba($msCream, .15);
+  &::before{ @include before(); background-color:$white; height:80%; margin-top: 5%; width:65%; left:35%;}
+  .info {width: 85%;float: right; 
+    .textSide,.infoImg{display: inline-block;}
+    .textSide{width:50%; float: right; padding-right:15px;}
+    .infoImg{width:54%; margin-left:-12%; vertical-align:top}
+    .ContInfo {margin-top:10%;}
+
+    p.ConInfo {margin-bottom:15px;}
+    .ContBorder{width:80px; height:2px; background-color:$msGreen; margin-bottom:20px;}
+  }
+
+  @include bp(dt) {
+    .info {width: 972px;}
+  }
+
+  @include bp(tb) {
+    padding:70px 0;
+    .info{width:90%; @include center-block();
+      .textSide{width:48%; padding-right:0px;}
+      .infoImg{width:48%; margin-left:0;}
+      .ContInfo {margin-top:6%;}
+      p{font-size:15px;}
+      p.ConInfo br {display: none;}
+    }
+  }
+
+  @include bp(tn) {
+    padding:40px 0;
+    &::before{height:60%; margin-top: 3%; width:85%; left:5%;}
+    .info{
+      .textSide{width:85%;@include center-block();}
+      .infoImg{width:52%;float:right; margin-top:-15%;}
+      .ContInfo {margin-top:0;}
+      p.ConInfo br {display: block;}
+    }
+  }
+
+  @include bp(mb) {
+    padding:30px 0;
+    &::before{display:none;}
+    .info{
+      .textSide{width:90%;}
+      .infoImg{display:none;}
+      p.ConInfo br {display: none;}
+    }
+  }
 }
 
 .Exec {@include sec-default(); text-align:left; margin-top:30px;padding-top:30px;

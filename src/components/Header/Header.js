@@ -40,7 +40,9 @@ class Header extends Component {
               <span></span>
               <span></span>
             </button>
+            
             <div id="offcanvas-nav" data-uk-offcanvas="overlay: true; flip: true;">
+              <button className="uk-offcanvas-close" type="button" uk-close></button>
               <div className={["uk-offcanvas-bar", classes.mobileMenu].join(' ')}>
                 <ul className={["uk-nav", classes.mobNav].join(' ')}>
                   <NavigationItems />

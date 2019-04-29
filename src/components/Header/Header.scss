@@ -29,11 +29,12 @@
     text-align: center;
   }
 
-  @media (max-width: 1023px) {
+
+  @include bp(tb) {
     .navbarWrap {display:none;}
-    .ocNavBtn {display: block; float:right; margin-top:7%; border:0; width:35px;
+    .ocNavBtn {display: block; float:right; margin-top:5%; border:0; width:35px;
       span{@include sec-default(); height:2px; margin-bottom: 5px; background-color: $black;}
     }
-
+    .LogoHd {width:200px;}
   }
 }
