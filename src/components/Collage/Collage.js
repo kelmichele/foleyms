@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Collage.scss";
 import { HashLink as Link } from 'react-router-hash-link';
 
-import Coll1 from "../../assets/images/foley4.jpg";
+import Coll1 from "../../assets/images/NoImg.jpg";
 
 const collage = () => {
   return (

@@ -66,7 +66,7 @@
 //   img{display: inline-block; width:49.7%;}
 //   .ImgL{float:left;}
 //   .ImgR{float:right;}
-  .SlideSize{ display:inline-block;
+  .SlideSize{ display:inline-block; padding-left:20px;
     // width: 70%;
     img{height:460px;}
   }
@@ -86,108 +86,68 @@
   p.Dos{float:right;}
 }
 
-.ContactBody{padding: 70px 0 60px;
-  .LeftSide, .RightSide, .CalSide {display: inline-block;}
-  .LeftSide {width:50%; margin-top:2%; 
-    p{font-size:18px;}
-    p.ConInfo{margin-left:30px; padding-left:15px; border-left:2px solid $msGreen;font-size:16px;}
-    .InLeft{@include sec-default(); margin-top:0px;}
-  }
+// .TextRowAlt {@include sec-default(); margin: 40px 0 55px;
+//   .Uno, .Dos{display: inline-block;  }
+//   .Uno{float:left; width:28%;margin-left: 3%;}
+//   .Dos{float:right; width:57%;margin-right: 2%;
+//     padding:30px; position: relative; z-index:0;
+//     @include sec-bgimage('../../../assets/images/Foley-3000.jpg'); background-position:center center;
+//     &::before{@include before(); background-color: rgba($black,.7);}
+//     p{color:$white;}
+//   }
+// }
 
-  .PhotoBoxLink1 {display: inline-block; min-height: 70px; 
-    width:48%; margin:40px 0 0;
-    @include sec-bgimage2();background-position: center center; background-size:cover;
-    padding: 35px 0 0; text-align:center; position: relative; z-index:0;
-    color:$white; font-weight: bold; @include tshadowl(rgba($black,.5)); font-family: $sign; font-size:25px; letter-spacing: 1.5px;
-      
-    &.property {float:right; }
+.ContactBody{
+  padding:100px 0; 
+  position: relative; z-index: 0; 
+  @include sec-bgimage('../../../assets/images/gadsBW2.jpg'); background-size:cover; background-position: bottom right;
+  // &::before{ @include before(); background-color:$white; height:80%; margin-top: 5%; width:65%; left:35%;}
+  &::before{ @include before(); background-color:rgba($cream,.92); z-index:-2;}
+  &::after{ @include before(); background-color:$white; height:80%; margin-top: 5%; width:65%; left:35%;}
 
-    &::before{@include before();background-color: rgba($black, .55);}
-    &::after{@include after(); border:2px solid $white; width:90%; height: 80%; margin-left:4%; bottom: 10%;}
-    
-    &.tour{background-image: url(../../../assets/images/mapSS.png);}
-    &.property{background-image: url(../../../assets/images/sAlston.png);}
-  }
-
-  .CalSide {float:right; width:48%; margin-top:-10%;
-    .PhotoBoxLink {width:88%; font-size: 15px; font-family: $monte; letter-spacing: .3px;
-      padding:30px 30px 5px;background-image: url(../../../assets/images/dogPark2.jpg);
-      &::after{width:95%; margin-left:2%;}
-      &::before{background-color: rgba($black, .65);}
-      a{color:$msGreen; font-weight: bold;}
-    }
-    p{padding:0 10px; text-align:center; margin-bottom:0;}
-  }
-
-  @include bp(dt) {
-    .PhotoBoxLink {width:250px; 
-      &.tour{ margin-left: -10%;}
-    }
-  }
-
-
-  .TopHlf, .BtmHlf {@include sec-default(); text-align:center;
-    .PhotoBoxLink, .ContInfo {display: inline-block; width:33%; margin:0 .5%; vertical-align: top;padding: 20px 5px; }
-    .PhotoBoxLink {min-height: 170px; width:25%;
-      // width:48%; margin:40px 0 0;
-      @include sec-bgimage2();background-position: center center; background-size:cover;
-      text-align:center; position: relative; z-index:0;
-      color:$white; font-weight: bold; @include tshadowl(rgba($black,.5)); font-family: $sign; font-size:25px; letter-spacing: 1.5px;
-      span{line-height: 110px;}
-
-      &::before{@include before();background-color: rgba($black, .55);}
-      &::after{@include after(); border:2px solid $white; width:90%; height: 80%; margin-left:4%; bottom: 10%;}
-      
-      &.tour{background-image: url(../../../assets/images/mapSS.png);}
-      &.property{background-image: url(../../../assets/images/sAlston.png);}
-      &.events {background-image: url(../../../assets/images/dogPark2.jpg);}
-    }
-    .ContInfo {padding:30px 5px 0;}
-  }
-
-  .TopHlf{
-    // .ContInfo {width:35%;}
-    // .PhotoBoxLink {width:25%;  }
-    p{width:85%; @include center-block();}
-  }
-  .BtmHlf{
-    .PhotoBoxLink{margin-top:-30px;}
-  }
-
-
-  position: relative; z-index: 0; padding:100px 0; background-color:rgba($msCream, .15);
-  &::before{ @include before(); background-color:$white; height:80%; margin-top: 5%; width:65%; left:35%;}
   .info {width: 85%;float: right; 
+    h1{font-size:1.6rem; margin-bottom:13px; font-weight:$semi; letter-spacing: .8px;}
     .textSide,.infoImg{display: inline-block;}
     .textSide{width:50%; float: right; padding-right:15px;}
-    .infoImg{width:54%; margin-left:-12%; vertical-align:top}
-    .ContInfo {margin-top:10%;}
+    .infoImg{width:54%; margin-left:-12%; vertical-align:top;
+      &.MobileImg{display: none;}
+    }
+    .ContInfo {margin-top:8%;}
 
     p.ConInfo {margin-bottom:15px;}
     .ContBorder{width:80px; height:2px; background-color:$msGreen; margin-bottom:20px;}
   }
 
   @include bp(dt) {
-    .info {width: 972px;}
+    .info {width: 972px;
+      .ContInfo {margin-top:10%;}
+    }
   }
 
   @include bp(tb) {
-    padding:70px 0;
+    padding:80px 0;
+    &::after{ height:85%; margin-top: 5%; width:80%; left:20%;}
     .info{width:90%; @include center-block();
+      h1{font-size:1.45rem;}
       .textSide{width:48%; padding-right:0px;}
       .infoImg{width:48%; margin-left:0;}
-      .ContInfo {margin-top:6%;}
       p{font-size:15px;}
       p.ConInfo br {display: none;}
+
+      .infoImg{
+        &.FullImg{display: none;}
+        &.MobileImg{display:block;}
+      }
     }
   }
 
   @include bp(tn) {
-    padding:40px 0;
-    &::before{height:60%; margin-top: 3%; width:85%; left:5%;}
+    padding:60px 0;
+    &::after{height:60%; margin-top: 3%; width:85%; left:5%;}
     .info{
+      h1{font-size:1.3rem;}
       .textSide{width:85%;@include center-block();}
-      .infoImg{width:52%;float:right; margin-top:-15%;}
+      .infoImg{width:52%;float:right; margin-top:-19%;}
       .ContInfo {margin-top:0;}
       p.ConInfo br {display: block;}
     }
@@ -195,11 +155,13 @@
 
   @include bp(mb) {
     padding:30px 0;
-    &::before{display:none;}
-    .info{
+    &::before{background-color:rgba($cream,.97);}
+    &::after{display:none;}
+    .info{text-align: center;
       .textSide{width:90%;}
-      .infoImg{display:none;}
+      .infoImg.MobileImg{display:none;}
       p.ConInfo br {display: none;}
+      .ContBorder{@include center-block();}
     }
   }
 }

@@ -1,7 +1,9 @@
 import React from "react";
 import classes from "./Listings.scss";
+import { Helmet } from "react-helmet";
 import PageHeader from "../../../components/PageHeader/PageHeader";
-import phBG from "../../../assets/images/Foley-3016.jpg";
+import phBG from "../../../assets/images/Foley-3073.jpg";
+// import phBG from "../../../assets/images/ph.jpg";
 import rl1 from "../../../assets/images/sAlston.png";
 import rl2 from "../../../assets/images/wLaurel.png";
 import rl3 from "../../../assets/images/wLaurel200.png";
@@ -14,10 +16,18 @@ import Listing3 from "../../../wLaurel200.pdf";
 const listings = () => {
   return (
     <div className={classes.listingsPage}>
-      <PageHeader phImage={phBG} ovPacity=".25" hColor="white" pageTitle="Available Property" Pos="center" />
+      <Helmet>
+        <title>Available Property in Foley, Al</title>
+        <meta name="description" content="" />
+      </Helmet>
 
+       {/* Pos="ListingsPg" */}
+      <PageHeader phImage={phBG} ovPacity=".1" hColor="white" pageTitle="Available Property" Pos="center" />
+
+      {/* <div className={classes.insideNrw}><div className={classes.intro}><div className={classes.insideXl}> */}
       <div className={classes.intro}>
         <div className={classes.insideNrw}>
+          {/* <h1>Available Property</h1> */}
           <p>With all of the history and beautiful scenery that Foley has to offer, on top of its prime location and high foot traffic, 
           it is no surprise that businesses of all kinds are attracted to the downtown area.
           Take a look at the properties currently available in Foley.
@@ -25,6 +35,7 @@ const listings = () => {
           {/* <p>Listings updated every 6 weeks.</p> */}
         </div>
       </div>
+      {/* </div></div> */}
 
       <div className={classes.realList}>
         <div className={classes.inside}>

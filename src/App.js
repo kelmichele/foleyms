@@ -14,10 +14,6 @@ import BuslistingsListLoader from "./components/BusTable/BuslistingsListLoader";
 import BuslistingDetailsLoader from "./components/BusTable/BuslistingDetailsLoader";
 import Calendar from "./components/Calendar/Calendar";
 
-// import Parallax from "./components/Parallax/Parallax";
-// import phImage from "./assets/images/ph.jpg";
-// import PropTypes from "prop-types";
-
 import Amplify, { } from 'aws-amplify';
 import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);

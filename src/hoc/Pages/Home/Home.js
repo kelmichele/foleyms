@@ -5,11 +5,9 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 import Parallax from "../../../components/Parallax/Parallax";
 import bg1 from "../../../assets/images/Foley-3087.jpg";
-// import PhotoCat from "../../../components/PhotoCat/PhotoCat";
 import msLogo from "../../../assets/images/msaRedRGB.jpg";
 
 import ImageTextLink from "../../../components/ImageText/ImageTextLink";
-// import ItPhoto1 from "../../../assets/images/wLaurel.png";
 import Pdf1 from "../../../Mkt-Snapshot2019.pdf";
 import Pdf2 from "../../../FoleyFwdPlan_190320.pdf";
 import Pdf3 from "../../../foley-map2.pdf";
@@ -22,9 +20,12 @@ import MapImg1 from "../../../assets/images/mapSS.png";
 import MapImg2 from "../../../assets/images/mapLegend.jpg";
 
 
-// const plaxHd1 = (
-//   <h1 className={[classes.HomeH1, classes.AltStyle].join(' ')}><span className={classes.TopH}>Welcome to</span> <br />Historic Downtown  <span className={classes.sign}>Foley</span></h1>
-// );
+const plaxHd1 = (
+  <h1 className={[classes.HomeH1, classes.AltStyle].join(' ')}>
+    {/* <span className={classes.TopH}>Welcome to</span> <br />Historic Downtown  <span className={classes.sign}>Foley</span> */}
+    Becoming better connected<br /> to <span className={classes.sign}>each other</span> and our <span className={classes.sign}>history</span>
+  </h1>
+);
 
 // KP * DELETE COLLAGE COMPONENT??
 
@@ -59,8 +60,7 @@ class Home extends Component {
         <Parallax
           plaxImage={bg1}
           // plaxShadow="true"
-          // plaxHeadline={plaxHd1}
-          // plaxContent={plaxContent1}
+          plaxHeadline={plaxHd1}
           // bgy="bgy: -200"
           bgSize="100%"
           plaxHeight="300px"

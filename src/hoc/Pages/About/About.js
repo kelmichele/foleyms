@@ -2,9 +2,9 @@ import React from "react";
 import classes from "./About.scss";
 import { Helmet } from "react-helmet";
 import PageHeader from "../../../components/PageHeader/PageHeader";
-import phImage from "../../../assets/images/Foley-3025.jpg";
+import phImage from "../../../assets/images/Foley-3073.jpg";
 import ImageText from "../../../components/ImageText/ImageText";
-import bodyImg3 from "../../../assets/images/foley6.jpg";
+import bodyImg3 from "../../../assets/images/Foley-3062.jpg";
 
 import Slider1A from "../../../assets/images/mm-menus.jpg";
 import Slider1B from "../../../assets/images/Foley-3058.jpg";
@@ -55,7 +55,10 @@ const about = () => {
       <div className={[classes.fullRow, classes.Sec1].join(' ')}>
         <div className={classes.insideNrw}>
           <div className={classes.intro}>
-              <h1 className={classes.HomeH1}><span className={classes.sign}>Foley</span> <span className={classes.Toph1}>Main Street</span></h1>
+              <h1 className={classes.HomeH1}>
+                {/* <span className={classes.sign}>Foley</span> <span className={classes.Toph1}>Main Street</span> */}
+                The <span className={classes.sign}>Heart</span> <span className={classes.Toph1}>of the City</span>
+              </h1>
             {textContent0}
           </div>
 
@@ -127,8 +130,8 @@ const about = () => {
           </div>
         </div>
 
-        <div className={classes.medDef}>            
-          <ImageText textContent={textContent1} image={bodyImg3} addPadd="xtra" textFloat="textRight" lessPadd="less" />
+        <div className={classes.med2Def}>            
+          <ImageText textContent={textContent1} image={bodyImg3} addPadd="xmid" textFloat="textRight" lessPadd="less" gridType="ABcustom"/>
           <div className={classes.spacer3} />
         </div>
       </div>

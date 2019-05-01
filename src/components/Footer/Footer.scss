@@ -14,19 +14,8 @@
 }
 
 .FtGrid {display: inline-block;
-//  position: relative; z-index: 0;
   text-align: left; vertical-align: top;
   width: 33%;text-align:center;
-  // &.FgAcc{width: 40%; } 
-  // &.Fg3{float:left;} 
-  // &.Fg1{width: 19%; } 
-  // &.Fg2{width: 25%;} 
-  // &.FgLast{float:right; width:25%;
-  //   padding-left:20px; 
-  //   text-align:center; padding-top:2%;
-  //   &::before{@include before(); background-color: rgba($dark,.2); width:1px; height:270px;}
-  // }
-
   p.FtTitle, p.FtMoto{font-size:25px; font-weight: bold; font-family: $sign; letter-spacing: 1px; margin-bottom: 7px;}
   p.FtMoto{font-size:19px}
   .FtMenu li, p.FtInfo{font-size:14px; margin-bottom:7px;}
@@ -39,6 +28,13 @@
   p.Hs{text-align:left; float:left;}
   p.Copy{float:right; text-align: right;}
   p,a {font-size:13px;}
+}
+
+@include bp(tn) {
+  .FtGrid { 
+    &.FgAcc{@include sec-default();}
+    &.FgLast, &.Fg3{display:none;}
+  }  
 }
 
 

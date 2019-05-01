@@ -4,24 +4,50 @@
 
 .listingsPage{@include sec-default();
   .intro {margin:20px 0 10px;}
-}
 
-.realList{@include sec-default(); 
-  position: relative; z-index: 0; padding: 75px 0 50px;
-  
-  background-image: url(../../../assets/images/foley7.jpg); 
-  background-size:35%; background-position: right bottom; background-repeat: no-repeat;
-  &::before{@include before(); width:35%; background-color: $msGreen; opacity:.93; margin-left:65%;}
 
-  .realItem, .FoButtons{display: inline-block;}
-  .realItem{
-    // width:35%; margin-left:2%;
-    width:28%; margin-left:1%;
-    margin-bottom:40px; background-color: $white; text-align:center;
-    box-shadow: 0px 5px 8px rgba($black,.15); 
-    .realTitle{padding: 20px 10px; color:$black; font-size:17px;
-      span {font-size: 15px; font-weight:bold;}
+  // .insideNrw{width: 810px;}
+  // .intro{@include sec-default();padding:20px 0; margin-top: -80px; background-color:$white; position: relative; margin-bottom:55px;
+  //   h1{font-size:1.6rem; letter-spacing:.9px; margin-bottom:10px; font-weight:$semi;}
+  // }
+
+  .realList{@include sec-default(); 
+    position: relative; z-index: 0; padding: 75px 0 50px;
+    
+    background-image: url(../../../assets/images/foley7.jpg); 
+    background-size:35%; background-position: right bottom; background-repeat: no-repeat;
+    &::before{@include before(); width:35%; background-color: rgba($msCream, .94); margin-left:65%;}
+
+    .realItem, .FoButtons{display: inline-block;}
+    .realItem{
+      // width:35%; margin-left:2%;
+      width:28%; margin-left:1%;
+      margin-bottom:40px; background-color: $white; text-align:center;
+      box-shadow: 0px 5px 8px rgba($black,.15); 
+      .realTitle{padding: 20px 10px; color:$black; font-size:17px;
+        span {font-size: 15px; font-weight:bold;}
+      }
+      a:hover .realTitle{opacity:.6;}
     }
-    a:hover .realTitle{opacity:.6;}
+  }
+
+  @include bp(tb) {
+    .intro p {font-size:16px; margin:0;}
+
+    .realList {padding: 55px 0 35px;
+      .realItem{width:30%; margin-left:1%;
+        .realTitle{font-size:16px;}
+        .realTitle span{font-size:14px;}
+      }
+    }
+  }
+
+   @include bp(br) {
+    .realList { background-image:none;
+      .realItem{width:42%; margin-left:5%;
+        .realTitle{font-size:16px;}
+        .realTitle span{font-size:14px;}
+      }
+    }
   }
 }

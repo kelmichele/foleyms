@@ -17,10 +17,10 @@
   &:first-child{margin-left: 0;}
   &:last-child{margin-right: 0;}
 
-  &.Box1{background-image: url(../../assets/images/foley1.jpg);}
-  &.Box2{background-image: url(../../assets/images/foley4.jpg);}
-  &.Box3{background-image: url(../../assets/images/foley7.jpg);}
-  &.Box4{background-image: url(../../assets/images/foley8.jpg);}
+  // &.Box1{background-image: url(../../assets/images/NoImg.jpg);}
+  // &.Box2{background-image: url(../../assets/images/NoImg.jpg);}
+  // &.Box3{background-image: url(../../assets/images/NoImg.jpg);}
+  // &.Box4{background-image: url(../../assets/images/NoImg.jpg);}
 }
 
 .photoCat.negative{margin-top:-50px;
@@ -30,8 +30,8 @@
     a{font-size:30px;
       font-family: $sign; font-size: 40px; letter-spacing: 2px;
     }
-    &.Box1{background-image: url(../../assets/images/mm-alfredo.jpg);}
-    &.Box2{background-image: url(../../assets/images/artCenter1.jpg);}
-    &.Box4{background-image: url(../../assets/images/downtown1.jpg);}
+    // &.Box1{background-image: url(../../assets/images/NoImg.jpg);}
+    // &.Box2{background-image: url(../../assets/images/NoImg.jpg);}
+    // &.Box4{background-image: url(../../assets/images/NoImg.jpg);}
   }
 }

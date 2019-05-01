@@ -2,18 +2,22 @@
 @import '../../assets/mixins.scss';
 @import '../../assets/global.scss';
 
-.PageHeader{height:250px; margin-bottom: 20px;text-align: center; margin-top:0;
+.PageHeader{height:200px; margin-bottom: 20px;text-align: center; margin-top:0;
   @include sec-bgimage2(); 
   // background-position: center center;
   z-index: 0; position:relative;
   .Overlay{@include sec-default(); @include before(); background-color: $black;}
-  .TextBx{@include sec-default(); margin-top:7%;}
+  .TextBx{@include sec-default(); margin-top:6%;}
 
   &.Teal .Overlay{background-color: $msGreen;}
   &.center{background-position: center center;}
   &.bottom{background-position: right bottom;}
 
-  &.aboutHd{background-position: top center; height:500px;
+  &.aboutHd{background-position: center center; height:500px;
+    h1{display: none;}
+  }
+
+  &.ListingsPg{height:280px; background-position: center center;
     h1{display: none;}
   }
 

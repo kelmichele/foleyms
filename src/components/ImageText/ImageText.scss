@@ -7,6 +7,7 @@
   .ImageHlf, .TextHlf {display: inline-block;
     &.xxtra{margin-top: 70px;}
     &.xtra{margin-top: 50px;}
+    &.xmid{margin-top: 35px;}
     &.xsm{margin-top: 20px;}
   }
   .ImageHlf {float: right;}
@@ -27,6 +28,13 @@
   &.imageBig{
     .TextHlf{width:45%;}
     .ImageHlf{width:51%;}
+  }
+
+
+  &.ABcustom{
+    .TextHlf{width:40%;}
+    .ImageHlf{width:56%;}
+    
   }
 
   &.RelativeBg{padding-bottom:60px;

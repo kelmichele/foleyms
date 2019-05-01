@@ -1,13 +1,8 @@
 import React from "react";
 import classes from "./Directory.scss";
 import { Helmet } from "react-helmet";
-// import Parallax from "../../../components/Parallax/Parallax";
-// import phImage from "../../../assets/images/ph.jpg";
 import PageHeader from "../../../components/PageHeader/PageHeader";
 import phBG from "../../../assets/images/TEMPgads.jpg";
-// import DropList from "../../../components/DropList/DropList";
-// import bg1 from "../../../assets/images/mm-alfredo.jpg";
-// import bg2 from "../../../assets/images/artCenter1.jpg";
 import Filter from "../../../components/Filter/Filter";
 
 
