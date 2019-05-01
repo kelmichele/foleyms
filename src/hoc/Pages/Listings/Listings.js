@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./Listings.scss";
 import { Helmet } from "react-helmet";
-import PageHeader from "../../../components/PageHeader/PageHeader";
-import phBG from "../../../assets/images/Foley-3073.jpg";
+// import PageHeader from "../../../components/PageHeader/PageHeader";
+import phBG from "../../../assets/images/Foley-3016.jpg";
 // import phBG from "../../../assets/images/ph.jpg";
 import rl1 from "../../../assets/images/sAlston.png";
 import rl2 from "../../../assets/images/wLaurel.png";
@@ -22,20 +22,21 @@ const listings = () => {
       </Helmet>
 
        {/* Pos="ListingsPg" */}
-      <PageHeader phImage={phBG} ovPacity=".1" hColor="white" pageTitle="Available Property" Pos="center" />
+      {/* <PageHeader phImage={phBG} ovPacity=".1" hColor="white" pageTitle="Available Property" Pos="ListingsPg" /> */}
 
-      {/* <div className={classes.insideNrw}><div className={classes.intro}><div className={classes.insideXl}> */}
-      <div className={classes.intro}>
-        <div className={classes.insideNrw}>
-          {/* <h1>Available Property</h1> */}
-          <p>With all of the history and beautiful scenery that Foley has to offer, on top of its prime location and high foot traffic, 
-          it is no surprise that businesses of all kinds are attracted to the downtown area.
-          Take a look at the properties currently available in Foley.
-          Select a listing to learn more, and feel free to contact us with questions. </p>
-          {/* <p>Listings updated every 6 weeks.</p> */}
+      <div className={classes.medDef}>
+        <div className={classes.intro}>
+          <img src={phBG} alt="real estate item" className={classes.imgRel} />
+
+          <div className={classes.intText}>
+            <h1>Available Property</h1>
+            <p>With all of the history, beautiful scenery, and foot traffic that Foley has to offer, it is no surprise that businesses of all kinds are attracted to the downtown area.
+            Take a look at the properties currently available in Foley.
+            Select a listing to learn more, and feel free to contact us with questions. </p>
+            {/* <p>Listings updated every 6 weeks.</p> */}
+          </div>
         </div>
       </div>
-      {/* </div></div> */}
 
       <div className={classes.realList}>
         <div className={classes.inside}>
