@@ -2,6 +2,44 @@
 @import '../../../assets/variables.scss';
 @import '../../../assets/mixins.scss';
 
+.relTitle {@include sec-default(); padding:70px 0 0px;
+  // margin-top:50px;
+  text-align: center;
+  position: relative; z-index: 0;  
+  &::before{@include before(); background-color: $msGreen; height:75%;}
+  &.BgAlt::before{background-color:$dark; height:45%;}
+
+  .imgCenter{width:80%; @include center-block();}
+  .TextBox {@include sec-default(); padding:60px 0 30px;}
+  h2{font-size:2rem; margin: 0; font-family: $gochi; color: $white; font-weight: bold; text-align: center; @include tshadowl(rgba($black,.5)); line-height:1em;}
+  h1{margin-top:0; color: $white; font-size:2.3rem; margin-bottom: 10px; font-family: $monte; letter-spacing:1px; font-weight:bold; text-transform: uppercase}
+
+  &.BgNone{padding:0 0 30px;
+    &::before{display:none;}
+    .imgCenter{width:75%;}
+    .TextBox {padding:40px 0 0px;}
+  }
+
+  @include bp(tb) {
+    padding:55px 0 0px;
+    h1 {font-size:2rem;}
+  }
+
+  @include bp(tn) {
+    padding:40px 0 0px;
+    h1 {font-size:1.7rem;}
+  }
+
+   @include bp(oc) {
+    padding:20px 0 0px;
+    h1 {font-size:1.3rem;}
+  }
+
+  @include bp(sm) {
+    h1 {font-size:1rem;}
+  }
+}
+
 .aboutPage, .boardPage,.abBody,.ContactBody{@include sec-default(); }
 .aboutPage {
   .intro p {font-size:17px;}
@@ -13,9 +51,14 @@
 }
 
 .boardPage {
-  h1{margin-top: -85px; color:$white; text-align:center; @include tshadowl(rgba($black,.4));}
-  
-  .boardBody{@include sec-default(); text-align: center; margin-top:50px; position:relative; background-color: $msLt;}
+  .relTitle{
+    &::before {background-color: rgba($msGreen, .96);}
+    &::after{ @include before(); height:75%; z-index: -2;
+      @include sec-bgimage('../../../assets/images/gadsBW2.jpg'); background-position: bottom right;
+    }
+  }
+  h1{ color:$white; text-align:center; @include tshadowl(rgba($black,.4));}
+  .boardBody{@include sec-default(); text-align: center; margin-top:30px; position:relative; background-color: $msLt;}
   
   h3{padding-bottom:5px; border-bottom:$border; margin-bottom: 20px; font-weight:bold;
     color: $msGreen; font-size:35px; letter-spacing: 2px; font-family: $sign;
@@ -30,8 +73,7 @@
     b{font-size:16px;}
   }
 
-  .OfficerBox {@include sec-default(); padding:20px 0; background-color: $msGreen; text-align:center;
-    margin: 40px 0;
+  .OfficerBox {@include sec-default(); padding:20px 0; background-color: $msGreen; text-align:center;margin: 40px 0;
     h3{border-color: rgba($msCream,.25); color:$white; @include tshadowl(rgba($black,.35));}
     .officers {@include sec-default(); }
     li{display: inline-block; float:none; vertical-align: top; width:24%; line-height:1.3em;}
@@ -40,26 +82,41 @@
     }
   }
 
-}
+  @include bp(tb) {
+    .boardBody{margin-top:15px; }
+    h3{font-size:28px;}   
+    li, a{ font-size: 16px; line-height: 1.5em;} 
+    .intro p{font-size:16px;}
 
-.relTitle {@include sec-default(); padding:70px 0 0px;
-  // margin-top:50px;
-  text-align: center;
-  position: relative; z-index: 0;  
-  &::before{@include before(); background-color: $msGreen; height:75%;}
-  &.BgAlt::before{background-color:$dark; height:45%;}
+    .OfficerBox{margin:10px 0 25px; padding:20px 0 10px;
+      li{width: 40%; margin:7px auto 20px;}
+      li, a{ font-size: 15px; }
+    }
+  }
 
-  .imgCenter{width:80%; @include center-block();}
-  .TextBox {@include sec-default(); padding:60px 0 30px;}
-  h2{font-size:2rem; margin: 0; font-family: $gochi; color: $white; font-weight: bold; text-align: center; @include tshadowl(rgba($black,.5)); line-height:1em;}
-  h1{margin-top:0; color: $white; font-size:2.5rem; margin-bottom: 10px; font-family: $monte; letter-spacing:1px; font-weight:bold; text-transform: uppercase}
+  @include bp(tn) {
+    .boardBody{margin:12px 0 0; }
+    h3{font-size:24px;}   
+    li, a{ font-size: 15px; }
+    .intro p{font-size:15px;}
 
-  &.BgNone{padding:0 0 30px;
-    &::before{display:none;}
-    .imgCenter{width:75%;}
-    .TextBox {padding:40px 0 0px;}
+    .OfficerBox{margin:0px 0 25px; padding:10px 0 5px;
+      li{width: 40%; margin:7px auto 20px;}
+    }
+  }
+
+  @include bp(mb) {
+    .boardBody{margin:12px 0 0; }
+    h3{font-size:22px;}   
+
+    .OfficerBox{
+      li{@include sec-default();margin:0px 0 20px;}
+    }
+
+    .members li{ @include sec-default(); margin:0 0 20px;}
   }
 }
+
 
 .ImgRow {@include sec-default(); padding:80px 0; background-color: #f5f5f5;
 // padding:15px 0; text-align: center;
