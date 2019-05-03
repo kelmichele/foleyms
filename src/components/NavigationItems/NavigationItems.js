@@ -4,7 +4,7 @@ import classes from "./NavigationItems.scss";
 import Aux from "../../hoc/Aux/Aux";
 import Pdf1 from "../../Mkt-Snapshot2019.pdf";
 import Pdf2 from "../../FoleyFwdPlan_190320.pdf";
-
+import MsMap from "../../MainStreetDist.pdf";
 class NavigationItems extends Component {
   render() {
     return(
@@ -37,6 +37,18 @@ class NavigationItems extends Component {
         <li><NavLink to="#">Community Links</NavLink>
           <div className={["uk-navbar-dropdown", classes.custDrop, classes.LgDrop].join(' ')}>
             <ul className={classes.dropMenu}>
+              <li><a href={Pdf1} target="_blank" rel="noopener noreferrer" className={[classes.NavigationItems, classes.dropLink].join(' ')}>
+                Market Snapshot
+              </a></li>
+              
+              <li><a href={Pdf2} target="_blank" rel="noopener noreferrer" className={[classes.NavigationItems, classes.dropLink].join(' ')}>
+                Foley Forward Comprehensive Plan
+              </a></li>
+
+              <li><a href={MsMap} target="_blank" rel="noopener noreferrer" className={[classes.NavigationItems, classes.dropLink].join(' ')}>
+                Main Street Foley Map
+              </a></li>
+
               <li>
                 <a href="https://cityoffoley.org" target="_blank" className={[classes.NavigationItems, classes.dropLink].join(' ')} rel="noopener noreferrer">
                 City of Foley</a>
@@ -56,14 +68,6 @@ class NavigationItems extends Component {
                 <a href="https://cityoffoley.org/demographics/" target="_blank" className={[classes.NavigationItems, classes.dropLink].join(' ')} rel="noopener noreferrer">
                 Demographics</a>
               </li>
-
-              <li><a href={Pdf1} target="_blank" rel="noopener noreferrer" className={[classes.NavigationItems, classes.dropLink].join(' ')}>
-                Market Snapshot
-              </a></li>
-              <li><a href={Pdf2} target="_blank" rel="noopener noreferrer" className={[classes.NavigationItems, classes.dropLink].join(' ')}>
-                Foley Forward Comprehensive Plan
-              </a></li>
-
             </ul>
           </div>
         </li>

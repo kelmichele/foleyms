@@ -12,22 +12,20 @@ import Pdf1 from "../../../Mkt-Snapshot2019.pdf";
 import Pdf2 from "../../../FoleyFwdPlan_190320.pdf";
 import Pdf3 from "../../../foley-map2.pdf";
 
+// import ti1 from "../../../assets/images/mm-alfredo.jpg";
+// import ti2 from "../../../assets/images/modelTrain1b.jpg";
+// import ti3 from "../../../assets/images/artCenter1.jpg";
 import ti1 from "../../../assets/images/mm-alfredo.jpg";
-import ti2 from "../../../assets/images/modelTrain1b.jpg";
-import ti3 from "../../../assets/images/artCenter1.jpg";
+import ti2 from "../../../assets/images/owa1.jpg";
+import ti3 from "../../../assets/images/Foley-3046.jpg";
 
 import MapImg1 from "../../../assets/images/mapSS.png";
 import MapImg2 from "../../../assets/images/mapLegend.jpg";
 
 
 const plaxHd1 = (
-  <h1 className={[classes.HomeH1, classes.AltStyle].join(' ')}>
-    {/* <span className={classes.TopH}>Welcome to</span> <br />Historic Downtown  <span className={classes.sign}>Foley</span> */}
-    Becoming better connected<br /> to <span className={classes.sign}>each other</span> and our <span className={classes.sign}>history</span>
-  </h1>
+  <h2 className={[classes.HomeH1, classes.AltStyle].join(' ')}>Becoming better connected<br /> to <span className={classes.sign}>each other</span> and our <span className={classes.sign}>history</span></h2>
 );
-
-// KP * DELETE COLLAGE COMPONENT??
 
 const textContent = (
   <div>  
@@ -59,7 +57,7 @@ class Home extends Component {
       <div className={classes.Home}>
         <Parallax
           plaxImage={bg1}
-          // plaxShadow="true"
+          // plaxShadow="tr2e"
           plaxHeadline={plaxHd1}
           // bgy="bgy: -200"
           bgSize="100%"
