@@ -101,7 +101,7 @@ const about = () => {
 
         <div className={[classes.ImgRow, classes.noBg, "uk-position-relative uk-visible-toggle uk-dark"].join(' ')} tabindex="-1" uk-slideshow="autoplay: true; autoplay-interval: 5000;">
             <div className={classes.insideAlt}>
-              <ul class="uk-slideshow-items">
+              <ul className="uk-slideshow-items">
               {/* <ul className={[classes.ImgSlides, "uk-slider-items uk-grid"].join(' ')}> */}
                 <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2A} alt="" /></div></li>
                 <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2D} alt="" /></div></li>
@@ -110,7 +110,7 @@ const about = () => {
                 <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2E} alt="" /></div></li>
               </ul>
               
-              {/* <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slideshow-item="previous">
+              {/* <a className="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slideshow-item="previous">
                 <span uk-icon="icon: chevron-left; ratio: 2"></span>
               </a> 
 
@@ -118,7 +118,7 @@ const about = () => {
                 <span uk-icon="icon: chevron-right; ratio: 2"></span>
               </a>*/}
             </div>
-            <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            <ul className="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
 
           </div>
 

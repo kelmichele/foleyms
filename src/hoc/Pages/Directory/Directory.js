@@ -126,7 +126,7 @@ const directory = () => {
     { id: 39, name: "Alabama Credit Union", website: "www.alabamacu.com", tags: "services" },
     { id: 40, name: "Alfa Insurance, Larry Engel", website: "www.alfainsurance.com", tags: "services" },
     { id: 41, name: "All About Massage Therapy", tags: "services" },
-    { id: 17, name: "Antiques on Alston Street", website: "www.antiquesonalstonstreet.com", tags: "shopping" },
+    { id: 17, name: "Antiques on Alston Street", website: "http://www.shopfoleyfirst.com/antiquesonalstonstreet?fbclid=IwAR3dfu-CKoYbXCUIOXvl9nsx4HEhwix-UIJKWntxzYE0KTUymj5Igg1AqPE", tags: "shopping" },
     { id: 42, name: "BB & T Bank", website: "www.bbandt.com", tags: "services" },
     { id: 43, name: "Big Wave Dentistry", website: "www.bigwavedentistry.com", tags: "services" },
     { id: 18, name: "Bobby’s Thrift Store", website: "https://www.facebook.com/bobbyrwilson60/", tags: "shopping" },

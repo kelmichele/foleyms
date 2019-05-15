@@ -61,6 +61,7 @@ body {font-family: $monte;
     &.bmargin0 {margin-bottom: 0;}
     &.gochi{font-family:$gochi;}
     &.sign{font-family:$sign; font-size:1.6em; letter-spacing: .4px; margin-bottom:0;}
+    &.green{color:$msGreen;}
   }
   p,li{font-weight: 400;}
   p{font-size: 16px; margin-top:7px;}
@@ -88,6 +89,7 @@ body {font-family: $monte;
       }
     }
 
+    span.green{color:$msGreen;}
   }
   h2{font-size: 1.65rem;}
 
