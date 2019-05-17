@@ -57,7 +57,7 @@ const about = () => {
           <div className={classes.intro}>
               <h1 className={classes.HomeH1}>
                 {/* <span className={classes.sign}>Foley</span> <span className={classes.Toph1}>Main Street</span> */}
-                The <span className={classes.sign}>Heart</span> <span className={classes.Toph1}>of the City</span>
+                The <span className={[classes.sign, classes.green].join(' ')}>Heart</span> <span className={classes.Toph1}>of the City</span>
               </h1>
             {textContent0}
           </div>
@@ -82,8 +82,12 @@ const about = () => {
               <li className={classes.SlideSize}><div className="uk-panel"><img src={Slider1C} alt="" /></div></li>
               <li className={classes.SlideSize}><div className="uk-panel"><img src={Slider1D} alt="" /></div></li>
             </ul>
-            {/* <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a> */}
-            {/* <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a> */}
+            <button type="button" className={["uk-position-center-left uk-position-small uk-hidden-hover", classes.ArrowRules].join(' ')} href="#" data-uk-slidenav-previous data-uk-slider-item="previous">
+              <span uk-icon="icon: chevron-left; ratio: 1.5"></span>
+            </button>
+            <button type="button" className={["uk-position-center-right uk-position-small uk-hidden-hover", classes.ArrowRules].join(' ')} href="#" data-uk-slidenav-next data-uk-slider-item="next">
+              <span uk-icon="icon: chevron-right; ratio: 1.5"></span>
+            </button>
           </div>
         </div>
 

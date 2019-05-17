@@ -4,10 +4,17 @@
 
 .listingsPage{@include sec-default();
   position: relative; z-index: 0;
-  &::before{@include before(); height:130px; background-color: rgba($msCream, .7);}
+  &::before{@include before(); height:130px; 
+    background-color: rgba($msCream, .7);
+    // background-color: rgba($msGreen, .8);
+  }
   
   .intro {margin:30px 0 50px;
-    h1{font-size:1.6rem; letter-spacing:.9px; margin-bottom:10px; font-weight:$semi;}
+    h1{font-size:1.6rem; letter-spacing:.9px; margin-bottom:10px; font-weight:$semi;
+    // text-transform: none; 
+    // letter-spacing: .5px;
+    // color:$msGreen;
+    }
     p{font-size:16px;}
   }
   .intText, .imgRel {display: inline-block; width:46%; position: relative;}
@@ -18,9 +25,12 @@
   .realList{@include sec-default(); 
     position: relative; z-index: 0; padding: 75px 0 50px;
     
-    background-image: url(../../../assets/images/foley7.jpg); 
+    background-image: url(../../../assets/images/foley1.jpg); 
     background-size:35%; background-position: right bottom; background-repeat: no-repeat;
-    &::before{@include before(); width:35%; background-color: rgba($msCream, .94); margin-left:65%;}
+    &::before{@include before(); width:35%; margin-left:65%;
+      background-color: rgba($msCream, .94);
+      background-color: rgba($msGreen, .94);
+    }
 
     .realItem, .FoButtons{display: inline-block;}
     .realItem{
@@ -29,7 +39,7 @@
       margin-bottom:40px; background-color: $white; text-align:center;
       box-shadow: 0px 5px 8px rgba($black,.15); 
       .realTitle{padding: 20px 10px; color:$black; font-size:17px;
-        span {font-size: 15px; font-weight:bold;}
+        span {font-size: 15px; font-weight:bold; color:$msGreen;}
       }
       a:hover .realTitle{opacity:.6;}
     }

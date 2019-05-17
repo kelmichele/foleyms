@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { TinyButton as ScrollUpButton } from "react-scroll-up-button"; //Add this line Here
+
 import { withRouter, Route, Switch } from "react-router-dom";
 import classes from './App.scss';
 import Header from "./components/Header/Header";
@@ -69,6 +71,12 @@ class App extends Component {
           
         </div>
         <Footer />
+        <ScrollUpButton 
+          ContainerClassName={classes.ToTopBtn}
+          TransitionClassName="MyOverRideTransitionedClass" 
+          style={{ fill: 'rgb(255,255,255)', color: '#008AAB', backgroundColor: 'rgb(0,138,171)', width:'20px', padding: '0px 5px'}}
+          EasingType='linear'
+        />
       </div>
     );
   }

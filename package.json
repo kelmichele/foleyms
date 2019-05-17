@@ -48,6 +48,7 @@
     "react-helmet": "^5.2.0",
     "react-router-dom": "^5.0.0",
     "react-router-hash-link": "^1.2.1",
+    "react-scroll-up-button": "^1.6.4",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",

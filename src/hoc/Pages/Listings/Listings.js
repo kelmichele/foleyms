@@ -21,9 +21,6 @@ const listings = () => {
         <meta name="description" content="" />
       </Helmet>
 
-       {/* Pos="ListingsPg" */}
-      {/* <PageHeader phImage={phBG} ovPacity=".1" hColor="white" pageTitle="Available Property" Pos="ListingsPg" /> */}
-
       <div className={classes.medDef}>
         <div className={classes.intro}>
           <img src={phBG} alt="real estate item" className={classes.imgRel} />

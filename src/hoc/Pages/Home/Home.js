@@ -12,12 +12,10 @@ import Pdf1 from "../../../Mkt-Snapshot2019.pdf";
 import Pdf2 from "../../../FoleyFwdPlan_190320.pdf";
 import Pdf3 from "../../../foley-map2.pdf";
 
-// import ti1 from "../../../assets/images/mm-alfredo.jpg";
-// import ti2 from "../../../assets/images/modelTrain1b.jpg";
-// import ti3 from "../../../assets/images/artCenter1.jpg";
-import ti1 from "../../../assets/images/mm-alfredo.jpg";
+import ti1 from "../../../assets/images/mm-pizza.jpg";
 import ti2 from "../../../assets/images/owa1.jpg";
-import ti3 from "../../../assets/images/Foley-3046.jpg";
+import ti3 from "../../../assets/images/modelTrain1b.jpg";
+// import ti3 from "../../../assets/images/Foley-3046.jpg";
 
 import MapImg1 from "../../../assets/images/mapSS.png";
 import MapImg2 from "../../../assets/images/mapLegend.jpg";
@@ -40,7 +38,7 @@ const textContent = (
 
 const textContent2 = (
   <div>
-    <h3 className={classes.sign}>Preservation. Promotion. Pride.</h3>
+    <h3 className={[classes.sign, classes.green].join(' ')}>Preservation. Promotion. Pride.</h3>
     {/* <h3 className={classes.sign}>Preserving Our History</h3> */}
     <p>With the help of their first ever Main Street Director, Foley is working to implement
     Main Street Alabama’s four-step approach for downtown promotion, economic vitality, and community connectivity.</p>
@@ -81,8 +79,8 @@ class Home extends Component {
         <div className={classes.photo4}>
           <div className={classes.inside}>
             <div className={[classes.ServiceBox, classes.Box1].join(' ')}>
-              <Link to="/directory" className={classes.SboxTitle}>Eat.</Link>
               <img src={ti1} className={classes.PhotoBox} alt="placeholder alt" />
+              <Link to="/directory" className={classes.SboxTitle}>Eat.</Link>
             </div>
 
             <div className={[classes.ServiceBox, classes.Box2].join(' ')}>
@@ -91,23 +89,21 @@ class Home extends Component {
             </div>
 
             <div className={[classes.ServiceBox, classes.Box3].join(' ')}>
-              <Link to="/directory" className={classes.SboxTitle}>Explore.</Link>
               <img src={ti3} className={classes.PhotoBox} alt="placeholder alt" />
-              <div className={classes.spacer1} />
-              {/* <Link to="/directory" className={classes.Plink}>Visit Our Business Directory <span uk-icon="arrow-right"></span></Link> */}
+              <Link to="/directory" className={classes.SboxTitle}>Explore.</Link>
             </div>
           </div>
         </div>
 
-        <div className={classes.JoinRow}>
-        {/* <div className={[classes.JoinRow, classes.dark].join(' ')}> */}
+        <div className={classes.JoinRow}> 
+         {/* <div className={[classes.JoinRow, classes.Green].join(' ')}> */}
           <div className={classes.insideNrw}>
-            <p className={classes.sign}>Join the Neighborhood</p>
+            <p className={[classes.sign, classes.green].join(' ')}>Join the Neighborhood</p>
             {textContent}
           </div>
         </div>
 
-        <div className={classes.MsSec} >
+        <div className={classes.MsSec}>
           <div className={classes.medDef}>
             <ImageTextLink textContent={textContent2} image={msLogo} alt="" gridType="CustomGridHome" textFloat="textRight" />
           </div>
@@ -116,7 +112,7 @@ class Home extends Component {
         <div className={classes.ImageRow}>
           <div className={classes.med2Def}>
             <div className={classes.Text}>
-              <p className={classes.sign}>Take the Walking Tour</p>
+              <p className={[classes.sign, classes.green].join(' ')}>Take the Walking Tour</p>
               <p>Experience everything our beautiful area has to offer on foot with our Historic Downtown Foley Walking Tour.</p>
               <div className={classes.clearfix} />
               <div className={classes.spacer1} />

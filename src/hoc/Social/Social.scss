@@ -11,4 +11,8 @@
   &.light {
     a, span {color: $white;}
   }
+
+  &.green {
+    a, span {color: $msGreen;}
+  }
 }

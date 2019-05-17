@@ -26,7 +26,7 @@ const footer = () => {
             Foley, Al 36535 </p>
           <p className={classes.FtInfo}>251.401.4801</p>
           <p className={classes.FtInfo}>foleymainstreet@gmail.com</p>
-          <Social />
+          <Social Colors="green"/>
         </div>
 
         <div className={[classes.FtGrid, classes.Fg3].join(' ')}>
@@ -45,9 +45,9 @@ const footer = () => {
         </div>
       </div>
 
-      <button className={classes.toTop} data-uk-totop data-uk-scroll>
+      {/* <button className={classes.toTop} data-uk-totop data-uk-scroll>
         <span uk-icon="icon: chevron-up" />
-      </button>
+      </button> */}
     </div>
   );
 };

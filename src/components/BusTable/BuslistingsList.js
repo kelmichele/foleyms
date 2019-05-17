@@ -22,12 +22,8 @@ function makeComparator(key, order = 'asc') {
 class BuslistingsList extends Component {
   buslistingItems() {
     return this.props.buslistings.sort(makeComparator('name')).map(buslisting =>
-      // <li key={buslisting.id} data-tags={["all " + buslisting.category]}>
-      //   <NavLink to={`/buslistings/${buslisting.id}`}>{buslisting.name}</NavLink>
-      // </li>
-
       <li key={buslisting.id} data-tags={["all " + buslisting.category]} className={classes[buslisting.category]}>
-        <a href={buslisting.website} target="_blank" rel="noopener noreferrer">{buslisting.name}</a> 
+        <a href={buslisting.website} target="_blank" rel="noopener noreferrer" className="uk-text-middle">{buslisting.name}</a> 
       </li>
     );
   }
