@@ -10,9 +10,7 @@
   // box-shadow: 0px 2px 2px rgba($black,.1); box-shadow: 0 1px 33px rgba(26,37,46,0.1), inset 0 1px 0 rgba(255,255,255,0.35);
   .LogoHd, nav { display: inline-block; float:none;}
   nav{min-width:70%; float:right;}
-  .LogoHd {width:20%; padding:10px 0 15px; margin-left: 7%;
-    // img{width: 200px;}
-  }
+  .LogoHd {width:20%; padding:10px 0 15px; margin-left: 7%;}
   
   .ocNavBtn {display: none;}
   .custNav {@include sec-default();
@@ -22,19 +20,27 @@
   }
 
   // .mobileMenu {background: msGreen;}
-  .mobileMenu .mobNav a {color: $white;}
+  .mobileMenu {width:375px;
+    .mobNav a {color: $white;}
+  }
 
   &.StickyUk, &.activeClass, &.Top{
-    // .LogoHd {width:80px;}
     text-align: center;
   }
 
 
   @include bp(tb) {
+    position: relative;
     .navbarWrap {display:none;}
-    .ocNavBtn {display: block; float:right; margin-top:5%; border:0; width:35px;
+    .ocNavBtn {display: block; float:right; width:35px; position: absolute; z-index:5; top:60px; right:8.5%; 
       span{@include sec-default(); height:2px; margin-bottom: 5px; background-color: $black;}
     }
-    .LogoHd {width:200px;}
+    .LogoHd {width:240px; padding: 10px 0; @include center-block();}
+
+    .mobileMenu .mobNav {
+      li {width:100%; margin: 10px 0;}
+      li a {font-size:15px;}
+      li li a {font-size:15px;}
+    }
   }
 }

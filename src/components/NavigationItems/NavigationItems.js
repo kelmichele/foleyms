@@ -11,7 +11,7 @@ class NavigationItems extends Component {
       <Aux>
         <li><NavLink to="/" className={classes.NavigationItems}>Home</NavLink></li>
         
-        <li><NavLink to="#">Explore</NavLink>
+        <li><NavLink className={classes.MobTitle} to="#">Explore</NavLink>
           {/* <NavLink to="/explore" className={classes.NavigationItems}></NavLink></li> */}
           <div className={["uk-navbar-dropdown", classes.custDrop].join(' ')}>
             <ul className={classes.dropMenu}>
@@ -24,7 +24,7 @@ class NavigationItems extends Component {
 
         <li><NavLink to="/events" className={classes.NavigationItems}>Events</NavLink></li>
 
-        <li><NavLink to="#">About</NavLink>
+        <li><NavLink className={classes.MobTitle} to="#">About</NavLink>
           <div className={["uk-navbar-dropdown", classes.custDrop].join(' ')}>
             <ul className={classes.dropMenu}>
               <li><NavLink to="/about" className={[classes.NavigationItems, classes.dropLink].join(' ')}>About Us</NavLink></li>
@@ -34,7 +34,7 @@ class NavigationItems extends Component {
           </div>
         </li>
 
-        <li><NavLink to="#">Community Links</NavLink>
+        <li><NavLink className={classes.MobTitle} to="#">Community Links</NavLink>
           <div className={["uk-navbar-dropdown", classes.custDrop, classes.LgDrop].join(' ')}>
             <ul className={classes.dropMenu}>
               <li><a href={Pdf1} target="_blank" rel="noopener noreferrer" className={[classes.NavigationItems, classes.dropLink].join(' ')}>

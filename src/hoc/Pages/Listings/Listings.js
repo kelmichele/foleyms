@@ -28,7 +28,7 @@ const listings = () => {
           <div className={classes.intText}>
             <h1>Available Property</h1>
             <p>With all of the history, beautiful scenery, and foot traffic that Foley has to offer, it is no surprise that businesses of all kinds are attracted to the downtown area.
-            Take a look at the properties currently available in Foley.
+            Take a look at the properties currently available in the downtown district of Foley.
             Select a listing to learn more, and feel free to contact us with questions. </p>
             {/* <p>Listings updated every 6 weeks.</p> */}
           </div>

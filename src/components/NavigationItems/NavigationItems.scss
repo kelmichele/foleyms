@@ -11,8 +11,14 @@
   li{width:100%; margin-bottom:12px !important; margin-top:0 !important;}
 }
 
-// @media (max-width: 1024px) {
-//   .NavigationItems {@include sec-default();margin-bottom:10px;
-//     a {color: $white;}
-//   }
-// }
+@media (max-width: 1024px) {
+  // .NavigationItems {@include sec-default();margin-bottom:10px;
+  //   a {color: $white;}
+  // }
+
+  .custDrop {display:block; min-width: auto; width:100%; margin-top:5px; border: 0; padding: 0;
+    background-color: transparent; position: relative; box-shadow: none;
+    &.LgDrop {width:100%;}
+  }
+  li a.MobTitle{font-size:13px; color: rgba($white,.7); border-bottom: 2px dotted rgba($white,.2); margin:20px 0 12px;}
+}

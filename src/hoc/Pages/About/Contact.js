@@ -22,7 +22,7 @@ const contact = () => {
             <div className={classes.ContInfo}>
               <h1>Contact Us</h1>
               {/* <div className={classes.ContBorder} /> */}
-              <p className={classes.ConInfo}>The Main Street Foley office is located in the <br /> South Baldwin Chamber of Commerce offices.</p>
+              <p className={classes.ConInfo}>The Main Street Foley office is located in the <br /> South Baldwin Chamber of Commerce.</p>
               <div className={classes.ContBorder} />
               <p>112 West Laurel Street <br />Foley, Al 36535 </p>
               <p>251.401.4801</p>

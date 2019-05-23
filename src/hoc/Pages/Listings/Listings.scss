@@ -25,7 +25,7 @@
     background-size:35%; background-position: right bottom; background-repeat: no-repeat;
     &::before{@include before(); width:35%; margin-left:65%;
       background-color: rgba($msCream, .94);
-      background-color: rgba($msGreen, .94);
+      // background-color: rgba($msGreen, .94);
     }
 
     .realItem, .FoButtons{display: inline-block;}
