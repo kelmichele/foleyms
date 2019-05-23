@@ -74,7 +74,7 @@ const about = () => {
       </div>
 
       <div className={classes.abBody}>
-          <div className={[classes.ImgRow, classes.SlideAlt, "uk-position-relative uk-visible-toggle uk-light"].join(' ')} tabindex="-1" uk-slider="center: true; autoplay: true; autoplay-interval: 5000;">
+        <div className={[classes.ImgRow, classes.SlideAlt, "uk-position-relative uk-visible-toggle uk-light"].join(' ')} tabindex="-1" uk-slider="center: true; autoplay: true; autoplay-interval: 5000;">
           <div className={classes.insideAlt}>
             <ul className={[classes.ImgSlides, "uk-slider-items uk-grid"].join(' ')}>
               <li className={classes.SlideSize}><div className="uk-panel"><img src={Slider1A} alt="" /></div></li>

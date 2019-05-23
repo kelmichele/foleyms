@@ -23,8 +23,6 @@
 
 
   .photo4{@include sec-default(); text-align:center; margin:30px 0 55px;
-    a.Plink{color:$msGreen; text-shadow: 0px 0px 1px rgba($dark,.2) !important; font-size:16px;}
-    
     .ServiceBox {display:inline-block; 
       width:33.3%; margin:15px 0; vertical-align: top;
       .PhotoBox{border: 5px solid $white;}
@@ -32,7 +30,6 @@
       a{font-weight: bold; @include tshadowl(rgba($black,.5));
         font-family: $sign;font-size: 37px; letter-spacing: 2px;
       }  
-      a.Plink {font-family: $monte; font-size:16px; text-shadow:none; letter-spacing: .2px;}
     }
   }
 
@@ -84,22 +81,35 @@
     }
     .detsHome{padding:40px 0;}
     .MsSec{ padding: 20px 0 30px;}
+
+    .photo4{margin:15px 0 20px;
+      a.Plink{font-size:16px;}
+      
+      .ServiceBox {
+        a{font-size: 30px; letter-spacing: 2px;}  
+      }
+    }
+
+    .JoinRow{padding:50px 0 60px; background-size:cover;}
   }
 
   @include bp(tn) {
     h2{ font-size:1.5rem; line-height:1.6em;
       span.sign{font-size: 2.35rem;}
     }
-    .photo4{margin:30px 0 40px;
-      .ServiceBox a{font-size: 30px; letter-spacing: 1px;}  
+    .photo4{margin:7px 0 20px;
+      .ServiceBox a{font-size: 27px; letter-spacing: 1px;}  
     }
 
-    .ImageRow{padding:30px 0; text-align:center;
+    .JoinRow{padding:35px 0 55px;}
+
+    .MsSec{@include sec-default(); padding: 10px 0 0px;}
+
+    .ImageRow{padding:20px 0 0px; text-align:center;
       .Images, .Text { width:80%; @include center-block(); margin-bottom: 30px;}
       .Text{margin-top:0; margin-bottom:40px;}
       .Images{width:70%;}
     }
-
   }
 
   @include bp(md) {

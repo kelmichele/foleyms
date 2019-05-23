@@ -31,10 +31,19 @@
 }
 
 @include bp(tn) {
+  .Footer{padding: 15px 0 5px; }
   .FtGrid { 
     &.FgAcc{@include sec-default();}
     &.FgLast, &.Fg3{display:none;}
+    p.FtTitle {letter-spacing: .3px;}
   }  
+  .FooterBtm {margin-top:15px;}
+}
+
+@include bp(oc) {
+  .FooterBtm {
+    p.Hs, p.Copy{@include sec-default(); text-align: center;}
+  }
 }
 
 

@@ -37,40 +37,6 @@ class BuslistingsList extends Component {
             <meta name="description" content="" />
           </Helmet>
           
-          {/* <div className={classes.BusListHead}>
-            <div className={classes.info}>         
-              <div className={classes.textSide}>
-                <h1>Business Directory</h1>
-                <p className={classes.ConInfo}>Explore Downtown Foley's Business Directory.
-                  Choose a category, or select a business to visit its website and learn more.
-                </p>
-              </div>
-
-              <img src={photo} alt="placeholder" className={[classes.infoImg, classes.FullImg].join(' ')} />              
-            </div>
-          </div>
-
-          <div className={classes.BusListBody} id="it-wrap" data-uk-grid>         
-            <div className={classes.medDef}>
-              <div className={classes.filterCat}>
-                <ul className={classes.filterList} uk-sticky="bottom: #it-wrap; offset:30;">
-                  <li className={[classes.all, "uk-active"].join(' ')} data-uk-filter-control="[data-tags*='all']"><button type="button">All</button></li>
-                  <li className={classes.shop} data-uk-filter-control="[data-tags*='retail']"><button type="button">Retail</button></li>
-                  <li className={classes.dine} data-uk-filter-control="[data-tags*='dining']"><button type="button">Dining</button></li>
-                  <li className={classes.attr} data-uk-filter-control="[data-tags*='misc']"><button type="button">Miscellaneous</button></li>
-                  <li className={classes.serve} data-uk-filter-control="[data-tags*='services']"><button type="button">Services</button></li>
-                </ul>
-              </div>
-
-              <ul className={["js-filter", classes.filterContent].join(' ')}>
-                {this.buslistingItems()}
-              </ul>
-            </div>
-          </div> */}
-
-
-
-
           <div className={classes.BusListHead}>
             <div className={classes.medDef}>
               <div className={classes.textSide}>
@@ -79,9 +45,8 @@ class BuslistingsList extends Component {
                 </p>
               </div>
 
-              {/* <img src={photo} alt="placeholder" className={[classes.infoImg, classes.FullImg].join(' ')} /> */}
               <ul className={classes.filterList}>
-                <li className={[classes.all, "uk-active"].join(' ')} data-uk-filter-control="[data-tags*='all']"><button type="button">All</button></li>
+                {/* <li className={[classes.all, "uk-active"].join(' ')} data-uk-filter-control="[data-tags*='all']"><button type="button">All</button></li> */}
                 <li className={classes.shop} data-uk-filter-control="[data-tags*='retail']"><button type="button">Retail</button></li>
                 <li className={classes.dine} data-uk-filter-control="[data-tags*='dining']"><button type="button">Dining</button></li>
                 <li className={classes.attr} data-uk-filter-control="[data-tags*='misc']"><button type="button">Miscellaneous</button></li>
@@ -97,10 +62,6 @@ class BuslistingsList extends Component {
               </ul>
             </div>
           </div>
-        
-        
-        
-        
         </div>
       </div>
     );

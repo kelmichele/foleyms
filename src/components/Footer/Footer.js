@@ -13,11 +13,9 @@ const footer = () => {
       <div className={classes.med2Def}>
 
         <div className={[classes.FtGrid, classes.FgLast].join(' ')}>
-          {/* <p className={classes.FtTitle}>Follow Foley</p> */}
           <a href="http://www.mainstreetalabama.org/" target="_blank" rel="noopener noreferrer">
             <img src={MsLogo} alt="Mainstreet Foley Logo" className={classes.LogoImg} />
           </a>
-          {/* <Social /> */}
         </div>  
 
         <div className={[classes.FtGrid, classes.FgAcc].join(' ')}>
@@ -44,10 +42,6 @@ const footer = () => {
           <p className={classes.Copy}>Copyright 2019. All rights reserved.</p>
         </div>
       </div>
-
-      {/* <button className={classes.toTop} data-uk-totop data-uk-scroll>
-        <span uk-icon="icon: chevron-up" />
-      </button> */}
     </div>
   );
 };

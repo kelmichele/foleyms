@@ -1,15 +1,9 @@
 import React from "react";
 import classes from "./About.scss";
 import { Helmet } from "react-helmet";
-// import Parallax from "../../../components/Parallax/Parallax";
-// import hero from "../../../assets/images/board.jpg";
 import heroRel from "../../../assets/images/boardNrw.jpg";
 import sherry from "../../../assets/images/sherry.jpg";
 import ImageText from "../../../components/ImageText/ImageText";
-
-// const plaxHd1 = (
-// <h1 className={classes.lightHd}>Board of Directors</h1>
-// );
 
 const textExec = (
   <div>
@@ -34,17 +28,7 @@ const board = () => {
         <meta name="description" content="" />
       </Helmet>
 
-      {/* <Parallax
-        plaxImage={hero}
-        // plaxShadow="true"
-        plaxHeadline={plaxHd1}
-        // plaxContent={plaxContent1}
-        // bgSize="100%"
-        plaxHeight="300px"
-      /> */}
-
       <div className={classes.relTitle}>
-        {/* <h2>Meet Our</h2> */}
         <h1>Board of Directors</h1>
         <img src={heroRel} className={classes.imgCenter} alt="board of directors"/>
       </div>
