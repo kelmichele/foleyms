@@ -19,7 +19,6 @@
     li li a {font-size:15px;}
   }
 
-  // .mobileMenu {background: msGreen;}
   .mobileMenu {width:375px;
     .mobNav a {color: $white;}
   }
@@ -28,6 +27,7 @@
     text-align: center;
   }
 
+  &.noSticky, &.noMobile{opacity: .9;}
 
   @include bp(tb) {
     position: relative;
@@ -41,6 +41,13 @@
       li {width:100%; margin: 10px 0;}
       li a {font-size:15px;}
       li li a {font-size:15px;}
+    }
+  }
+
+  @include bp(tn) {
+    &.uk-sticky.uk-sticky-fixed.uk-navbar-sticky {
+      // position: relative !important;
+      .LogoHd {width:150px;}
     }
   }
 }

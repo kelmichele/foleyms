@@ -6,18 +6,36 @@ import NavigationItems from "../../components/NavigationItems/NavigationItems";
 import { Link } from "react-router-dom";
 
 class Header extends Component {
-  
+  constructor(props) {
+    super(props);
+    this.state = {
+      stickClass: window.innerWidth < 824 ? 'show-on-up: true; animation: uk-animation-slide-top; sel-target: .Header; cls-active: uk-navbar-sticky;' : 'show-on-up: false; sel-target: .Header; cls-active: uk-navbar-sticky'
+
+    };
+  }
+
+  handleResize = e => {
+    const stickClass = window.innerWidth < 824 ? 'show-on-up: true; animation: uk-animation-slide-top; sel-target: .Header; cls-active: uk-navbar-sticky;' : 'show-on-up: false; sel-target: .Header; cls-active: uk-navbar-sticky';
+    
+    this.setState(prevState => {
+      return {
+        stickClass
+      };
+    });
+  };
+
+  componentDidMount() {
+    window.addEventListener("resize", this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleResize);
+  }
 
   render() {
-    // data-uk-sticky={actClass}
-    // const actClass = (
-    //   'cls-active: uk-navbar-sticky;'
-    // );
     
-    // if (window.location.pathname === '/') return null;
     return (
-      <div className={classes.Header} data-uk-sticky="sel-target: .Header; cls-active: uk-navbar-sticky;">
-       {/* data-uk-sticky="sel-target: .Header; cls-active: uk-navbar-sticky;"> */}
+      <div className={classes.Header} data-uk-sticky={this.state.stickClass}>
         <div className={classes.insideXl}>
 
           <header className={classes.HeaderDiv}>
@@ -25,21 +43,17 @@ class Header extends Component {
               <Link to="/"><img src={logo} alt="Mainstreet Foley Logo" className={classes.LogoImg} /></Link>
             </div>
 
-            {/* style={{ position: 'relative', zIndex: '980' }} */}
             <nav className={classes.navbarWrap} data-uk-navbar="mode: hover">
-
               <ul className={["uk-navbar-nav", classes.custNav].join(' ')}>
                 <NavigationItems />
               </ul>
             </nav>
-
 
             <button className={classes.ocNavBtn} data-uk-toggle="target: #offcanvas-nav">
               <span></span>
               <span></span>
               <span></span>
             </button>
-            
             <div id="offcanvas-nav" data-uk-offcanvas="overlay: true; flip: true;">
               <button className="uk-offcanvas-close" type="button" data-uk-close></button>
               <div className={["uk-offcanvas-bar", classes.mobileMenu].join(' ')}>
@@ -48,7 +62,6 @@ class Header extends Component {
                 </ul>
               </div>
             </div>
-
           </header>
         </div>
       </div>

@@ -97,7 +97,13 @@
     &.textRight.textBig{
       .ImageHlf, .TextHlf{@include center-block();}
       .TextHlf{width:95%; margin-top:0;}
-      .ImageHlf{width:340px;}
+      .ImageHlf{width:300px; margin-bottom:15px;}
     }
   }
+
+  @include bp(oc) {
+    &.textRight.textBig{text-align: center;
+      .ImageHlf{width:250px;}
+    }
+  }  
 }
