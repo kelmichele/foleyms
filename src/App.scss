@@ -1,10 +1,15 @@
 @import './assets/global.scss';
 @import './assets/variables.scss';
 @import './assets/mixins.scss';
+@import './assets/mixins.scss';
 
 .BackTo {color: $black;}
 
 .CalNot{display: none;}
-.Cal{@include sec-default(); padding:40px 0;}
+.Cal{@include sec-default(); padding:20px 0 40px;
+  @include bp(oc) {
+    padding:10px 0 20px;
+  }
+}
 
-.ToTopBtn{background-color: $white;}
+.ToTopBtn{background-color: $white; margin-right:-15px;}

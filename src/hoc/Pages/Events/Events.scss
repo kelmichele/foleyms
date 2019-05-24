@@ -10,12 +10,54 @@
   .EventEmbed{display:block;}
   .CalFrame{@include center-block(); } 
 
-  .EventsHead{@include sec-default(); position: relative; z-index: 0; padding:50px 0 30px;
+  .EventsHead{@include sec-default(); position: relative; z-index: 0; padding:50px 0 75px;
     &::before{@include before(); background-color: rgba($msCream,.8); height: 120px; }
 
-    .intText, .imgRel {display: inline-block; width:42%; }
-    .imgRel{float:left; width:54%;}
-    .intText {text-align:left;margin-top:15%; float:right;}
+    .MedEvent {width:880px; @include center-block();}
+    .intText, .imgRel {display: inline-block; width:45%; }
+    .imgRel{float:left; width:52%;}
+    .intText {text-align:left;margin-top:12%; float:right;}
     h1{font-size:1.6rem; letter-spacing:.6px; margin-bottom:10px; font-weight:$semi; color:$msGreen; text-shadow: 0px 1px 1px rgba($black,.2);}
+  }
+
+  @include bp(tb) {
+    .EventsHead { padding:40px 0 60px;
+      &::before{height:100px;}
+      h1{font-size:1.45rem; }
+      .MedEvent {width:80%;}
+      .imgRel{width:48%}
+      .intText {width:48%;margin-top:10%;}
+    }
+  }
+
+  @include bp(tn) {
+    .EventsHead { padding:40px 0 30px;
+      &::before{height:70px;}
+      h1{font-size:1.3rem; font-weight:bold; margin-bottom:6px;}
+      p{font-size:15px;}
+      .MedEvent {width:85%;}
+      .imgRel{width:50%}
+      .intText {width:46%;margin-top:8%;}
+    }
+  }
+
+  @include bp(pl) {
+    .EventsHead { padding:25px 0 15px;
+      &::before{height:50px;}
+      h1{font-size:1.2rem;}
+      p{font-size:14px;}
+      .MedEvent {width:90%;}
+      .imgRel{width:49%}
+      .intText {width:48%;margin-top:45px;}
+    }
+  }
+
+  @include bp(oc) {
+    .EventsHead { padding:25px 0 0;
+      &::before{height:15px;}
+      .MedEvent {width:85%;}
+      .imgRel{display: none;}
+      .intText {margin-top:0; @include sec-default(); text-align: center;}
+    }
   }
 }

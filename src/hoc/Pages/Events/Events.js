@@ -3,7 +3,7 @@ import classes from "./Events.scss";
 import { Helmet } from "react-helmet";
 // import PageHeader from "../../../components/PageHeader/PageHeader";
 // import phImage from "../../../assets/images/Foley-30Head.jpg";
-import phBG from "../../../assets/images/Foley-3046.jpg";
+import stack2b from "../../../assets/images/adobe-jazz2.jpg";
 
 class Events extends React.Component {
   render() {
@@ -16,8 +16,15 @@ class Events extends React.Component {
         {/* <PageHeader phImage={phImage} ovPacity=".15" hColor="white" pageTitle="Upcoming Events" /> */}
 
         <div className={classes.EventsHead}>
-          <div className={classes.med2Def}>
-            <img src={phBG} alt="real estate item" className={classes.imgRel} />
+          <div className={classes.MedEvent}>
+          {/* <div className={classes.med2Def}> */}
+              <img src={stack2b} alt="real estate item" className={classes.imgRel} />
+            {/* 
+            <div className={classes.imgRel}>
+              <img src={stack1} alt="real estate item" className={classes.stack1b} />
+              <img src={stack2b} alt="real estate item" className={classes.stack2b} />
+              <img src={stack3b} alt="real estate item" className={classes.stack3b} />
+            </div> */}
 
             <div className={classes.intText}>
               <h1>Upcoming Events</h1>
