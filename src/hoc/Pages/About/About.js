@@ -113,14 +113,6 @@ const about = () => {
                 <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2C} alt="" /></div></li>
                 <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2E} alt="" /></div></li>
               </ul>
-              
-              {/* <a className="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slideshow-item="previous">
-                <span uk-icon="icon: chevron-left; ratio: 2"></span>
-              </a> 
-
-              <a className="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slideshow-item="next">
-                <span uk-icon="icon: chevron-right; ratio: 2"></span>
-              </a>*/}
             </div>
             <ul className="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
 

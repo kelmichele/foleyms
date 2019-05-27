@@ -41,25 +41,6 @@
 }
 
 .aboutPage, .boardPage,.abBody,.ContactBody{@include sec-default(); }
-.aboutPage {
-  .intro p {font-size:17px;}
-  .fullRow.Sec1, .fullRow.Sec2{padding:20px 0 0px; text-align:center;}
-  .fullRow.Sec2 {padding:30px 0 25px;
-    p {width:90%; @include center-block();}
-  }
-  .msLink{font-size:14px;}
-
-
-  .uk-position-center-left.uk-position-small,
-  .uk-position-center-right.uk-position-small,
-  .ArrowRules{z-index:9999; background-color: rgba($black,.5); color:$white;
-    span{font-size:30px;}
-  }
-
-  @include bp(tn) {
-    .fullRow.Sec2 {padding:15px 0 20px;}
-  }
-}
 
 .boardPage {
   .relTitle{
@@ -136,16 +117,9 @@
 
 
 .ImgRow {@include sec-default(); padding:80px 0; background-color: #f5f5f5;
-// padding:15px 0; text-align: center;
-//   img{display: inline-block; width:49.7%;}
-//   .ImgL{float:left;}
-//   .ImgR{float:right;}
   .SlideSize{ display:inline-block; padding-left:20px;
-    // width: 70%;
     img{height:460px;}
   }
-
-  // &.SlideAlt .SlideSize img{height:460px;}
   &.noBg{background-color: transparent; padding:0px 0 0px;}
 }
 
@@ -242,5 +216,62 @@
     padding-top: 10px; margin-top:10px;
     h3{color: $msGreen; letter-spacing: .5px;}
     p{margin-top:0;}
+  }
+}
+
+.aboutPage {
+  .intro p {font-size:17px;}
+  .fullRow.Sec1, .fullRow.Sec2{padding:20px 0 0px; text-align:center;}
+  .fullRow.Sec2 {padding:30px 0 25px;
+    p {width:90%; @include center-block();}
+  }
+  .msLink{font-size:14px;}
+
+  .uk-position-center-left.uk-position-small,
+  .uk-position-center-right.uk-position-small,
+  .ArrowRules{z-index:9999; background-color: rgba($black,.5); color:$white;
+    span{font-size:30px;}
+  }
+
+  @include bp(tb) {
+    .fullRow.Sec1 {padding:0;}
+    .TextRow {margin-bottom:10px;}
+    .ImgRow.SlideAlt {padding:50px 0;}
+    .relTitle.BgNone {padding-bottom:20px;
+      .TextBox {padding:30px 0 0px;}
+    }
+    .fullRow.Sec2 {padding:15px 0 5px;}
+  }
+
+  @include bp(tn) {
+    .intro p {font-size:16px;}
+    
+    .TextRow {
+      p{width:48%; text-align: left;}
+      p.Uno::before {display:none; }
+    }
+
+    .ImgRow.SlideAlt {padding:25px 0;
+      .SlideSize img{height:350px;}
+    }
+  }
+
+  @include bp(md) {
+    .insideNrw{width:95%;}
+    .intro {
+      p{margin-bottom: 0;}
+    }
+    .TextRow {
+      p{@include center-block(); width:90%;}
+    }
+  }
+
+  @include bp(oc) {
+    .intro p br {display: none;}
+    .TextRow p{width:97%; text-align: center;}
+
+    .ImgRow.SlideAlt {
+      .SlideSize img{height:300px;}
+    }
   }
 }

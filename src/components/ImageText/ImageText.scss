@@ -30,7 +30,6 @@
     .ImageHlf{width:51%;}
   }
 
-
   &.ABcustom{
     .TextHlf{width:40%;}
     .ImageHlf{width:56%;}  
@@ -48,7 +47,6 @@
     .TextHlf{width:70%;}
     .ImageHlf{width:220px;}
   }
-
 
   @include bp(tb) {padding:30px 0 15px;
     .TextHlf.xtra{margin-top: 0px;}
@@ -104,6 +102,11 @@
   @include bp(oc) {
     &.textRight.textBig{text-align: center;
       .ImageHlf{width:250px;}
+    }
+
+     &.ABcustom{ 
+      .TextHlf.xmid{width:98%;}
+      .ImageHlf{width:85%;}
     }
   }  
 }

@@ -17,15 +17,18 @@
     h1{display: none;}
   }
 
-  &.ListingsPg{
-     background-position: top left; background-size:60%; text-align: right;padding-right: 15%;
-    //  height:175px;
-    // height:280px;
-    // h1{display: none;}
-  }
+  &.ListingsPg{background-position: top left; background-size:60%; text-align: right;padding-right: 15%;}
 
   h1{ font-weight:bold; font-size:2.2rem; 
     &.Light {color: $white; @include tshadowl(rgba($black,.8)); text-shadow: 1px 1px 2px rgba($black,.8);}
     &.Dark {color: $black;}
+  }
+
+  @include bp(tn) {
+    &.aboutHd{ height:350px;}
+  }
+
+  @include bp(oc) {
+    &.aboutHd{ height:250px;}
   }
 }
