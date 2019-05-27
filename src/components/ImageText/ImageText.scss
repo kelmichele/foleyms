@@ -109,4 +109,11 @@
       .ImageHlf{width:85%;}
     }
   }  
+
+  @include bp(sm) {
+     &.ABcustom{ 
+      .TextHlf.xmid{width:100%;}
+      .ImageHlf{width:90%;}
+    }
+  }  
 }

@@ -29,6 +29,6 @@
   }
 
   @include bp(oc) {
-    &.aboutHd{ height:250px;}
+    &.aboutHd{ height:225px; margin-bottom: 10px;}
   }
 }

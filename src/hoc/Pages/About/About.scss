@@ -267,11 +267,18 @@
   }
 
   @include bp(oc) {
-    .intro p br {display: none;}
+    h1{margin-bottom: 5px;}
+    .intro p {font-size:15px;
+      br {display: none;}
+    }
     .TextRow p{width:97%; text-align: center;}
 
     .ImgRow.SlideAlt {
       .SlideSize img{height:300px;}
+    }
+
+    .relTitle.BgNone {padding-bottom:10px;
+      .TextBox {padding:15px 0 0px;}
     }
   }
 }
