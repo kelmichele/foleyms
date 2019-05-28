@@ -21,8 +21,6 @@
     li li a {font-size:15px;}
   }
 
-  // , .uk-offcanvas-flip .uk-offcanvas, .uk-offcanvas-flip .uk-open>.uk-offcanvas-bar
-  // .uk-offcanvas-bar {width:375px;}
   .mobileMenu {left:auto !important; right:0 !important;
     .mobNav a {color: $white;}
   }
@@ -61,3 +59,11 @@
     .ocNavBtn { top:60px;}
   }
 }
+
+
+.SideNavList, .FullNavList{background-color: #222; padding:10px; 
+  li {width:100%; margin: 10px 0 20px;}
+  li a {font-size:15px;color:$white;}
+  li li a {font-size:15px;}
+}
+.SideNavList{ width:275px;}

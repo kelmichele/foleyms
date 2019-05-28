@@ -4,6 +4,7 @@ import classes from "./Header.scss";
 import logo from "../../assets/images/FMS-teal.png";
 import NavigationItems from "../../components/NavigationItems/NavigationItems";
 import { Link } from "react-router-dom";
+import TemporaryDrawer from "../../components/Drawer/Drawer";
 
 class Header extends Component {
   constructor(props) {
@@ -49,6 +50,7 @@ class Header extends Component {
               </ul>
             </nav>
 
+            <TemporaryDrawer />
             <button className={classes.ocNavBtn} data-uk-toggle="target: #offcanvas-nav">
               <span></span>
               <span></span>
