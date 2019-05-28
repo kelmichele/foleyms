@@ -25,7 +25,7 @@
   }
 
   @include bp(tn) {
-    &.aboutHd{ height:350px;}
+    &.aboutHd{ height:300px;}
   }
 
   @include bp(oc) {

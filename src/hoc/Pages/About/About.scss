@@ -192,7 +192,7 @@
 
   @include bp(mb) {
     padding:30px 0;
-    &::before{background-color:rgba($cream,.97);}
+    &::before{background-color:rgba($cream,.95);}
     &::after{display:none;}
     .info{text-align: center;
       .textSide{width:90%;}
@@ -252,7 +252,7 @@
     }
 
     .ImgRow.SlideAlt {padding:25px 0;
-      .SlideSize img{height:350px;}
+      .SlideSize img{height:300px;}
     }
   }
 
@@ -273,12 +273,14 @@
     }
     .TextRow p{width:97%; text-align: center;}
 
-    .ImgRow.SlideAlt {
-      .SlideSize img{height:300px;}
-    }
-
     .relTitle.BgNone {padding-bottom:10px;
       .TextBox {padding:15px 0 0px;}
     }
+
+    .ImgRow.noBg .insideAlt{width:90%;}
+  }
+
+  @include bp(sm) {
+    // .ImgRow.SlideAlt .SlideSize img{height:330px;}
   }
 }

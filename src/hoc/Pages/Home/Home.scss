@@ -105,7 +105,7 @@
 
     .MsSec{@include sec-default(); padding: 10px 0 0px;}
 
-    .ImageRow{padding:20px 0 0px; text-align:center;
+    .ImageRow{padding:20px 0 0px; text-align:center;background-position:center top;
       .Images, .Text { width:80%; @include center-block(); margin-bottom: 30px;}
       .Text{margin-top:0; margin-bottom:40px;}
       .Images{width:70%;}
@@ -125,9 +125,9 @@
   }
 
   @include bp(mb) {
-    .MsSec {padding:10px 0 15px;}
+    .MsSec {padding:10px 0 0px;}
 
-    .ImageRow{
+    .ImageRow{padding: 10px 0 0;
       .Images{width:90%;}
     }
   }
