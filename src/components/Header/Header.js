@@ -50,20 +50,7 @@ class Header extends Component {
               </ul>
             </nav>
 
-            <TemporaryDrawer />
-            <button className={classes.ocNavBtn} data-uk-toggle="target: #offcanvas-nav">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <div id="offcanvas-nav" className={classes.ocNavAll} data-uk-offcanvas="overlay: true; flip: true;">
-              <button className="uk-offcanvas-close" type="button" data-uk-close></button>
-              <div className={["uk-offcanvas-bar", classes.mobileMenu].join(' ')}>
-                <ul className={["uk-nav", classes.mobNav].join(' ')}>
-                  <NavigationItems />
-                </ul>
-              </div>
-            </div>
+            <div className={classes.NavMobileBtn}><TemporaryDrawer /></div>
           </header>
         </div>
       </div>

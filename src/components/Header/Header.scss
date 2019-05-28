@@ -31,39 +31,37 @@
 
   &.noSticky, &.noMobile{opacity: .9;}
 
+  .NavMobileBtn{display: none;}
   @include bp(tb) {
     .navbarWrap {display:none;}
-    .ocNavBtn {display: block; float:right; width:35px; position: absolute; z-index:5; top:60px; right:8.5%; 
-      span{@include sec-default(); height:2px; margin-bottom: 5px; background-color: $black;}
-    }
+    .NavMobileBtn{display: block;float:right; width:35px; position: absolute; z-index:5; top:60px; right:8.5%; }
+
     .LogoHd {width:259px; padding: 0; @include center-block();
       .LogoImg{@include sec-default();padding:10px 0;}
-    }
-
-    .mobileMenu .mobNav {
-      li {width:100%; margin: 10px 0;}
-      li a {font-size:15px;}
-      li li a {font-size:15px;}
     }
   }
 
   @include bp(tn) {
     .LogoHd {width:235px;}
-    .ocNavBtn {width:50px}
   }
 
   @include bp(sm) {
     .LogoHd {float:left; margin-left:10px;
       .LogoImg{padding:5px 0;}
     }
-    .ocNavBtn { top:60px;}
+    
+    .NavMobileBtn{ top:45px; right:8.5%; }
   }
 }
 
 
-.SideNavList, .FullNavList{background-color: #222; padding:10px; 
+.SideNavList{background-color: #222; padding:10px 15px; width:275px;
   li {width:100%; margin: 10px 0 20px;}
   li a {font-size:15px;color:$white;}
   li li a {font-size:15px;}
+
+  .closeIcon {position: absolute; color:$white; right:20px; cursor: pointer;}
+  @include bp(sm) {
+    width:250px;
+  }
 }
-.SideNavList{ width:275px;}
