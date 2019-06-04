@@ -24,12 +24,12 @@
 
       &::before{@include before(); background-color: rgba($black, .15);}
       &.all{background-image: url(../../assets/images/Foley-3073.jpg);}
-      &.shop{background-image: url(../../assets/images/adobe2.jpg);}
+      &.shop{background-image: url(../../assets/images/tab-retail.jpg);}
       &.dine{background-image: url(../../assets/images/mm-appetizer3.jpg);}
       &.attr{background-image: url(../../assets/images/Foley-3051.jpg);
         // background-image: url(../../assets/images/Foley-3087.jpg);background-position: center right;
       }
-      &.serve{background-image: url(../../assets/images/adobe1.jpg); background-position: bottom right;}
+      &.serve{background-image: url(../../assets/images/auto-services.jpg); background-position: bottom right;}
     }
   }
   .BusListHead {@include sec-default(); padding: 50px 0;

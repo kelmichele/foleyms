@@ -3,7 +3,7 @@ import classes from "./Events.scss";
 import { Helmet } from "react-helmet";
 // import PageHeader from "../../../components/PageHeader/PageHeader";
 // import phImage from "../../../assets/images/Foley-30Head.jpg";
-import stack2b from "../../../assets/images/adobe-jazz2.jpg";
+import stack2b from "../../../assets/images/outdoor-jazz.jpg";
 
 class Events extends React.Component {
   render() {
