@@ -28,8 +28,8 @@ const contact = () => {
             </div>
           </div>
 
-          <img src={photo} alt="placeholder" className={[classes.infoImg, classes.FullImg].join(' ')} />
-          <img src={MobilePhoto} alt="placeholder" className={[classes.infoImg, classes.MobileImg].join(' ')} />
+          <img src={photo} alt="Foley Chamber of Commerce Office Entrance" className={[classes.infoImg, classes.FullImg].join(' ')} />
+          <img src={MobilePhoto} alt="Foley Chamber of Commerce Office and Sign" className={[classes.infoImg, classes.MobileImg].join(' ')} />
         </div>
       </div>
     </div>

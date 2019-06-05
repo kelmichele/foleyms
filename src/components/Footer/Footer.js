@@ -14,7 +14,7 @@ const footer = () => {
 
         <div className={[classes.FtGrid, classes.FgLast].join(' ')}>
           <a href="http://www.mainstreetalabama.org/" target="_blank" rel="noopener noreferrer">
-            <img src={MsLogo} alt="Mainstreet Foley Logo" className={classes.LogoImg} />
+            <img src={MsLogo} alt="Main Street Alabama Logo" className={classes.LogoImg} />
           </a>
         </div>  
 
@@ -28,7 +28,7 @@ const footer = () => {
         </div>
 
         <div className={[classes.FtGrid, classes.Fg3].join(' ')}>
-          <Link to="/"><img src={logo} alt="Mainstreet Foley Logo" className={classes.LogoImg} /></Link>
+          <Link to="/"><img src={logo} alt="Foley Main Street Logo" className={classes.LogoImg} /></Link>
           <p className={classes.FtMoto}>Preservation. Promotion. Pride.</p>
         </div>
       </div>

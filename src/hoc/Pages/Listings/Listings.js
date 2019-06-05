@@ -23,7 +23,7 @@ const listings = () => {
 
       <div className={classes.medDef}>
         <div className={classes.intro}>
-          <img src={phBG} alt="real estate item" className={classes.imgRel} />
+          <img src={phBG} alt="Downtown Foley sidewalk view" className={classes.imgRel} />
 
           <div className={classes.intText}>
             <h1>Available Property</h1>
@@ -39,7 +39,7 @@ const listings = () => {
         <div className={classes.inside}>
           <div className={classes.realItem}>
             <a href={Listing1} target="_blank" rel="noopener noreferrer">
-              <img src={rl1} alt="real estate item" className={classes.imgResponsive} />
+              <img src={rl1} alt="Downtown Foley, Alston Street real estate listing" className={classes.imgResponsive} />
               <div className={classes.realTitle}>
                 222 S Alston St<br /> Foley, AL 36535<br />
                 <span>Commercial Building</span>
@@ -49,7 +49,7 @@ const listings = () => {
 
           <div className={classes.realItem}>
             <a href={Listing2} target="_blank" rel="noopener noreferrer">
-              <img src={rl2} alt="real estate item" className={classes.imgResponsive} />
+              <img src={rl2} alt="Downtown Foley, Laurel Avenue property listing" className={classes.imgResponsive} />
               <div className={classes.realTitle}>
                 309 W Laurel Ave<br /> Foley, AL 36535<br />
                 <span>Office Space For Lease</span>
@@ -59,7 +59,7 @@ const listings = () => {
 
           <div className={classes.realItem}>
             <a href={Listing3} target="_blank" rel="noopener noreferrer">
-              <img src={rl3} alt="real estate item" className={classes.imgResponsive} />
+              <img src={rl3} alt="Downtown Foley, Laurel Avenue real estate listing" className={classes.imgResponsive} />
               <div className={classes.realTitle}>
                 200 W Laurel Ave<br /> Foley, AL 36535<br />
                 <span>Office Space For Rent</span>

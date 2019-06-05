@@ -18,7 +18,7 @@ class Events extends React.Component {
         <div className={classes.EventsHead}>
           <div className={classes.MedEvent}>
           {/* <div className={classes.med2Def}> */}
-              <img src={stack2b} alt="real estate item" className={classes.imgRel} />
+              <img src={stack2b} alt="Musicians playing outdoor concert" className={classes.imgRel} />
             {/* 
             <div className={classes.imgRel}>
               <img src={stack1} alt="real estate item" className={classes.stack1b} />

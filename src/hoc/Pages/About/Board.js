@@ -30,7 +30,7 @@ const board = () => {
 
       <div className={classes.relTitle}>
         <h1>Board of Directors</h1>
-        <img src={heroRel} className={classes.imgCenter} alt="board of directors"/>
+        <img src={heroRel} className={classes.imgCenter} alt="Foley Main Street Board of Directors"/>
       </div>
 
       <div className={classes.boardBody}>
@@ -74,7 +74,7 @@ const board = () => {
 
         <div className={classes.Exec}>
           <div className={classes.medDef}>
-            <ImageText textContent={textExec} textFloat="textRight" image={sherry} gridType="textBig" addPadd="xtra" />
+            <ImageText textContent={textExec} textFloat="textRight" image={sherry} gridType="textBig" addPadd="xtra" alt="Sherry Sullivan, Foley Main Street Director" />
           </div>
         </div>
       </div>

@@ -65,7 +65,6 @@ class Home extends Component {
         <div className={classes.detsHome}>
           <div className={classes.insideNrw}>
             <h1 className={classes.HomeH1}><span className={classes.TopH1}>Welcome to</span> <br />Historic Downtown <span className={classes.sign}>Foley</span></h1>
-            {/* <p className={classes.sign}>Historic Downtown Foley</p> */}
             <p className={classes.Xnrw}>
               Just eleven miles north of Alabama’s white sand beaches, Foley’s historic downtown epitomizes old Alabama charm.  
               Historic sites, boutique retailers, and unique restaurants line the walkways of this quaint Main Street, 
@@ -79,17 +78,17 @@ class Home extends Component {
         <div className={classes.photo4}>
           <div className={classes.inside}>
             <div className={[classes.ServiceBox, classes.Box1].join(' ')}>
-              <img src={ti1} className={classes.PhotoBox} alt="placeholder alt" />
+              <img src={ti1} className={classes.PhotoBox} alt="Foley, Alabama's Mamma Mia's pizza on a table" />
               <Link to="/directory" className={classes.SboxTitle}>Eat.</Link>
             </div>
 
             <div className={[classes.ServiceBox, classes.Box2].join(' ')}>
-              <img src={ti2} className={classes.PhotoBox} alt="placeholder alt" />
+              <img src={ti2} className={classes.PhotoBox} alt="People enjoying a ride at OWA, in Foley, Alabama" />
               <Link to="/directory" className={classes.SboxTitle}>Play.</Link>
             </div>
 
             <div className={[classes.ServiceBox, classes.Box3].join(' ')}>
-              <img src={ti3} className={classes.PhotoBox} alt="placeholder alt" />
+              <img src={ti3} className={classes.PhotoBox} alt="Model Train display in Foley, Alabama" />
               <Link to="/directory" className={classes.SboxTitle}>Explore.</Link>
             </div>
           </div>
@@ -121,8 +120,8 @@ class Home extends Component {
             </div>
 
             <div className={classes.Images}>
-              <img src={MapImg1} alt="placeholder alt" className={[classes.MapPhoto, classes.Photo1].join(' ')} />
-              <img src={MapImg2} alt="placeholder alt" className={[classes.MapPhoto, classes.Photo2].join(' ')} />
+              <img src={MapImg1} alt="Downtown Foley walking map" className={[classes.MapPhoto, classes.Photo1].join(' ')} />
+              <img src={MapImg2} alt="Downtown Foley walking map key" className={[classes.MapPhoto, classes.Photo2].join(' ')} />
             </div>
           </div>
         </div>

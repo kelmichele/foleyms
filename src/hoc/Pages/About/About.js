@@ -55,7 +55,7 @@ const about = () => {
       <div className={[classes.fullRow, classes.Sec1].join(' ')}>
         <div className={classes.insideNrw}>
           <div className={classes.intro}>
-              <h1 className={classes.HomeH1}>
+            <h1 className={classes.HomeH1}>
                 {/* <span className={classes.sign}>Foley</span> <span className={classes.Toph1}>Main Street</span> */}
                 The <span className={[classes.sign, classes.green].join(' ')}>Heart</span> <span className={classes.Toph1}>of the City</span>
               </h1>
@@ -77,10 +77,10 @@ const about = () => {
         <div className={[classes.ImgRow, classes.SlideAlt, "uk-position-relative uk-visible-toggle uk-light"].join(' ')} tabindex="-1" uk-slider="center: true; autoplay: true; autoplay-interval: 5000;">
           <div className={classes.insideAlt}>
             <ul className={[classes.ImgSlides, "uk-slider-items uk-grid"].join(' ')}>
-              <li className={classes.SlideSize}><div className="uk-panel"><img src={Slider1A} alt="" /></div></li>
-              <li className={classes.SlideSize}><div className="uk-panel"><img src={Slider1B} alt="" /></div></li>
-              <li className={classes.SlideSize}><div className="uk-panel"><img src={Slider1C} alt="" /></div></li>
-              <li className={classes.SlideSize}><div className="uk-panel"><img src={Slider1D} alt="" /></div></li>
+              <li className={classes.SlideSize}><div className="uk-panel"><img src={Slider1A} alt="Couple with menus at Mamma Mia's Pizzeria" /></div></li>
+              <li className={classes.SlideSize}><div className="uk-panel"><img src={Slider1B} alt="Downtown Foley Centennial Plaza tower" /></div></li>
+              <li className={classes.SlideSize}><div className="uk-panel"><img src={Slider1C} alt="Street view of Hotel Magnolia in Foley" /></div></li>
+              <li className={classes.SlideSize}><div className="uk-panel"><img src={Slider1D} alt="Foley Dog Park entrance" /></div></li>
             </ul>
             <button type="button" className={["uk-position-center-left uk-position-small uk-hidden-hover", classes.ArrowRules].join(' ')} href="#" data-uk-slidenav-previous data-uk-slider-item="previous">
               <span uk-icon="icon: chevron-left; ratio: 1.5"></span>
@@ -106,12 +106,11 @@ const about = () => {
         <div className={[classes.ImgRow, classes.noBg, "uk-position-relative uk-visible-toggle uk-dark"].join(' ')} tabindex="-1" uk-slideshow="autoplay: true; autoplay-interval: 5000;">
             <div className={classes.insideAlt}>
               <ul className="uk-slideshow-items">
-              {/* <ul className={[classes.ImgSlides, "uk-slider-items uk-grid"].join(' ')}> */}
-                <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2A} alt="" /></div></li>
-                <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2D} alt="" /></div></li>
-                <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2B} alt="" /></div></li>
-                <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2C} alt="" /></div></li>
-                <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2E} alt="" /></div></li>
+                <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2A} alt="Louisville and Nashville Railroad route in Foley, Alabama" /></div></li>
+                <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2D} alt="Foley Railroad Station" /></div></li>
+                <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2B} alt="Model train display inside the Foley Railroad Station" /></div></li>
+                <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2C} alt="Foley's Charlie Ebert II Express for kids" /></div></li>
+                <li className={classes.SlideSizeX}><div className="uk-panel"><img src={Slider2E} alt="Foley's full model train display" /></div></li>
               </ul>
             </div>
             <ul className="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
@@ -127,7 +126,7 @@ const about = () => {
         </div>
 
         <div className={classes.med2Def}>            
-          <ImageText textContent={textContent1} image={bodyImg3} addPadd="xmid" textFloat="textRight" lessPadd="less" gridType="ABcustom"/>
+          <ImageText textContent={textContent1} image={bodyImg3} addPadd="xmid" textFloat="textRight" lessPadd="less" gridType="ABcustom" alt="Downtown Foley's main intersection" />
           <div className={classes.spacer3} />
         </div>
       </div>
