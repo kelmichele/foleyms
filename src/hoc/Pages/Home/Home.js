@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import classes from "./Home.scss";
 // import { Link } from "react-router-dom";
 import { HashLink as Link } from 'react-router-hash-link';
+import { Helmet } from "react-helmet";
 
 import Parallax from "../../../components/Parallax/Parallax";
 import bg1 from "../../../assets/images/Foley-3087.jpg";
