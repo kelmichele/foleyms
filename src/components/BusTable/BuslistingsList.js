@@ -34,7 +34,7 @@ class BuslistingsList extends Component {
         <div data-uk-filter="target: .js-filter">
           <Helmet>
             <title>Foley Main Street Business Directory</title>
-            <meta name="description" content="" />
+            <meta name="description" content="Take a look at all of the great businesses located in Downtown Foley." />
           </Helmet>
           
           <div className={classes.BusListHead}>

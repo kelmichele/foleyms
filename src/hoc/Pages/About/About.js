@@ -44,7 +44,7 @@ const about = () => {
     <Aux>
     <Helmet>
       <title>About the Foley Main Street District</title>
-      <meta name="description" content="" />
+        <meta name="description" content="Downtown Foley is home to many restaurants, retail stores, and other businesses. Learn more about everything the Foley Main Street area has to offer." />
       <body className={classes.aboutPage} />
     </Helmet>
 

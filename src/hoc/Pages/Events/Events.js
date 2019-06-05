@@ -11,7 +11,7 @@ class Events extends React.Component {
       <div className={classes.eventsPage}>
         <Helmet>
           <title>Events Around Foley, Al</title>
-          <meta name="description" content="" />
+          <meta name="description" content="Check out our event calendar, and be sure not to miss out on all the fun things happening in the Downtown Foley area." />
         </Helmet>
         {/* <PageHeader phImage={phImage} ovPacity=".15" hColor="white" pageTitle="Upcoming Events" /> */}
 

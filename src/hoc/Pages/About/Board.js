@@ -25,7 +25,7 @@ const board = () => {
     <div className={classes.boardPage}>
       <Helmet>
         <title>Board of Directors | Foley Main Street</title>
-        <meta name="description" content="" />
+        <meta name="description" content="Foley Main Street is a stand alone 501(c)6 governed by the Main Street Board of Directors listed on this page." />
       </Helmet>
 
       <div className={classes.relTitle}>

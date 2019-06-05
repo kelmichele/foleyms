@@ -53,6 +53,11 @@ class Home extends Component {
   render() {
     return (
       <div className={classes.Home}>
+        <Helmet>
+          <title>Welcome to the Foley Main Street District</title>
+          <meta name="description" content="Foley’s historic downtown epitomizes old Alabama charm. Covered with beautiful scenery, retailers, restaurants, and other businesses, Foley Main Street has plenty to offer." />
+        </Helmet>
+
         <Parallax
           plaxImage={bg1}
           // plaxShadow="tr2e"

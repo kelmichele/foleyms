@@ -18,7 +18,8 @@ const listings = () => {
     <div className={classes.listingsPage}>
       <Helmet>
         <title>Available Property in Foley, Al</title>
-        <meta name="description" content="" />
+        <meta name="description" content="Take a look at the properties currently available in the downtown district of Foley. 
+              With all of its surrounding history, beautiful scenery, and foot traffic, it is no surprise that businesses of all kinds are attracted to this area." />
       </Helmet>
 
       <div className={classes.medDef}>

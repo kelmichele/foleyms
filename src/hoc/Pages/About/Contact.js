@@ -10,7 +10,7 @@ const contact = () => {
     <div className={classes.contactPage}>
       <Helmet>
         <title>Contact Foley Main Street</title>
-        <meta name="description" content="" />
+        <meta name="description" content="The Main Street Foley office is located in the South Baldwin Chamber of Commerce building. Stop by our office, or contact us if you have any questions." />
       </Helmet>
 
       <div className={classes.ContactBody}>
