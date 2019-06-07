@@ -150,6 +150,10 @@ hr{
   &.inline{display: inline-block; width:auto; margin-bottom:20px;
     &:last-child {margin-left: 15px;}
   }
+  // &.some{margin-bottom:20px;}
+  &.threeLine{display: inline-block; width:auto; margin-bottom:20px; padding:10px; font-size:14px;
+    &.invColor {margin: 0 7px 20px}
+  }
 
   @include bp(tb) {font-size:14px;}
 }

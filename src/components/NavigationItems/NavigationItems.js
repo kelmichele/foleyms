@@ -5,6 +5,8 @@ import Aux from "../../hoc/Aux/Aux";
 import Pdf1 from "../../Mkt-Snapshot2019.pdf";
 import Pdf2 from "../../FoleyFwdPlan_190320.pdf";
 import MsMap from "../../MainStreetDist.pdf";
+import MktExec from "../../Mkt-Exec-Summary.pdf";
+
 class NavigationItems extends Component {
   render() {
     return(
@@ -37,6 +39,10 @@ class NavigationItems extends Component {
         <li><NavLink className={classes.MobTitle} to="#">Community Links</NavLink>
           <div className={["uk-navbar-dropdown", classes.custDrop, classes.LgDrop].join(' ')}>
             <ul className={classes.dropMenu}>
+              <li><a href={MktExec} target="_blank" rel="noopener noreferrer" className={[classes.NavigationItems, classes.dropLink].join(' ')}>
+                Market Study Executive Summary
+              </a></li>
+
               <li><a href={Pdf1} target="_blank" rel="noopener noreferrer" className={[classes.NavigationItems, classes.dropLink].join(' ')}>
                 Market Snapshot
               </a></li>

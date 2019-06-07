@@ -12,6 +12,7 @@ import ImageTextLink from "../../../components/ImageText/ImageTextLink";
 import Pdf1 from "../../../Mkt-Snapshot2019.pdf";
 import Pdf2 from "../../../FoleyFwdPlan_190320.pdf";
 import Pdf3 from "../../../foley-map2.pdf";
+import MktExec from "../../../Mkt-Exec-Summary.pdf";
 
 import ti1 from "../../../assets/images/mm-pizza.jpg";
 import ti2 from "../../../assets/images/owa1.jpg";
@@ -43,6 +44,8 @@ const textContent2 = (
     {/* <h3 className={classes.sign}>Preserving Our History</h3> */}
     <p>With the help of their first ever Main Street Director, Foley is working to implement
     Main Street Alabama’s four-step approach for downtown promotion, economic vitality, and community connectivity.</p>
+    <a href={MktExec} target="_blank" rel="noopener noreferrer" className={[classes.msLink, classes.some].join(' ')}>Market Study Executive Summary</a>
+    <div className={classes.clearfix} /><div className={classes.spacer2} />
     <a href={Pdf1} target="_blank" rel="noopener noreferrer" className={[classes.msLink, classes.inline, classes.invColor].join(' ')}>
     Market Snapshot</a>
     <a href={Pdf2} target="_blank" rel="noopener noreferrer" className={[classes.msLink, classes.inline].join(' ')}>
