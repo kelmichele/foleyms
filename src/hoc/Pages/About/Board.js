@@ -2,23 +2,23 @@ import React from "react";
 import classes from "./About.scss";
 import { Helmet } from "react-helmet";
 import heroRel from "../../../assets/images/boardNrw.jpg";
-import sherry from "../../../assets/images/sherry.jpg";
-import ImageText from "../../../components/ImageText/ImageText";
+// import sherry from "../../../assets/images/sherry.jpg";
+// import ImageText from "../../../components/ImageText/ImageText";
 
-const textExec = (
-  <div>
-    <h3>Main Street Executive Director</h3>
-    <p>In January 2019, Sherry Sullivan took the position as Foley’s first Main Street Executive Director.
-      In her role, she will work with the community to implement Main Street’s four-step approach for downtown promotion,
-      economic vitality, community connectivity; and create an overall plan for downtown. “I am excited to begin my new role
-      as Foley’s Main Street Director. Foley is a great place and I can’t wait to begin meeting with all the stakeholders and
-      learning the community. I look forward to highlighting the historic downtown and creating a place where people are excited
-      to visit and shop.“ Sullivan said.
-    </p>
-    <p>Sullivan, a native of Baldwin County, attended Troy State University and spent most of her career working for municipal government.
-    She has extensive experience in project management, working with community organizations and marketing.</p>
-  </div>
-)
+// const textExec = (
+//   <div>
+//     <h3>Main Street Executive Director</h3>
+//     <p>In January 2019, Sherry Sullivan took the position as Foley’s first Main Street Executive Director.
+//       In her role, she will work with the community to implement Main Street’s four-step approach for downtown promotion,
+//       economic vitality, community connectivity; and create an overall plan for downtown. “I am excited to begin my new role
+//       as Foley’s Main Street Director. Foley is a great place and I can’t wait to begin meeting with all the stakeholders and
+//       learning the community. I look forward to highlighting the historic downtown and creating a place where people are excited
+//       to visit and shop.“ Sullivan said.
+//     </p>
+//     <p>Sullivan, a native of Baldwin County, attended Troy State University and spent most of her career working for municipal government.
+//     She has extensive experience in project management, working with community organizations and marketing.</p>
+//   </div>
+// )
 
 const board = () => {
   return(
@@ -72,11 +72,11 @@ const board = () => {
           </ul>
         </div>
 
-        <div className={classes.Exec}>
+        {/* <div className={classes.Exec}>
           <div className={classes.medDef}>
             <ImageText textContent={textExec} textFloat="textRight" image={sherry} gridType="textBig" addPadd="xtra" alt="Sherry Sullivan, Foley Main Street Director" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

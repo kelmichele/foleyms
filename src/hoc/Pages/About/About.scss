@@ -284,3 +284,32 @@
     // .ImgRow.SlideAlt .SlideSize img{height:330px;}
   }
 }
+
+
+.PressReleasePage {
+  .Exec {@include sec-default(); text-align:left; margin-top:0px;padding-top:0px;
+    position: relative; z-index: 0;  
+    &::before{@include before(); background-color: $msGreen; height:160px;}
+    h1{color:$white; border-bottom:0;margin-bottom:35px; font-size: 1.6rem; letter-spacing: .5px; font-weight:500; text-shadow: 0px 1px 1px rgba($black, .1);}
+    h1.h1Sm{display: none;}
+    h4{font-weight: bold; margin:50px 0 10px; font-size:16.5px;}
+    
+    .fullRelease{@include sec-default(); margin-top:-25px;}
+    
+    @media screen and (max-width:1110px) {
+      &::before{height:180px;}
+    }
+    
+    @include bp(tb) {
+      &::before{height:120px;}
+      h1.h1Sm{display: block; text-align: center; margin:30px 0 0;}
+      h1.h1Lg{display: none;}
+      h4{margin-top:15px;}
+    }
+
+    @include bp(tn) {
+      padding-top: 10px;
+      p{margin-top:0;}
+    }
+  }
+}
