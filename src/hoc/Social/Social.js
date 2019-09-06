@@ -4,12 +4,12 @@ import classes from "./Social.scss";
 const social = (props) => {
   return (
     <ul className={[classes.Social, classes[props.Colors]].join(' ')}>
-      <li><a href="https://www.facebook.com/VisitFoley" target="_blank" rel="noopener noreferrer">
-        <span className={classes.SocialIcon} aria-label="City of Foley Facebook Link" uk-icon="icon: facebook"></span>
+      <li><a href="https://www.facebook.com/foleymainstreet/" target="_blank" rel="noopener noreferrer">
+        <span className={classes.SocialIcon} aria-label="Foley Main Street Facebook Link" uk-icon="icon: facebook"></span>
       </a></li>
 
-      <li><a href="https://www.instagram.com/visitfoley/" target="_blank" rel="noopener noreferrer">
-        <span aria-label="City of Foley Instagram Link" uk-icon="icon: instagram"></span>
+      <li><a href="https://www.instagram.com/foleymainstreet/" target="_blank" rel="noopener noreferrer">
+        <span aria-label="Foley Main Street Instagram Link" uk-icon="icon: instagram"></span>
       </a></li>
 
       <li><a href="https://twitter.com/visitfoley" target="_blank" rel="noopener noreferrer">

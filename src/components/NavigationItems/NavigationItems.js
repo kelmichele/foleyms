@@ -39,7 +39,7 @@ class NavigationItems extends Component {
         <li><NavLink className={classes.MobTitle} to="#">Community Links</NavLink>
           <div className={["uk-navbar-dropdown", classes.custDrop, classes.LgDrop].join(' ')}>
             <ul className={classes.dropMenu}>
-              <li><NavLink to="/press-release" className={[classes.NavigationItems, classes.dropLink].join(' ')}>Main Street Director</NavLink></li>
+              <li><NavLink to="/press-release" className={[classes.NavigationItems, classes.dropLink].join(' ')}>Main Street Hires Dunmore</NavLink></li>
               
               <li><a href={MktExec} target="_blank" rel="noopener noreferrer" className={[classes.NavigationItems, classes.dropLink].join(' ')}>
                 Market Study Executive Summary

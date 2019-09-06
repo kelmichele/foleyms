@@ -6,8 +6,6 @@ import MsLogo from "../../assets/images/msaRedRGB.jpg";
 import logo from "../../assets/images/FMS-teal.png";
 
 const footer = () => { 
-
-
   return (
     <div className={classes.Footer}>
       <div className={classes.med2Def}>
@@ -20,9 +18,9 @@ const footer = () => {
 
         <div className={[classes.FtGrid, classes.FgAcc].join(' ')}>
           <p className={classes.FtTitle}>Contact Us</p>
-          <p className={classes.FtInfo}>112 West Laurel Street <br />
+          <p className={classes.FtInfo}>120 S. McKenzie Street <br />
             Foley, Al 36535 </p>
-          <p className={classes.FtInfo}>251.401.4801</p>
+          <p className={classes.FtInfo}>251.366.1565</p>
           <p className={classes.FtInfo}>foleymainstreet@gmail.com</p>
           <Social Colors="green"/>
         </div>
