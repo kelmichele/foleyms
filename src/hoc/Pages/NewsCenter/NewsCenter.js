@@ -23,7 +23,7 @@ const newsCenter = () => {
       <div className={classes.NewsBody}>
         <div className={classes.med2Def}>
           <div id="dib-categories" className={classes.PostCats}></div>
-          <div id="dib-posts" className={classes.PostGrid}></div>
+          {/* <div id="dib-posts" className={classes.PostGrid}></div> */}
         </div>
       </div>
     </div>

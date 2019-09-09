@@ -28,6 +28,7 @@ const footer = () => {
         <div className={[classes.FtGrid, classes.Fg3].join(' ')}>
           <Link to="/"><img src={logo} alt="Foley Main Street Logo" className={classes.LogoImg} /></Link>
           <p className={classes.FtMoto}>Preservation. Promotion. Pride.</p>
+          <Link to="/news-center" className={classes.kpLink} style={{color:'#f7f7f7'}}>News Center</Link>
         </div>
       </div>
 

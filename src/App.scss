@@ -11,4 +11,30 @@
   }
 }
 
+.NewsList{@include sec-default(); }
+.NewsNot{display: none;}
+.News{@include sec-default(); padding:20px 0;
+  h2, p, a{font-family: $monte;}
+  h2{font-size:18px;margin-bottom: 0px;
+    a{color:$msGreen; font-weight:500;}
+  }
+  p{margin:0 0 5px; color:$black; font-size:16px;
+    a{color:$black;}
+  }
+  img{margin:10px 0;}
+  
+  h1{font-size:1.4rem; color: $msGreen; margin:0 0 5px;}
+
+
+  @include bp(tb) {
+    h2{font-size:17px;}
+    p{font-size:15px;}
+  }
+  
+  @include bp(tn) {
+    h2{font-size:16px;}
+    p{font-size:14px;}
+  }
+}
+
 .ToTopBtn{background-color: $white; margin-right:-15px;}

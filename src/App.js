@@ -65,12 +65,32 @@ class App extends Component {
     }
     const SneakyCal = withRouter(Cal);
     
+    
+    // News Center Test
+    const News = (props) => {
+      const { location } = props;
+      if (!location.pathname.match(/news-center/)) {
+        return (
+          <div className={classes.NewsNot}>
+            <div className={classes.med2Def}><div id="dib-posts" className={classes.NewsList}></div></div>
+          </div>            
+        );
+      }
+      return (
+        <div className={classes.News}>
+          <div className={classes.med2Def}><div id="dib-posts" className={classes.NewsList}></div></div>
+        </div>
+      )
+    }
+    const SneakyNews = withRouter(News);
+    
     return (
       <div className="App">
         <Header />
         <div className={classes.boxedBody}>
           <Content>{routes}
             <SneakyCal />
+            <SneakyNews />
           </Content>
           
         </div>
