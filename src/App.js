@@ -16,6 +16,7 @@ import BuslistingsListLoader from "./components/BusTable/BuslistingsListLoader";
 import BuslistingDetailsLoader from "./components/BusTable/BuslistingDetailsLoader";
 import Calendar from "./components/Calendar/Calendar";
 import PressRelease from "./hoc/Pages/About/PressRelease";
+import NewsCenter from "./hoc/Pages/NewsCenter/NewsCenter";
 
 import Amplify, { } from 'aws-amplify';
 import aws_exports from './aws-exports';
@@ -32,6 +33,7 @@ class App extends Component {
         <Route path="/events" component={Events} />
         <Route path="/calendar" component={Calendar} />
         <Route path="/press-release" component={PressRelease} />
+        <Route path="/news-center" component={NewsCenter} />
 
         <Route path="/listings" component={Listings} />
         <Route path="/directory" exact component={BuslistingsListLoader} />

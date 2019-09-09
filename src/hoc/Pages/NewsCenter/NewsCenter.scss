@@ -1,0 +1,38 @@
+@import '../../../assets/global.scss';
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixins.scss';
+
+.NewsHead{@include sec-default(); position: relative; z-index: 0; padding:50px 0 75px;
+  &::before{@include before(); background-color: rgba($msCream,.8); height: 120px; }
+  .MedEvent {width:880px; @include center-block();}
+  .intText, .imgRel {display: inline-block; width:45%; }
+  .imgRel{float:left; width:52%;}
+  .intText {text-align:left;margin-top:12%; float:right;}
+  h1{font-size:1.6rem; letter-spacing:.6px; margin-bottom:10px; font-weight:$semi; color:$msGreen; text-shadow: 0px 1px 1px rgba($black,.2);}
+}
+
+.NewsBody{@include sec-default(); 
+  .PostCats{@include sec-default(); margin-bottom:30px;}
+  h2, p, a{font-family: $monte;}
+  h2{font-size:18px;margin-bottom: 0px;
+    a{color:$msGreen; font-weight:500;}
+  }
+  p{margin:0 0 5px; color:$black; font-size:16px;
+    a{color:$black;}
+  }
+  img{margin:10px 0;}
+  
+  h1{font-size:1.4rem; color: $msGreen; margin:0 0 5px;}
+
+
+  @include bp(tb) {
+    h2{font-size:17px;}
+    p{font-size:15px;}
+  }
+  
+  @include bp(tn) {
+    h2{font-size:16px;}
+    p{font-size:14px;}
+  }
+}
+
