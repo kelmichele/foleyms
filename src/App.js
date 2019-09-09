@@ -17,6 +17,7 @@ import BuslistingDetailsLoader from "./components/BusTable/BuslistingDetailsLoad
 import Calendar from "./components/Calendar/Calendar";
 import PressRelease from "./hoc/Pages/About/PressRelease";
 import NewsCenter from "./hoc/Pages/NewsCenter/NewsCenter";
+import NewsPosts from "./components/NewsPosts/NewsPosts";
 
 import Amplify, { } from 'aws-amplify';
 import aws_exports from './aws-exports';
@@ -69,16 +70,16 @@ class App extends Component {
     // News Center Test
     const News = (props) => {
       const { location } = props;
-      if (!location.pathname.match(/news-center/)) {
+      if (!location.pathname.match('/news-center?c=')) {
         return (
           <div className={classes.NewsNot}>
-            <div className={classes.med2Def}><div id="dib-posts" className={classes.NewsList}></div></div>
+            <NewsPosts />
           </div>            
         );
       }
       return (
         <div className={classes.News}>
-          <div className={classes.med2Def}><div id="dib-posts" className={classes.NewsList}></div></div>
+          <NewsPosts />
         </div>
       )
     }
