@@ -70,7 +70,7 @@ class App extends Component {
     // News Center Test
     const News = (props) => {
       const { location } = props;
-      if (!location.pathname.match('/news-center?c=')) {
+      if (!location.pathname.match(/news-center/)) {
         return (
           <div className={classes.NewsNot}>
             <NewsPosts />

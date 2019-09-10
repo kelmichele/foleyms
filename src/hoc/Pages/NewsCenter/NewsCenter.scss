@@ -7,8 +7,49 @@
 }
 
 .NewsBody{@include sec-default();
-  .PostCats{@include sec-default(); margin:20px 0 50px; padding-bottom: 15px; border-bottom: 1px solid rgba($black, .1);
+  .PostCats{@include sec-default(); margin:20px 0 30px; padding-bottom: 15px; border-bottom: 1px solid rgba($black, .1);
     ul.Cats{display:block; float:left; width:100%; text-align:center;}
     ul.Cats li {display:inline-block; float:none; margin: 5px 12px; padding: 5px 10px; border:1px solid rgba(0,138,171, .7); }
   }
 }
+
+// .dib-list {display:block; float:left; width:100%;  margin-top:20px;}
+// .dib-list .dib-post {display:inline-block; float:none; width:47%; margin-bottom:30px; }
+// .dib-list .dib-post:nth-child(2n+2) {float:right;}
+
+// p.dib-post-content, .dib-post-content p {font-family:'Montserrat', sans-serif !important; color: #000;}
+// p.dib-post-categories, p.dib-post-content, p.dib-post-date {font-size:14px;}
+// .dib-list p.dib-post-categories{color: rgba(0,138,171, .8); }
+// p a.dib-more {color:#008AAB; font-weight:500;}
+
+// .dib-post-back-link {font-size:14px;width:100%; float:left; }
+// #dib-posts .dib-post-back-link.dib-post-back-link-top{margin:-15px 0 30px;}
+// #dib-posts .dib-post-back-link.dib-post-back-link-bottom{border-top:1px solid rgba(0,0,0, .1); margin:15px 0 10px; padding-top:10px;}
+// #dib-posts h1 {color: #000; letter-spacing:1px; padding-bottom:7px; border-bottom:1px solid rgba(0,0,0,.1); margin-bottom:20px;}
+
+// #dib-categories ul {display:block; float:left; width:100%; text-align:center;}
+// #dib-categories li {display:inline-block; float:none; margin: 5px 12px; padding: 5px 10px; border:1px solid rgba(0,138,171, .7); }
+
+// .dib-single {margin-bottom:25px;}
+// .dib-single .dib-post-content{margin:15px 0;}
+// .dib-single .dib-post-featured-image img {width:100%; height:auto;}
+
+// .dib-single .dib-post-content, .dib-single .dib-post-author, .dib-single .dib-post-date, .dib-single .dib-post-back-link-bottom {
+// width:95%; display:block; float:none; margin-left:auto; margin-right:auto;
+// }
+
+// @media only screen and (max-width: 1025px) {
+// .dib-single {display:block; float:none; width:90%; margin:auto;}
+// }
+
+// @media only screen and (max-width: 640px) {
+// .dib-list .dib-post {display:block; float:none; width:80%; margin:0px auto 30px; border-bottom:1px solid rgba(0,0,0, .1); padding-bottom: 20px;}
+// .dib-list .dib-post:nth-child(2n+2)  {float:none;}
+
+// .dib-single {width:100%; }
+// .dib-single .dib-post-title{font-size:1.2rem;}
+// }
+
+// @media only screen and (max-width: 570px) {
+// .dib-list .dib-post {width:95%; }
+// }

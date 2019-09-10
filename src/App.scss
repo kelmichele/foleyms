@@ -13,7 +13,7 @@
 
 .NewsList{@include sec-default(); }
 .NewsNot{display: none;}
-.News{@include sec-default(); padding:20px 0;
+.News{@include sec-default(); padding: 0;
   .PostCats{@include sec-default(); margin-bottom:50px; padding-bottom: 15px; border-bottom: 1px solid rgba($black, .1);}
   h2, p, a{font-family: $monte;}
   h2{font-size:18px;margin-bottom: 0px;
