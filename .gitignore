@@ -32,3 +32,14 @@ dist/
 node_modules/
 aws-exports.js
 awsconfiguration.json
+
+/src/foley-map2.pdf
+/src/foley-walking-map.pdf
+/src/FoleyFwdPlan_190320.pdf
+/src/Mkt-Snapshot2019.pdf
+/src/Mkt-Exec-Summary.pdf
+/src/MainStreetDist.pdf
+/src/wLaurel200.pdf
+/src/wLaurel309.pdf
+/src/sAlston222.pdf
+/src/COVIDTips.pdf

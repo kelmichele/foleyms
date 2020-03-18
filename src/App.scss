@@ -39,3 +39,11 @@
 }
 
 .ToTopBtn{background-color: $white; margin-right:-15px;}
+
+.covid{@include sec-default(); background-color: $red; padding: 5px 0; text-align: center;
+  .tipLink{color: $white; font-weight: bold; text-shadow: 0px 1px 1px rgba($black, .3);}
+  
+  @include bp(mb) {
+    .tiplink{font-size:15px;}
+  }
+}

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button"; //Add this line Here
 
 import { withRouter, Route, Switch } from "react-router-dom";
-import classes from './App.scss';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Content from "./hoc/Content/Content";
@@ -18,9 +17,12 @@ import Calendar from "./components/Calendar/Calendar";
 import PressRelease from "./hoc/Pages/About/PressRelease";
 import NewsCenter from "./hoc/Pages/NewsCenter/NewsCenter";
 import NewsPosts from "./components/NewsPosts/NewsPosts";
-
 import Amplify, { } from 'aws-amplify';
 import aws_exports from './aws-exports';
+
+const classes = require('./App.scss');
+const tips = require("./COVIDTips.pdf");
+
 Amplify.configure(aws_exports);
 
 class App extends Component {
@@ -87,6 +89,14 @@ class App extends Component {
     
     return (
       <div className="App">
+        <div className={classes.covid}>
+          <div className={classes.inside}>
+            <a href={tips} target="_blank" rel="noopener noreferrer" className={classes.tipLink}>
+              COVID-19 Tips from Main Street Alabama and Foley Main Street
+            </a>
+          </div>
+        </div>
+        
         <Header />
         <div className={classes.boxedBody}>
           <Content>{routes}
