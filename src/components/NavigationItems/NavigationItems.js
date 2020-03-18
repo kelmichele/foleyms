@@ -6,6 +6,8 @@ import Pdf1 from "../../Mkt-Snapshot2019.pdf";
 import Pdf2 from "../../FoleyFwdPlan_190320.pdf";
 import MsMap from "../../MainStreetDist.pdf";
 import MktExec from "../../Mkt-Exec-Summary.pdf";
+import plan20 from "../../PlanOfAction2020.pdf";
+import report19 from "../../AnnualReport2019.pdf";
 
 class NavigationItems extends Component {
   render() {
@@ -39,6 +41,16 @@ class NavigationItems extends Component {
         <li><NavLink className={classes.MobTitle} to="#">Community Links</NavLink>
           <div className={["uk-navbar-dropdown", classes.custDrop, classes.LgDrop].join(' ')}>
             <ul className={classes.dropMenu}>
+              <li>
+                <a href={report19} target="_blank" className={[classes.NavigationItems, classes.dropLink].join(' ')} rel="noopener noreferrer">
+                2019 Annual Report</a>
+              </li>
+              
+              <li>
+                <a href={plan20} target="_blank" className={[classes.NavigationItems, classes.dropLink].join(' ')} rel="noopener noreferrer">
+                2020 Plan of Action</a>
+              </li>
+              
               <li><NavLink to="/press-release" className={[classes.NavigationItems, classes.dropLink].join(' ')}>Main Street Hires Dunmore</NavLink></li>
               
               <li><a href={MktExec} target="_blank" rel="noopener noreferrer" className={[classes.NavigationItems, classes.dropLink].join(' ')}>
