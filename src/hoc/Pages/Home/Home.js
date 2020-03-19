@@ -1,26 +1,21 @@
 import React, { Component } from "react";
-import classes from "./Home.scss";
 // import { Link } from "react-router-dom";
 import { HashLink as Link } from 'react-router-hash-link';
 import { Helmet } from "react-helmet";
-
 import Parallax from "../../../components/Parallax/Parallax";
-import bg1 from "../../../assets/images/Foley-3087.jpg";
-import msLogo from "../../../assets/images/msaRedRGB.jpg";
-
 import ImageTextLink from "../../../components/ImageText/ImageTextLink";
-import Pdf1 from "../../../Mkt-Snapshot2019.pdf";
-import Pdf2 from "../../../FoleyFwdPlan_190320.pdf";
-import Pdf3 from "../../../foley-map2.pdf";
-import MktExec from "../../../Mkt-Exec-Summary.pdf";
-
-import ti1 from "../../../assets/images/mm-pizza.jpg";
-import ti2 from "../../../assets/images/owa1.jpg";
-import ti3 from "../../../assets/images/modelTrain1b.jpg";
-// import ti3 from "../../../assets/images/Foley-3046.jpg";
-
-import MapImg1 from "../../../assets/images/mapSS.png";
-import MapImg2 from "../../../assets/images/mapLegend.jpg";
+const classes = require ("./Home.scss");
+const bg1 = require("../../../assets/images/Foley-3087.jpg");
+const msLogo = require("../../../assets/images/msaRedRGB.jpg");
+const Pdf1 = require("../../../Mkt-Snapshot2019.pdf");
+const Pdf2 = require("../../../FoleyFwdPlan_190320.pdf");
+const Pdf3 = require("../../../foley-walking-map.pdf");
+const MktExec = require("../../../Mkt-Exec-Summary.pdf");
+const ti1 = require ("../../../assets/images/mm-pizza.jpg");
+const ti2 = require ("../../../assets/images/owa1.jpg");
+const ti3 = require ("../../../assets/images/modelTrain1b.jpg");
+const MapImg1 = require ("../../../assets/images/mapSS.png");
+const MapImg2 = require ("../../../assets/images/mapLegend.jpg");
 
 
 const plaxHd1 = (
