@@ -1,0 +1,19 @@
+@import '../../../assets/global.scss';
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixins.scss';
+
+.updatesPage {@include sec-default(); padding:30px 0;
+  .updatesHeader, .updatesBody {@include sec-default(); margin-bottom:30px; text-align: center;}
+  
+  
+  
+  .upLink{display: inline-block; width:45%; 
+    font-weight: bold; text-shadow: 0px 1px 1px rgba($black, .3);
+    background-color: $red; color: $white; padding:10px 10px;
+    
+    &.upLink{float:left;}
+    &.tipLink {float:right;}
+  }
+  
+  .customDialog{width:80%; }
+}

@@ -41,7 +41,18 @@
 .ToTopBtn{background-color: $white; margin-right:-15px;}
 
 .covid{@include sec-default(); background-color: $red; padding: 5px 0; text-align: center;
-  .tipLink{color: $white; font-weight: bold; text-shadow: 0px 1px 1px rgba($black, .3);}
+  .tipLink, .covLinks{color: $white; font-weight: bold; text-shadow: 0px 1px 1px rgba($black, .3);}
+  
+  .ocLinks{@include sec-default(); text-align: center; }
+  .covLinks{display: inline-block; margin: 5px 2% 0;}
+  
+  @include bp(tb) {
+    .covLinks{font-size:15px;}
+  }
+  
+  @include bp(tn) {
+    .covLinks{margin:5px 2%;}
+  }
   
   @include bp(mb) {
     .tiplink{font-size:15px;}

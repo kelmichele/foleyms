@@ -34,7 +34,8 @@
   .NavMobileBtn{display: none;}
   @include bp(tb) {
     .navbarWrap {display:none;}
-    .NavMobileBtn{display: block;float:right; width:35px; position: absolute; z-index:5; top:60px; right:8.5%; }
+    // .NavMobileBtn{display: block;float:right; width:35px; position: absolute; z-index:5; top:60px; right:8.5%; margin-top:3%;}
+    .NavMobileBtn{display: block;float:right; width:35px; margin-right:5%; margin-top:6%;} // 3/25 covid updates
 
     .LogoHd {width:259px; padding: 0; @include center-block();
       .LogoImg{@include sec-default();padding:10px 0;}
@@ -43,6 +44,11 @@
 
   @include bp(tn) {
     .LogoHd {width:235px;}
+    .NavMobileBtn{ margin-top: 7%;} // 3/25 covid updates
+  }
+  
+  @include bp(mb) {
+    .NavMobileBtn{ margin-top: 9%;} // 3/25 covid updates
   }
 
   @include bp(sm) {
@@ -50,7 +56,8 @@
       .LogoImg{padding:5px 0;}
     }
     
-    .NavMobileBtn{ top:45px; right:8.5%; }
+    .NavMobileBtn{ margin-top: 12%;} // 3/25 covid updates
+    // .NavMobileBtn{ top:45px; right:8.5%; } // 3/25 covid updates
   }
 }
 
