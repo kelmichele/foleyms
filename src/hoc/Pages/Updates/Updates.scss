@@ -2,18 +2,62 @@
 @import '../../../assets/variables.scss';
 @import '../../../assets/mixins.scss';
 
-.updatesPage {@include sec-default(); padding:30px 0;
-  .updatesHeader, .updatesBody {@include sec-default(); margin-bottom:30px; text-align: center;}
-  
-  
-  
-  .upLink{display: inline-block; width:45%; 
-    font-weight: bold; text-shadow: 0px 1px 1px rgba($black, .3);
-    background-color: $red; color: $white; padding:10px 10px;
-    
-    &.upLink{float:left;}
-    &.tipLink {float:right;}
+.sbdc,.updatesPage {@include sec-default(); padding-bottom: 30px; 
+  .uhead {@include sec-default(); margin-bottom:30px; text-align: center; padding:30px 0;background-color: $msCream;}
+  h1 {font-size:2rem; line-height: 1.2em; margin:0; font-weight: bold;
+    span{font-size: 1.2rem; font-weight: normal;}
   }
   
-  .customDialog{width:80%; }
+  .updatesBody, .ubBlock, .sbdcAcc {@include sec-default();}
+  .custContent{padding-left:20px;}
+  .AccTitle{font-weight: bold; margin: 0 0;color: $msGreen; padding:0; font-size: 1.4rem; text-align: left;}
+  h4{margin:0 0 8px; font-size:1.1rem; font-weight: 500;}
+  ul.innerUL { padding-left: 20px; margin-bottom: 20px;}
+  li {list-style-type: disc;margin-bottom: 7px;}
+  a{color: $msGreen; font-weight: 500;}
+  img{width:180px; margin-bottom: 20px;}
+  
+  @include bp(tb) {
+    h1 {font-size:1.6rem;
+      span{font-size:1.1rem;}
+    }
+    .AccTitle{font-size: 1.2rem;}
+    h4{font-size: 1rem;}
+  }
+  
+  @include bp(tn) {
+    h1 {font-size:1.4rem;
+      span{font-size:1rem;}
+    }
+    li{font-size: 15px;}
+    .AccTitle{font-size: 1.1rem;}
+    h4{font-size: 1rem;}
+  }
+  
+  @include bp(oc) {
+    h1 {font-size:1.2rem;}
+    .med2Def{width:92%;}
+    .AccTitle{font-size: 1rem;}
+    h4{font-size: .93rem;}
+    .custContent{padding-left:5px;}
+  }
+}
+
+.updatesPage {
+  .tipLink, .covLinks{color: $white; font-weight: bold; text-shadow: 0px 1px 1px rgba($black, .3);}
+  
+  .ocLinks{@include sec-default(); text-align: center; }
+  .covLinks{display: inline-block; margin: 5px 2% 0;}
+  
+  @include bp(tb) {
+    .covLinks{font-size:15px;}
+  }
+  
+  @include bp(tn) {
+    .covLinks{margin:5px 2%;}
+  }
+  
+  @include bp(mb) {
+    .tiplink{font-size:15px;}
+  }
 }

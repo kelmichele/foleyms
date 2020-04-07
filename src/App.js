@@ -18,6 +18,7 @@ import PressRelease from "./hoc/Pages/About/PressRelease";
 import NewsCenter from "./hoc/Pages/NewsCenter/NewsCenter";
 import NewsPosts from "./components/NewsPosts/NewsPosts";
 import Updates from "./hoc/Pages/Updates/Updates";
+import SBDC from "./hoc/Pages/Updates/SBDCUpdates";
 import Amplify, { } from 'aws-amplify';
 import aws_exports from './aws-exports';
 
@@ -49,7 +50,9 @@ class App extends Component {
           path="/buslistings/:buslistingId"
           render={props => <BuslistingDetailsLoader id={props.match.params.buslistingId} />}
         />
+        
         <Route path="/updates" component={Updates} />
+        <Route path="/sbdc-updates" component={SBDC} />
       </Switch>
     );
 
@@ -72,22 +75,22 @@ class App extends Component {
     
     
     // News Center Test
-    const News = (props) => {
-      const { location } = props;
-      if (!location.pathname.match(/news-center/)) {
-        return (
-          <div className={classes.NewsNot}>
-            <NewsPosts />
-          </div>            
-        );
-      }
-      return (
-        <div className={classes.News}>
-          <NewsPosts />
-        </div>
-      )
-    }
-    const SneakyNews = withRouter(News);
+    // const News = (props) => {
+    //   const { location } = props;
+    //   if (!location.pathname.match(/news-center/)) {
+    //     return (
+    //       <div className={classes.NewsNot}>
+    //         <NewsPosts />
+    //       </div>            
+    //     );
+    //   }
+    //   return (
+    //     <div className={classes.News}>
+    //       <NewsPosts />
+    //     </div>
+    //   )
+    // }
+    // const SneakyNews = withRouter(News);
     
     return (
       <div className="App">
@@ -99,7 +102,7 @@ class App extends Component {
           
             <div className={classes.ocLinks}>
               <a href="https://foleymainstreet-739f.gr8.com/" target="_blank" rel="noopener noreferrer" className={classes.covLinks}>Restaurant Updates  </a>
-              <a href="https://foleymainstreet-00c0.gr8.com/" target="_blank" rel="noopener noreferrer" className={classes.covLinks}>Business Help </a>
+              <a href="https://foleymainstreet-3d5c.gr8.com/" target="_blank" rel="noopener noreferrer" className={classes.covLinks}>Business Help </a>
               <a href="https://foleymainstreet-6a3c.gr8.com/" target="_blank" rel="noopener noreferrer" className={classes.covLinks}>Get Your Business Online </a>
               <a href={tips} target="_blank" rel="noopener noreferrer" className={classes.covLinks}>COVID-19 Tips</a>
             </div>
@@ -111,7 +114,7 @@ class App extends Component {
         <div className={classes.boxedBody}>
           <Content>{routes}
             <SneakyCal />
-            <SneakyNews />
+            {/* <SneakyNews /> */}
           </Content>
           
         </div>
