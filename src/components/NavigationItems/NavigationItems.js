@@ -41,6 +41,8 @@ class NavigationItems extends Component {
         <li><NavLink className={classes.MobTitle} to="#">Community Links</NavLink>
           <div className={["uk-navbar-dropdown", classes.custDrop, classes.LgDrop].join(' ')}>
             <ul className={classes.dropMenu}>
+              <li className={classes.cov}><NavLink to="/updates"  className={[classes.NavigationItems, classes.dropLink].join(' ')}>COVID-19 Updates</NavLink></li>
+              
               <li>
                 <a href={report19} target="_blank" className={[classes.NavigationItems, classes.dropLink].join(' ')} rel="noopener noreferrer">
                 2019 Annual Report</a>

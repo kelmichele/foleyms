@@ -17,18 +17,18 @@ const updates = () => {
 
     <div className={classes.updatesPage}>
       <div className={classes.uhead}>
-        <h1>Foley Main Street COVID-19 Updates</h1>
+        <h1>Foley Main Street <br/> COVID-19 Updates &amp; Information</h1>
       </div>
       
-      <div className={[classes.updatesBody, ["uk-grid"]].join(' ')}>
+      <div className={classes.updatesBody}>
         <div className={classes.med2Def}>
        
           <div className={classes.ocLinks}>
+            <Link to="/sbdc-updates" className={classes.covLinks}>4/7/2020 SBDC Updates</Link>
             <a href="https://foleymainstreet-739f.gr8.com/" target="_blank" rel="noopener noreferrer" className={classes.covLinks}>Restaurant Updates  </a>
             <a href="https://foleymainstreet-3d5c.gr8.com/" target="_blank" rel="noopener noreferrer" className={classes.covLinks}>Business Help </a>
             <a href="https://foleymainstreet-6a3c.gr8.com/" target="_blank" rel="noopener noreferrer" className={classes.covLinks}>Get Your Business Online </a>
             <a href={tips} target="_blank" rel="noopener noreferrer" className={classes.covLinks}>COVID-19 Tips</a>
-            <Link to="/sbdc-updates" className={classes.covLinks}>4/7/2020 SBDC Updates</Link>
           </div>
         
         </div>

@@ -37,6 +37,17 @@ class Header extends Component {
     
     return (
       <div className={classes.Header} data-uk-sticky={this.state.stickClass}>
+     
+     
+        <div className={classes.covid}>
+          <div className={classes.inside}>
+            <div className={classes.ocLinks}>
+              <Link to="/updates" className={classes.covLink}>COVID-19 Information, Local Updates, and Tips</Link>
+            </div>
+          </div>
+        </div>
+        
+        
         <div className={classes.insideXl}>
 
           <header className={classes.HeaderDiv}>

@@ -43,21 +43,14 @@
   }
 }
 
-.updatesPage {
-  .tipLink, .covLinks{color: $white; font-weight: bold; text-shadow: 0px 1px 1px rgba($black, .3);}
-  
-  .ocLinks{@include sec-default(); text-align: center; }
-  .covLinks{display: inline-block; margin: 5px 2% 0;}
-  
-  @include bp(tb) {
-    .covLinks{font-size:15px;}
+.updatesPage { text-align: center; 
+  .covLinks{font-weight: bold; text-shadow: 0px 1px 1px rgba($black, .1); font-size:1.2rem;
+    @include sec-default(); margin:8px 0;
+    // width:30%; display: inline-block; margin:14px auto;
+
   }
   
   @include bp(tn) {
-    .covLinks{margin:5px 2%;}
-  }
-  
-  @include bp(mb) {
-    .tiplink{font-size:15px;}
+    .covLinks{font-size: 1.1rem;}
   }
 }
