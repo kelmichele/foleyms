@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 
-import classes from "./Header.scss";
-import logo from "../../assets/images/FMS-teal.png";
+// import classes from "./Header.scss";
+// import logo from "../../assets/images/FMS-teal.png";
 import NavigationItems from "../../components/NavigationItems/NavigationItems";
 import { Link } from "react-router-dom";
 import TemporaryDrawer from "../../components/Drawer/Drawer";
+const classes = require("./Header.scss");
+const logo = require('../../assets/images/FMS-teal.png');
 
 class Header extends Component {
   constructor(props) {
@@ -42,7 +44,7 @@ class Header extends Component {
         <div className={classes.covid}>
           <div className={classes.inside}>
             <div className={classes.ocLinks}>
-              <Link to="/updates" className={classes.covLink}>COVID-19 Information, Local Updates, and Tips</Link>
+              <Link to="/updates" className={classes.covLink}>Local Restaurant Updates, Business Tips, and COVID-19 Info</Link>
             </div>
           </div>
         </div>
