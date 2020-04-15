@@ -1,0 +1,33 @@
+@import '../../assets/global.scss';
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+
+.NewsPosts{
+  .PostsBody, .PostSide{display: inline-block;}
+  .PostsBody{width:75%; float:left; margin-left:-2%;}
+  .PostSide{width:24%; float: right; margin-top:35px; margin-right:-3%;}
+  .backLink1{@include sec-default(); margin:20px 0 0px; padding-bottom:10px; border-bottom: 1px solid rgba(0,0,0, .1);}
+
+  h4{font-weight: bold; color: $msGreen; text-transform: uppercase; margin-bottom: 7px; font-size:1.2em;}
+  h2{font-size:1.3rem;}
+
+  .PostCats, .RecentPosts {@include sec-default(); margin-bottom:20px;
+    li{margin-bottom: 10px;}
+  }
+  
+  @include bp(tb) {
+    h2{font-size:1.15rem;}
+    h4{font-size: 1.1em;}
+  }
+  
+  @include bp(br) {
+    .PostsBody, .PostSide{@include sec-default();}
+    .PostSide{margin-top: 20px;padding-bottom:2px; border-bottom: 1px solid rgba($black,.1);}
+    h4{margin-bottom:0;}
+    .PostCats{margin-bottom: 0px; 
+      li{display: inline-block; margin:7px 15px 10px 0;}
+    }
+    h4.RecentH4, .RecentPosts{display: none;}
+  }
+  // posts go to 100% @ 749px
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from "./NewsCenter.scss";
 import { Helmet } from "react-helmet";
-// import stack2b from "../../../assets/images/outdoor-jazz.jpg";
+import NewsPosts from "../../../components/NewsPosts/NewsPosts";
 
 const newsCenter = () => {
   return (
@@ -16,15 +16,7 @@ const newsCenter = () => {
       </div>
       
       <div className={classes.NewsBody}>
-        <div className={classes.med2Def}>
-          <div className={classes.PostCats}>
-            <ul className={classes.Cats}>
-              <li><a href="https://foleymainstreet.com/news-center?c=blog-post">Blog Posts</a></li>
-              <li><a href="https://foleymainstreet.com/news-center?c=newsletters">Newsletters</a></li>
-              <li><a href="https://foleymainstreet.com/news-center?c=press-release">Press Releases</a></li>
-            </ul>
-          </div>
-        </div>
+        <NewsPosts /> 
       </div>
     </div>
   )  

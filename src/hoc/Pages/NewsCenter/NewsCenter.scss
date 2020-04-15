@@ -2,16 +2,19 @@
 @import '../../../assets/variables.scss';
 @import '../../../assets/mixins.scss';
 
-.NewsHead{@include sec-default(); background-color: rgba($msCream,.8); padding:30px 0 20px;
-  h1{font-size:1.6rem; letter-spacing:.6px; margin-bottom:10px; font-weight:$semi; color:$msGreen; text-shadow: 0px 1px 1px rgba($black,.2);}
-}
-
-.NewsBody{@include sec-default();
-  .PostCats{@include sec-default(); margin:20px 0 30px; padding-bottom: 15px; border-bottom: 1px solid rgba($black, .1);
-    ul.Cats{display:block; float:left; width:100%; text-align:center;}
-    ul.Cats li {display:inline-block; float:none; margin: 5px 12px; padding: 5px 10px; border:1px solid rgba(0,138,171, .7); }
+.NewsHead{@include sec-default(); background-color: rgba($msCream,.8); padding:30px 0;
+  h1{font-size:1.6rem; letter-spacing:.6px; margin-bottom:0px; font-weight:$semi; color:$msGreen; text-shadow: 0px 1px 1px rgba($black,.2);}
+  @include bp(tb) {padding:20px 0;}
+  
+  @include bp(br) {
+    h1{font-size:1.4rem;}
+  }
+  
+  @include bp(oc) {
+    h1{font-size:1.3rem; letter-spacing:.1px;}
   }
 }
+.NewsBody{@include sec-default();}
 
 // .dib-list {display:block; float:left; width:100%;  margin-top:20px;}
 // .dib-list .dib-post {display:inline-block; float:none; width:47%; margin-bottom:30px; }

@@ -34,6 +34,7 @@ class NavigationItems extends Component {
               <li><NavLink to="/about" className={[classes.NavigationItems, classes.dropLink].join(' ')}>About Us</NavLink></li>
               <li><NavLink to="/board" className={[classes.NavigationItems, classes.dropLink].join(' ')}>Board of Directors</NavLink></li>
               <li><NavLink to="/contact" className={[classes.NavigationItems, classes.dropLink].join(' ')}>Contact</NavLink></li>
+              {/* <li><NavLink to="/news-center" className={classes.NavigationItems}>Blog</NavLink></li> */}
             </ul>
           </div>
         </li>
