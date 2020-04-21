@@ -15,7 +15,7 @@ import BuslistingsListLoader from "./components/BusTable/BuslistingsListLoader";
 import BuslistingDetailsLoader from "./components/BusTable/BuslistingDetailsLoader";
 import Calendar from "./components/Calendar/Calendar";
 import PressRelease from "./hoc/Pages/About/PressRelease";
-import NewsCenter from "./hoc/Pages/NewsCenter/NewsCenter";
+// import NewsCenter from "./hoc/Pages/NewsCenter/NewsCenter";
 // import NewsPosts from "./components/NewsPosts/NewsPosts";
 import Updates from "./hoc/Pages/Updates/Updates";
 import SBDC from "./hoc/Pages/Updates/SBDCUpdates";
@@ -38,7 +38,7 @@ class App extends Component {
         <Route path="/events" component={Events} />
         <Route path="/calendar" component={Calendar} />
         <Route path="/press-release" component={PressRelease} />
-        <Route path="/news-center" component={NewsCenter} />
+        {/* <Route path="/news-center" component={NewsCenter} /> */}
 
         <Route path="/listings" component={Listings} />
         <Route path="/directory" exact component={BuslistingsListLoader} />
