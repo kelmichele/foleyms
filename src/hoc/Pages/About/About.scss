@@ -321,3 +321,35 @@
     }
   }
 }
+
+
+.ResidentConsumerSurvey {@include sec-default(); padding-bottom:50px;
+  .uhead{@include sec-default(); padding: 40px 0; text-align: center;}
+  h1{font-size:1.8rem; margin:0; font-weight: bold;}
+  h2{font-size: 1.4rem; margin:0;}
+  .pdfPage{@include sec-default();}
+  .pdfContent{width:100%; max-width:100%; min-height:1100px;}
+  
+  @include bp(tb){
+    h1{font-size:1.6rem;}
+    h2{font-size: 1.2rem;}
+    .pdfContent{min-height:1000px;}
+  }
+
+  @include bp(tn){
+    .uhead{padding: 25px 0;}
+    .pdfContent{min-height:800px;}
+  }
+
+  @include bp(oc){
+    h1{font-size:1.3rem;}
+    h2{font-size: 1rem;}
+    .pdfContent{min-height:700px;}
+  }
+
+  @include bp(ph){padding-bottom:30px;
+    h1{font-size:1.2rem;}
+    h2{width:70%; @include center-block();}
+    .pdfContent{min-height:550px;}
+  }
+}

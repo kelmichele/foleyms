@@ -8,7 +8,7 @@ import MsMap from "../../MainStreetDist.pdf";
 import MktExec from "../../Mkt-Exec-Summary.pdf";
 import plan20 from "../../PlanOfAction2020.pdf";
 import report19 from "../../AnnualReport2019.pdf";
-import residentSurvey from "../../Resident-Consumer-Survey-June2020.pdf";
+// import residentSurvey from "../../Resident-Consumer-Survey-June2020.pdf";
 
 class NavigationItems extends Component {
   render() {
@@ -43,9 +43,10 @@ class NavigationItems extends Component {
           <div className={["uk-navbar-dropdown", classes.custDrop, classes.LgDrop].join(' ')}>
             <ul className={classes.dropMenu}>
               <li className={classes.cov}><NavLink to="/updates" className={[classes.NavigationItems, classes.dropLink, classes.alt].join(' ')}>COVID-19 Updates</NavLink></li>
+              
               <li className={classes.blue}>
-                <a href={residentSurvey} target="_blank" className={[classes.NavigationItems, classes.dropLink, classes.alt].join(' ')} rel="noopener noreferrer">
-                Resident &amp; Consumer Survey</a>
+              <NavLink to="/resident-consumer-survey" className={[classes.NavigationItems, classes.dropLink, classes.alt].join(' ')}>Resident &amp; Consumer Survey</NavLink>
+                {/* <a href={residentSurvey} target="_blank" className={[classes.NavigationItems, classes.dropLink, classes.alt].join(' ')} rel="noopener noreferrer"></a> */}
               </li>
 
               

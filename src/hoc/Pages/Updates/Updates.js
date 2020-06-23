@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 import Aux from "../../../hoc/Aux/Aux";
 // import { Link } from "react-router-dom";
 const classes = require('./Updates.scss');
-// const tips = require("../../../COVIDTips.pdf");
 
 const updates = () => {
   return (
@@ -28,7 +27,6 @@ const updates = () => {
             <a href="https://foleymainstreet-739f.gr8.com/" target="_blank" rel="noopener noreferrer" className={classes.covLinks}>Restaurant Updates  </a>
             <a href="https://foleymainstreet-3d5c.gr8.com/" target="_blank" rel="noopener noreferrer" className={classes.covLinks}>Business Help </a>
             <a href="https://foleymainstreet-6a3c.gr8.com/" target="_blank" rel="noopener noreferrer" className={classes.covLinks}>Get Your Business Online </a>
-            {/* <a href={tips} target="_blank" rel="noopener noreferrer" className={classes.covLinks}>COVID-19 Tips</a> */}
           </div>
         
         </div>
