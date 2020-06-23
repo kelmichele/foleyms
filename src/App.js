@@ -18,7 +18,6 @@ import PressRelease from "./hoc/Pages/About/PressRelease";
 // import NewsCenter from "./hoc/Pages/NewsCenter/NewsCenter";
 // import NewsPosts from "./components/NewsPosts/NewsPosts";
 import Updates from "./hoc/Pages/Updates/Updates";
-import SBDC from "./hoc/Pages/Updates/SBDCUpdates";
 import Amplify, { } from 'aws-amplify';
 import aws_exports from './aws-exports';
 
@@ -52,7 +51,6 @@ class App extends Component {
         />
         
         <Route path="/updates" component={Updates} />
-        <Route path="/sbdc-updates" component={SBDC} />
       </Switch>
     );
 

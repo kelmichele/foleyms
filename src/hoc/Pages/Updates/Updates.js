@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import Aux from "../../../hoc/Aux/Aux";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 const classes = require('./Updates.scss');
 // const tips = require("../../../COVIDTips.pdf");
 
@@ -24,7 +24,7 @@ const updates = () => {
         <div className={classes.med2Def}>
        
           <div className={classes.ocLinks}>
-            <Link to="/sbdc-updates" className={classes.covLinks}>4/7/2020 SBDC Updates</Link>
+            {/* <Link to="/sbdc-updates" className={classes.covLinks}>4/7/2020 SBDC Updates</Link> */}
             <a href="https://foleymainstreet-739f.gr8.com/" target="_blank" rel="noopener noreferrer" className={classes.covLinks}>Restaurant Updates  </a>
             <a href="https://foleymainstreet-3d5c.gr8.com/" target="_blank" rel="noopener noreferrer" className={classes.covLinks}>Business Help </a>
             <a href="https://foleymainstreet-6a3c.gr8.com/" target="_blank" rel="noopener noreferrer" className={classes.covLinks}>Get Your Business Online </a>

@@ -9,10 +9,12 @@
 
 .dropMenu {text-align: left;
   li{width:100%; margin-bottom:12px !important; margin-top:0 !important;}
-  li.cov{position: relative; z-index: 0;
-    &::before{@include before();background-color:$red; margin-left:-10px}
-    a{color: $white;}
+  li.cov, li.blue{position: relative; z-index: 0;
+    &::before{@include before(); margin-left:-10px}
+    a.alt{color: $white;}
   }
+  li.cov::before{background-color:$red;}
+  li.blue::before{background-color:$teal;}
 }
 
 @media (max-width: 1024px) {
