@@ -336,10 +336,15 @@
     .pdfContent{min-height:1000px;}
   }
 
-  @include bp(tn){
+  @include bp(br){
     .uhead{padding: 25px 0;}
+    // .pdfPage{width:80%; @include center-block();}
     .pdfContent{min-height:800px;}
   }
+
+  // @include bp(tn){
+  //   .pdfContent{min-height:800px;}
+  // }
 
   @include bp(oc){
     h1{font-size:1.3rem;}
