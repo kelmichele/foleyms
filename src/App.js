@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button"; //Add this line Here
-
 import { withRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
