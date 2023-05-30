@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { graphqlOperation } from 'aws-amplify';
 import { Connect } from 'aws-amplify-react';
+import classes from "../../assets/_global.scss";
 import BuslistingsList from "./BuslistingsList";
 
 const ListBuslistings = `query ListBuslistings {
@@ -38,18 +39,21 @@ class BuslistingsListLoader extends Component {
 
   render() {
     return (
-      <Connect
-        query={graphqlOperation(ListBuslistings)}
-        subscription={graphqlOperation(SubscribeToNewBuslistings)}
-        onSubscriptionMsg={this.onNewBuslisting}
-      >
-        {({ data, loading }) => {
-          if (loading) { return <div>Loading...</div>; }
-          if (!data.listBuslistings) return;
+      <div className={classes.busListPage}>
+        <h1>Business Table Goes Here</h1>
+        <Connect
+          query={graphqlOperation(ListBuslistings)}
+          subscription={graphqlOperation(SubscribeToNewBuslistings)}
+          onSubscriptionMsg={this.onNewBuslisting}
+        >
+          {({ data, loading }) => {
+            if (loading) { return <div>Loading...</div>; }
+            if (!data.listBuslistings) return;
 
-          return <BuslistingsList buslistings={data.listBuslistings.items} />;
-        }}
-      </Connect>
+            return <BuslistingsList buslistings={data.listBuslistings.items} />;
+          }}
+        </Connect>
+      </div>
     );
   }
 }
