@@ -192,3 +192,6 @@ button{background: none; border:none; border-radius:0; font-family: $monte; font
 
 
 .Calendar{width:100%;}
+.busListPage{@include sec-default();padding:50px 0 30px;
+  h1{text-align:center;}
+}
